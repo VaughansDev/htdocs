@@ -21,7 +21,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $stmt2->execute();
 
                     session_name('Khaos Development');
-                    session_set_cookie_params(0, '/', '.khaosdevelopment.com');
+                    session_set_cookie_params(0, '.khaosdevelopment.com');
                     session_start();
                     $_SESSION['id'] = $users_id;
                     $_SESSION['username'] = $users_username;
@@ -71,7 +71,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $stmt2->execute();
 
                 session_name('Khaos Development');
-                session_set_cookie_params(0, '/', '.khaosdevelopment.com');
+                session_set_cookie_params(0, '.khaosdevelopment.com');
                 session_start();
                 $_SESSION['id'] = $users_id;
                 $_SESSION['username'] = $users_username;
