@@ -11,7 +11,7 @@
 <nav class="kd-navbar kd-navbar-top kd-navbar-collapse kd-navbar-sticky kd-navbar-expand-lg kd-navbar-dropdown-triangle kd-navbar-autohide">
     <div class="container">
         <a href="index-2.php" class="kd-nav-logo">
-            <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/logo.svg" alt="" width="88px">
+            <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/logo.png" alt="" width="88px">
         </a>
         <button class="kd-navbar-burger">
             <span></span><span></span><span></span>

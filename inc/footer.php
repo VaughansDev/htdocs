@@ -7,7 +7,7 @@
                     <div class="kd-widget-footer">
                         <div class="kd-widget-title">
                             <a href="index-2.php" class="kd-widget-logo">
-                                <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/logo.svg" alt="" width="88px">
+                                <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/logo.png" alt="" width="88px">
                             </a>
                         </div>
                         <div class="kd-widget-text">
