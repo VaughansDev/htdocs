@@ -9,7 +9,7 @@ session_start();
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo $_PAGE['title'].' | '.$_CONFIG['sitename']; ?></title>
+    <title><?php echo $_PAGE['title'] . ' | ' . $_CONFIG['sitename']; ?></title>
     <meta name="description" content="Amdesk - Help Center HTML template for your digital products">
     <meta name="keywords" content="helpdesk, forum, template, HTML template, responsive, clean">
     <meta name="author" content="Khaos Development">
@@ -33,8 +33,7 @@ session_start();
     <!-- Quill -->
     <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['supporturl']; ?>/assets/vendor/quill/dist/quill.snow.css">
     <!-- Font Awesome -->
-    <script defer src="<?php echo $_CONFIG['supporturl']; ?>/assets/vendor/fontawesome-free/js/all.js"></script>
-    <script defer src="<?php echo $_CONFIG['supporturl']; ?>/assets/vendor/fontawesome-free/js/v4-shims.js"></script>
+    <script src="https://kit.fontawesome.com/cef1fcc158.js" crossorigin="anonymous"></script>
     <!-- Amdesk -->
     <link rel="stylesheet" href="<?php echo $_CONFIG['supporturl']; ?>/assets/css/khaos.min.css">
     <!-- Custom Styles -->
