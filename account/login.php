@@ -32,7 +32,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-box-content pt-0">
                                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                                     <div class="col-auto kd-dropzone-attachment-btn">
-                                        <button class="kd-btn kd-btn-lg" type="submit" name="register" value="register">Register</button>
+                                        <button class="kd-btn kd-btn-lg" type="submit" name="login" value="login">Login</button>
                                     </div>
                                 </div>
                             </div>
