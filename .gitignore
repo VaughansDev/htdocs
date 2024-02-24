@@ -3,3 +3,11 @@ khaosdev-website/
 my-dev/idk/
 khaos-backup/
 new-backup/
+inc/config.php
+account/inc/config.php
+blog/inc/config.php
+docs/inc/config.php
+forums/inc/config.php
+knowledgebase/inc/config.php
+store/inc/config.php
+support/inc/config.php
