@@ -9,7 +9,8 @@
         <div class="kd-navbar-content">
             <ul class="kd-nav">
                 <li class="kd-nav-item kd-nav-item-drop">
-                    <a class="kd-nav-link" href="<?php echo $_CONFIG['domain']; ?>"> Home </a>
+                    <a class="kd-nav-link" href="<?php echo $_CONFIG['domain']; ?>">
+                        <?php echo $_SESSION['loggedin']; ?> </a>
                 </li>
                 <li class="kd-nav-item kd-nav-item-drop">
                     <a class="kd-nav-link" href="<?php echo $_CONFIG['storeurl']; ?>"> Store </a>

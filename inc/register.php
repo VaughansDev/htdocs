@@ -35,7 +35,11 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                 if ($result2) {
 
                     session_name('Khaos Development');
-                    session_set_cookie_params(0, '.khaosdevelopment.com');
+                    session_set_cookie_params(
+                        time() + 3600,      // $lifetime
+                        '/',                // $path 
+                        '.khaosdevelopment.com'
+                    );
                     session_start();
                     $_SESSION['id'] = $users_id;
                     $_SESSION['username'] = $users_username;
@@ -130,7 +134,11 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                     mail($to, $subject, $message, $headers);
 
                     session_name('Khaos Development');
-                    session_set_cookie_params(0, '.khaosdevelopment.com');
+                    session_set_cookie_params(
+                        time() + 3600,      // $lifetime
+                        '/',                // $path 
+                        '.khaosdevelopment.com'
+                    );
                     session_start();
                     $_SESSION['id'] = $users_id;
                     $_SESSION['username'] = $users_username;

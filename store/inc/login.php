@@ -20,8 +20,12 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_accountid = '$accountid'");
                     $stmt2->execute();
 
-                    session_name('Khaos Development');
-                    session_set_cookie_params(0, '.khaosdevelopment.com');
+
+                    session_set_cookie_params(
+                        time() + 3600,      // $lifetime
+                        '/',                // $path 
+                        '.khaosdevelopment.com'
+                    );
                     session_start();
                     $_SESSION['id'] = $users_id;
                     $_SESSION['username'] = $users_username;
@@ -71,7 +75,11 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $stmt2->execute();
 
                 session_name('Khaos Development');
-                session_set_cookie_params(0, '.khaosdevelopment.com');
+                session_set_cookie_params(
+                    time() + 3600,      // $lifetime
+                    '/',                // $path 
+                    '.khaosdevelopment.com'
+                );
                 session_start();
                 $_SESSION['id'] = $users_id;
                 $_SESSION['username'] = $users_username;
