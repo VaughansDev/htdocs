@@ -5,7 +5,7 @@
             <header class="kd-header kd-box-5">
                 <div class="container">
                     <div class="bg-image bg-image-parallax">
-                        <img src="assets/images/bg-header-5.png" class="jarallax-img" alt="">
+                        <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/bg-header-5.png" class="jarallax-img" alt="">
                         <div style="background-color: rgba(27, 27, 27, .8);"></div>
                     </div>
                     <div class="container mnb-8">

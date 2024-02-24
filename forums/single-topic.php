@@ -5,7 +5,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
     <header class="kd-header kd-box-1">
         <div class="container">
             <div class="bg-image bg-image-parallax">
-                <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <img src="<?php echo $_CONFIG['forumsurl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
                 <div style="background-color: rgba(27, 27, 27, .8);"></div>
             </div>
             <div class="row justify-content-center">
@@ -45,7 +45,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-comment kd-topic-comment">
                                 <div>
                                     <div class="kd-comment-img">
-                                        <img src="assets/images/avatar-1.png" alt="">
+                                        <img src="<?php echo $_CONFIG['forumsurl']; ?>/assets/images/avatar-1.png" alt="">
                                     </div>
                                     <div class="kd-comment-cont">
                                         <div class="kd-comment-head">
@@ -62,7 +62,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-comment kd-topic-comment">
                                 <div>
                                     <div class="kd-comment-img">
-                                        <img src="assets/images/avatar-default.svg" alt="">
+                                        <img src="<?php echo $_CONFIG['forumsurl']; ?>/assets/images/avatar-default.svg" alt="">
                                     </div>
                                     <div class="kd-comment-cont">
                                         <div class="kd-comment-head">

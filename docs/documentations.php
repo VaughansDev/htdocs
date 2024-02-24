@@ -5,7 +5,7 @@
             <header class="kd-header kd-box-1">
                 <div class="container">
                     <div class="bg-image bg-image-parallax">
-                        <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                        <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
                         <div style="background-color: rgba(27, 27, 27, .8);"></div>
                     </div>
                     <div class="row justify-content-center">
@@ -30,7 +30,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-1-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-1-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Quantial – Moving Upon Signs Moveth Lesser</span>
                             </a>
@@ -38,7 +38,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-2-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-2-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Sensific – Saying Beast Lesser for in Fruitful</span>
                             </a>
@@ -46,7 +46,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-3-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-3-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Minist – Subdue Above for Signs Dry is Have Great</span>
                             </a>
@@ -54,7 +54,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-4-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-4-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Desty – She&#39;d Under Light Over Multiply Stars Winged</span>
                             </a>
@@ -62,7 +62,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-5-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-5-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Silies – Grass Living Fly Subdue After Fruitful</span>
                             </a>
@@ -70,7 +70,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-6-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-6-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Interra – Evening Were Set Beginning Image That One</span>
                             </a>
@@ -78,7 +78,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-7-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-7-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Explora – Open Winged Lights Spirit Very Subdue</span>
                             </a>
@@ -86,7 +86,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-8-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-8-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Thoute – Yielding Land Fill Gathering Midst Second</span>
                             </a>
@@ -94,7 +94,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-9-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-9-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Accountry – Saying Gathering Image Above Dominion</span>
                             </a>
@@ -102,7 +102,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-10-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-10-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Mained – Third Lights Greater Were Morning</span>
                             </a>
@@ -110,7 +110,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-11-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-11-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Treate – Blessed Which Give May Make Life Sea Days</span>
                             </a>
@@ -118,7 +118,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="single-documentation.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-12-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/product-12-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Priety – Living Given Night a in Itself Lesser Fowl</span>
                             </a>

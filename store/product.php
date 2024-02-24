@@ -4,7 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 <div class="kd-main">
     <header class="kd-header kd-box-5">
         <div class="bg-image bg-image-parallax">
-            <img src="assets/images/bg-header-2.png" class="jarallax-img" alt="">
+            <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/bg-header-2.png" class="jarallax-img" alt="">
             <div style="background-color: rgba(27, 27, 27, .8);"></div>
         </div>
         <div class="container mnb-8">
@@ -24,40 +24,40 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 <div class="col-lg-8">
                     <div class="kd-box kd-box-decorated">
                         <div class="kd-gallery p-10">
-                            <a href="assets/images/product-1-lg.png" data-fancybox="images" class="kd-gallery-item">
+                            <a href="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-1-lg.png" data-fancybox="images" class="kd-gallery-item">
                                 <span class="kd-gallery-item-overlay"><span class="icon pe-7s-exapnd2"></span></span>
-                                <img src="assets/images/product-1.png" class="kd-img" alt="">
+                                <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-1.png" class="kd-img" alt="">
                             </a>
                             <div class="swiper-container kd-slider kd-slider-gallery mt-10" data-swiper-speed="800" data-swiper-space="10" data-swiper-slides="4" data-swiper-pagination-scrollbar="true">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="assets/images/product-2-lg.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-2-lg.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-sm"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/product-2-md.png" alt="">
+                                            <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-2-md.png" alt="">
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="assets/images/product-3-lg.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-3-lg.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-sm"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/product-3-md.png" alt="">
+                                            <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-3-md.png" alt="">
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="assets/images/product-4-lg.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-4-lg.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-sm"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/product-4-md.png" alt="">
+                                            <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-4-md.png" alt="">
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="assets/images/product-5-lg.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-5-lg.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-sm"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/product-5-md.png" alt="">
+                                            <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-5-md.png" alt="">
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="assets/images/product-6-lg.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-6-lg.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-sm"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/product-6-md.png" alt="">
+                                            <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-6-md.png" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                                 <div class="tab-content kd-tab-content">
                                     <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                                         <p class="mnt-5 mb-40">One after fowl own let over replenish spirit. Created together tree you're given creeping. Image gathered they're meat whose i us rule fish Morning you're wherein. Brought without Image darkness fifth isn't signs may. Divide cattle forth hath living.</p>
-                                        <img src="assets/images/product-2.png" alt="" class="kd-img mb-50">
+                                        <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-2.png" alt="" class="kd-img mb-50">
                                         <h3 class="h5">Features List</h3>
                                         <ul class="kd-blog-post-list mnb-8">
                                             <li>Fish he moveth of.</li>
@@ -158,7 +158,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-comment">
                             <div>
                                 <div class="kd-comment-img">
-                                    <img src="assets/images/avatar-1.png" alt="">
+                                    <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/avatar-1.png" alt="">
                                 </div>
                                 <div class="kd-comment-cont">
                                     <a href="#" class="kd-comment-name">John Leonard</a>
@@ -172,7 +172,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-comment">
                                 <div>
                                     <div class="kd-comment-img">
-                                        <img src="assets/images/avatar-2.png" alt="">
+                                        <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/avatar-2.png" alt="">
                                     </div>
                                     <div class="kd-comment-cont">
                                         <a href="#" class="kd-comment-name">Mercy Shields</a>
@@ -188,7 +188,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-comment">
                             <div>
                                 <div class="kd-comment-img">
-                                    <img src="assets/images/avatar-3.png" alt="">
+                                    <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/avatar-3.png" alt="">
                                 </div>
                                 <div class="kd-comment-cont">
                                     <a href="#" class="kd-comment-name">Maria Anthony</a>
@@ -266,35 +266,35 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-widget kd-box kd-box-decorated">
                             <div class="kd-widget-title"> Related Products </div>
                             <a href="product.php" class="kd-widget-products">
-                                <span class="kd-widget-products-img"><img src="assets/images/product-1-sm.png" alt=""></span>
+                                <span class="kd-widget-products-img"><img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-1-sm.png" alt=""></span>
                                 <span class="kd-widget-products-text">
                                     <span class="kd-widget-products-title">Sensific – Saying Beast Lesser for in Fruitful</span>
                                     <span class="kd-widget-products-price">$59</span>
                                 </span>
                             </a>
                             <a href="product.php" class="kd-widget-products">
-                                <span class="kd-widget-products-img"><img src="assets/images/product-2-sm.png" alt=""></span>
+                                <span class="kd-widget-products-img"><img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-2-sm.png" alt=""></span>
                                 <span class="kd-widget-products-text">
                                     <span class="kd-widget-products-title">Minist – Subdue Above for Signs Dry is Have Great</span>
                                     <span class="kd-widget-products-price">$39</span>
                                 </span>
                             </a>
                             <a href="product.php" class="kd-widget-products">
-                                <span class="kd-widget-products-img"><img src="assets/images/product-3-sm.png" alt=""></span>
+                                <span class="kd-widget-products-img"><img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-3-sm.png" alt=""></span>
                                 <span class="kd-widget-products-text">
                                     <span class="kd-widget-products-title">Desty – She'd Under Light Over Multiply Stars Winged</span>
                                     <span class="kd-widget-products-price">$99</span>
                                 </span>
                             </a>
                             <a href="product.php" class="kd-widget-products">
-                                <span class="kd-widget-products-img"><img src="assets/images/product-4-sm.png" alt=""></span>
+                                <span class="kd-widget-products-img"><img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-4-sm.png" alt=""></span>
                                 <span class="kd-widget-products-text">
                                     <span class="kd-widget-products-title">Silies – Grass Living Fly Subdue After Fruitful</span>
                                     <span class="kd-widget-products-price">$99</span>
                                 </span>
                             </a>
                             <a href="product.php" class="kd-widget-products">
-                                <span class="kd-widget-products-img"><img src="assets/images/product-5-sm.png" alt=""></span>
+                                <span class="kd-widget-products-img"><img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-5-sm.png" alt=""></span>
                                 <span class="kd-widget-products-text">
                                     <span class="kd-widget-products-title">Interra – Evening Were Set Beginning Image That One</span>
                                     <span class="kd-widget-products-price">$59</span>

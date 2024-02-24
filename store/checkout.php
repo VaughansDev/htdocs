@@ -4,7 +4,7 @@
         <div class="kd-main">
             <header class="kd-header kd-box-5">
                 <div class="bg-image bg-image-parallax">
-                    <img src="assets/images/bg-header-2.png" class="jarallax-img" alt="">
+                    <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/bg-header-2.png" class="jarallax-img" alt="">
                     <div style="background-color: rgba(27, 27, 27, .8);"></div>
                 </div>
                 <div class="container mnb-8">
@@ -37,7 +37,7 @@
                                             <tr>
                                                 <th scope="row" class="kd-table-checkout-img">
                                                     <a href="product.php">
-                                                        <img src="assets/images/product-1-sm.png" alt="">
+                                                        <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-1-sm.png" alt="">
                                                     </a>
                                                 </th>
                                                 <td class="kd-table-checkout-title">
@@ -62,7 +62,7 @@
                                             <tr>
                                                 <th scope="row" class="kd-table-checkout-img">
                                                     <a href="product.php">
-                                                        <img src="assets/images/product-2-sm.png" alt="">
+                                                        <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/product-2-sm.png" alt="">
                                                     </a>
                                                 </th>
                                                 <td class="kd-table-checkout-title">
@@ -114,13 +114,13 @@
                                     <ul class="nav kd-tab kd-tab-payment mnt-10 row vertical-gap sm-gap" role="tablist">
                                         <li class="nav-item col-sm-6">
                                             <a class="nav-link active kd-tab-payment-method" id="card-tab" data-toggle="tab" href="#card" role="tab" aria-controls="card" aria-selected="true">
-                                                <img src="assets/images/payment-card.png" alt="">
+                                                <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/payment-card.png" alt="">
                                                 <span class="kd-tab-payment-method-text">Credit Card</span>
                                             </a>
                                         </li>
                                         <li class="nav-item col-sm-6">
                                             <a class="nav-link kd-tab-payment-method" id="paypal-tab" data-toggle="tab" href="#paypal" role="tab" aria-controls="paypal" aria-selected="false">
-                                                <img src="assets/images/payment-paypal.png" alt="">
+                                                <img src="<?php echo $_CONFIG['storeurl']; ?>/assets/images/payment-paypal.png" alt="">
                                             </a>
                                         </li>
                                     </ul>

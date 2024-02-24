@@ -5,7 +5,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
     <header class="kd-header kd-box-1">
         <div class="container">
             <div class="bg-image bg-image-parallax">
-                <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
                 <div style="background-color: rgba(27, 27, 27, .8);"></div>
             </div>
             <div class="row justify-content-center">
@@ -54,7 +54,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-comment kd-ticket-comment">
                                 <div>
                                     <div class="kd-comment-img">
-                                        <img src="assets/images/avatar-1.png" alt="">
+                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
                                     </div>
                                     <div class="kd-comment-cont">
                                         <a href="#" class="kd-comment-name">John Leonard</a>
@@ -63,7 +63,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                                             <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
                                         </div>
                                         <a href="#" class="kd-comment-file kd-comment-file-jpg">
-                                            <span class="kd-comment-file-img"><img src="assets/images/icon-jpg.svg" alt="" width="36"></span>
+                                            <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
                                             <span class="kd-comment-file-name">example-file.jpg</span>
                                             <span class="kd-comment-file-size">4.8 MB</span>
                                             <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
@@ -74,7 +74,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-comment kd-ticket-comment kd-comment-replied kd-comment-new">
                                 <div>
                                     <div class="kd-comment-img">
-                                        <img src="assets/images/avatar-default.svg" alt="">
+                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-default.svg" alt="">
                                     </div>
                                     <div class="kd-comment-cont">
                                         <a href="#" class="kd-comment-name"> Bruno Rice <span class="kd-comment-replied">Replied</span>

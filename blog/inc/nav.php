@@ -11,7 +11,7 @@
 <nav class="kd-navbar kd-navbar-top kd-navbar-collapse kd-navbar-sticky kd-navbar-expand-lg kd-navbar-dropdown-triangle kd-navbar-autohide">
     <div class="container">
         <a href="index-2.php" class="kd-nav-logo">
-            <img src="assets/images/logo.svg" alt="" width="88px">
+            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/logo.svg" alt="" width="88px">
         </a>
         <button class="kd-navbar-burger">
             <span></span><span></span><span></span>
@@ -134,7 +134,7 @@
                 <li class="kd-nav-item kd-nav-item-drop">
                     <a class="kd-nav-icon" href="#" role="button">
                         <span class="kd-nav-badge">2</span>
-                        <img class="icon" width="22" src="assets/images/icon-bag.svg">
+                        <img class="icon" width="22" src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/icon-bag.svg">
                     </a>
                     <div class="kd-navbar-dropdown kd-navbar-dropdown-left kd-dropdown-checkout">
                         <div class="kd-navbar-dropdown-triangle"></div>
@@ -142,7 +142,7 @@
                             <tbody>
                                 <tr>
                                     <th scope="row" class="kd-table-checkout-img">
-                                        <a href="product.php"><img src="assets/images/product-1-sm.png" alt=""></a>
+                                        <a href="product.php"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/product-1-sm.png" alt=""></a>
                                     </th>
                                     <td class="kd-table-checkout-title">
                                         <a href="product.php">Sensific – Saying Beast Lesser for in Fruitful</a>
@@ -156,7 +156,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row" class="kd-table-checkout-img">
-                                        <a href="product.php"><img src="assets/images/product-2-sm.png" alt=""></a>
+                                        <a href="product.php"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/product-2-sm.png" alt=""></a>
                                     </th>
                                     <td class="kd-table-checkout-title">
                                         <a href="product.php">Minist – Subdue Above for Signs Dry is Have Great</a>

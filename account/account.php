@@ -5,7 +5,7 @@
             <header class="kd-header kd-box-5">
                 <div class="container">
                     <div class="bg-image bg-image-parallax">
-                        <img src="assets/images/bg-header-5.png" class="jarallax-img" alt="">
+                        <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/bg-header-5.png" class="jarallax-img" alt="">
                         <div style="background-color: rgba(27, 27, 27, .8);"></div>
                     </div>
                     <div class="container mnb-8">
@@ -34,7 +34,7 @@
                     </div>
                     <a href="single-ticket.php" class="kd-ticket-item kd-ticket-new kd-ticket-open kd-block-decorated">
                         <span class="kd-ticket-img">
-                            <img src="assets/images/avatar-1.png" alt="">
+                            <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/avatar-1.png" alt="">
                         </span>
                         <span class="kd-ticket-cont">
                             <span class="kd-ticket-name"> John Leonard </span>
@@ -50,7 +50,7 @@
                     </a>
                     <a href="single-ticket.php" class="kd-ticket-item kd-ticket-closed kd-block-decorated">
                         <span class="kd-ticket-img">
-                            <img src="assets/images/avatar-default.svg" alt="">
+                            <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/avatar-default.svg" alt="">
                         </span>
                         <span class="kd-ticket-cont">
                             <span class="kd-ticket-name"> Bruno Rice </span>
@@ -81,7 +81,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="product.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-1-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/product-1-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Quantial – Moving Upon Signs Moveth Lesser</span>
                             </a>
@@ -89,7 +89,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="product.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-2-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/product-2-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Sensific – Saying Beast Lesser for in Fruitful</span>
                             </a>
@@ -97,7 +97,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="product.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-3-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/product-3-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Minist – Subdue Above for Signs Dry is Have Great</span>
                             </a>
@@ -105,7 +105,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="product.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-4-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/product-4-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Desty – She&#39;d Under Light Over Multiply Stars Winged</span>
                             </a>
@@ -113,7 +113,7 @@
                         <div class="col-12 col-md-6 col-lg-4">
                             <a href="product.php" class="kd-portfolio-item kd-portfolio-item-style-2 kd-block-decorated">
                                 <span class="kd-portfolio-item-img">
-                                    <img src="assets/images/product-5-sm.png" alt="">
+                                    <img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/product-5-sm.png" alt="">
                                 </span>
                                 <span class="kd-portfolio-item-title">Silies – Grass Living Fly Subdue After Fruitful</span>
                             </a>

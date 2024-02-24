@@ -4,7 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 <div class="kd-main">
     <header class="kd-header kd-box-5">
         <div class="bg-image bg-image-parallax">
-            <img src="assets/images/bg-header-3.png" class="jarallax-img" alt="">
+            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/bg-header-3.png" class="jarallax-img" alt="">
             <div style="background-color: rgba(27, 27, 27, .8);"></div>
         </div>
         <div class="container mnb-8">
@@ -28,9 +28,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 <div class="col-lg-8">
                     <div class="kd-blog-post kd-box kd-box-decorated">
                         <div class="kd-gallery pt-10 pr-10 pl-10">
-                            <a href="assets/images/blog-3.png" data-fancybox="images" class="kd-gallery-item">
+                            <a href="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-3.png" data-fancybox="images" class="kd-gallery-item">
                                 <span class="kd-gallery-item-overlay"><span class="icon pe-7s-exapnd2"></span></span>
-                                <img src="assets/images/blog-3.png" class="kd-img" alt="">
+                                <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-3.png" class="kd-img" alt="">
                             </a>
                         </div>
                         <div class="kd-blog-post-box">
@@ -55,27 +55,27 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-gallery">
                                 <div class="row vertical-gap">
                                     <div class="col-6">
-                                        <a href="assets/images/blog-1.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-1.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/blog-1-md.png" class="kd-img" alt="">
+                                            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-1-md.png" class="kd-img" alt="">
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="assets/images/blog-2.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-2.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/blog-2-md.png" class="kd-img" alt="">
+                                            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-2-md.png" class="kd-img" alt="">
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="assets/images/blog-4.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-4.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/blog-4-md.png" class="kd-img" alt="">
+                                            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-4-md.png" class="kd-img" alt="">
                                         </a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="assets/images/blog-5.png" data-fancybox="images" class="kd-gallery-item">
+                                        <a href="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-5.png" data-fancybox="images" class="kd-gallery-item">
                                             <span class="kd-gallery-item-overlay kd-gallery-item-overlay-md"><span class="icon pe-7s-exapnd2"></span></span>
-                                            <img src="assets/images/blog-5-md.png" class="kd-img" alt="">
+                                            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-5-md.png" class="kd-img" alt="">
                                         </a>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-comment">
                             <div>
                                 <div class="kd-comment-img">
-                                    <img src="assets/images/avatar-1.png" alt="">
+                                    <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/avatar-1.png" alt="">
                                 </div>
                                 <div class="kd-comment-cont">
                                     <a href="#" class="kd-comment-name">John Leonard</a>
@@ -146,7 +146,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-comment">
                                 <div>
                                     <div class="kd-comment-img">
-                                        <img src="assets/images/avatar-2.png" alt="">
+                                        <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/avatar-2.png" alt="">
                                     </div>
                                     <div class="kd-comment-cont">
                                         <a href="#" class="kd-comment-name">Mercy Shields</a>
@@ -162,7 +162,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-comment">
                             <div>
                                 <div class="kd-comment-img">
-                                    <img src="assets/images/avatar-3.png" alt="">
+                                    <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/avatar-3.png" alt="">
                                 </div>
                                 <div class="kd-comment-cont">
                                     <a href="#" class="kd-comment-name">Maria Anthony</a>
@@ -234,14 +234,14 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-widget kd-box kd-box-decorated">
                             <div class="kd-widget-title"> Latest Posts </div>
                             <a href="single-post.php" class="kd-widget-post">
-                                <span class="kd-widget-post-img"><img src="assets/images/blog-3-sm.png" alt=""></span>
+                                <span class="kd-widget-post-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-3-sm.png" alt=""></span>
                                 <span class="kd-widget-post-text">
                                     <span class="kd-widget-post-title">The Big Thing in Design</span>
                                     <span class="kd-widget-post-date">25 Sep 2018</span>
                                 </span>
                             </a>
                             <a href="single-post.php" class="kd-widget-post">
-                                <span class="kd-widget-post-img"><img src="assets/images/blog-1-sm.png" alt=""></span>
+                                <span class="kd-widget-post-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-1-sm.png" alt=""></span>
                                 <span class="kd-widget-post-text">
                                     <span class="kd-widget-post-title">Will Coding Ever Rule the World?</span>
                                     <span class="kd-widget-post-date">24 Sep 2018</span>

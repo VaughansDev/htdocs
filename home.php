@@ -4,7 +4,7 @@
         <div class="kd-main">
             <header class="kd-header kd-box-4">
                 <div class="bg-image bg-image-parallax">
-                    <img src="assets/images/bg-header.png" class="jarallax-img" alt="">
+                    <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/bg-header.png" class="jarallax-img" alt="">
                     <div style="background-color: rgba(27, 27, 27, .75);"></div>
                 </div>
                 <div class="container">
@@ -61,7 +61,7 @@
                                     <div class="kd-feature-title">Easy Setup</div>
                                     <div class="kd-feature-text">We make our products easy to setup and customize.</div>
                                 </div>
-                                <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+                                <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
@@ -73,7 +73,7 @@
                                     <div class="kd-feature-title">Perfect Design</div>
                                     <div class="kd-feature-text">Choose our solutions and your website will be in a trend always.</div>
                                 </div>
-                                <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+                                <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
@@ -85,7 +85,7 @@
                                     <div class="kd-feature-title">Lifetime Updates</div>
                                     <div class="kd-feature-text">We improve our products after release and you will get it for free.</div>
                                 </div>
-                                <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+                                <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
@@ -97,7 +97,7 @@
                                     <div class="kd-feature-title">Freebies</div>
                                     <div class="kd-feature-text">Not only paid products, but also freebies available.</div>
                                 </div>
-                                <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+                                <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
@@ -109,7 +109,7 @@
                                     <div class="kd-feature-title">Clean Code</div>
                                     <div class="kd-feature-text">All our products provided with best code quality and high performance.</div>
                                 </div>
-                                <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+                                <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                             </div>
                         </div>
                         <div class="col-12 col-md-6 col-lg-4">
@@ -121,7 +121,7 @@
                                     <div class="kd-feature-title">Outstanding Support</div>
                                     <div class="kd-feature-text">We provide fast and professional support through support system.</div>
                                 </div>
-                                <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-dark.svg');"></span>
+                                <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                             </div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                         <a href="#" class="kd-btn kd-btn-lg">View Our Products</a>
                     </div>
                     <div class="kd-box-1">
-                        <span class="kd-decorated" style="background-image: url('assets/images/decorated-pattern-light.svg');"></span>
+                        <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-light.svg');"></span>
                     </div>
                     <!--<h2 class="text-center mb-40">Reviews</h2>
                     <div class="kd-box">

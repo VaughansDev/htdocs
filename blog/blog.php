@@ -4,7 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 <div class="kd-main">
     <header class="kd-header kd-box-5">
         <div class="bg-image bg-image-parallax">
-            <img src="assets/images/bg-header-3.png" class="jarallax-img" alt="">
+            <img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/bg-header-3.png" class="jarallax-img" alt="">
             <div style="background-color: rgba(27, 27, 27, .8);"></div>
         </div>
         <div class="container mnb-8">
@@ -26,7 +26,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
             <div class="row vertical-gap md-gap">
                 <div class="col-lg-8">
                     <div class="kd-blog-item kd-box kd-box-decorated">
-                        <a href="single-post.php" class="kd-blog-item-img"><img src="assets/images/blog-3.png" alt=""></a>
+                        <a href="single-post.php" class="kd-blog-item-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-3.png" alt=""></a>
                         <div class="kd-blog-item-cont">
                             <h2 class="h3 kd-blog-item-title"><a href="single-post.php">The Big Thing in Design</a></h2>
                             <ul class="kd-blog-item-info">
@@ -45,7 +45,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         </div>
                     </div>
                     <div class="kd-blog-item kd-box kd-box-decorated">
-                        <a href="single-post.php" class="kd-blog-item-img"><img src="assets/images/blog-1.png" alt=""></a>
+                        <a href="single-post.php" class="kd-blog-item-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-1.png" alt=""></a>
                         <div class="kd-blog-item-cont">
                             <h2 class="h3 kd-blog-item-title"><a href="single-post.php">Will Coding Ever Rule the World?</a></h2>
                             <ul class="kd-blog-item-info">
@@ -64,7 +64,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         </div>
                     </div>
                     <div class="kd-blog-item kd-box kd-box-decorated">
-                        <a href="single-post.php" class="kd-blog-item-img"><img src="assets/images/blog-2.png" alt=""></a>
+                        <a href="single-post.php" class="kd-blog-item-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-2.png" alt=""></a>
                         <div class="kd-blog-item-cont">
                             <h2 class="h3 kd-blog-item-title"><a href="single-post.php">Master Your Vision in 3 Simple Steps</a></h2>
                             <ul class="kd-blog-item-info">
@@ -83,7 +83,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         </div>
                     </div>
                     <div class="kd-blog-item kd-box kd-box-decorated">
-                        <a href="single-post.php" class="kd-blog-item-img"><img src="assets/images/blog-4.png" alt=""></a>
+                        <a href="single-post.php" class="kd-blog-item-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-4.png" alt=""></a>
                         <div class="kd-blog-item-cont">
                             <h2 class="h3 kd-blog-item-title"><a href="single-post.php">The Beginning of The Journey</a></h2>
                             <ul class="kd-blog-item-info">
@@ -147,14 +147,14 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <div class="kd-widget kd-box kd-box-decorated">
                             <div class="kd-widget-title"> Latest Posts </div>
                             <a href="single-post.php" class="kd-widget-post">
-                                <span class="kd-widget-post-img"><img src="assets/images/blog-3-sm.png" alt=""></span>
+                                <span class="kd-widget-post-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-3-sm.png" alt=""></span>
                                 <span class="kd-widget-post-text">
                                     <span class="kd-widget-post-title">The Big Thing in Design</span>
                                     <span class="kd-widget-post-date">25 Sep 2018</span>
                                 </span>
                             </a>
                             <a href="single-post.php" class="kd-widget-post">
-                                <span class="kd-widget-post-img"><img src="assets/images/blog-1-sm.png" alt=""></span>
+                                <span class="kd-widget-post-img"><img src="<?php echo $_CONFIG['blogurl']; ?>/assets/images/blog-1-sm.png" alt=""></span>
                                 <span class="kd-widget-post-text">
                                     <span class="kd-widget-post-title">Will Coding Ever Rule the World?</span>
                                     <span class="kd-widget-post-date">24 Sep 2018</span>

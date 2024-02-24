@@ -5,7 +5,7 @@
             <header class="kd-header kd-box-5">
                 <div class="container">
                     <div class="bg-image bg-image-parallax">
-                        <img src="assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                        <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
                         <div style="background-color: rgba(27, 27, 27, .8);"></div>
                     </div>
                     <div class="row justify-content-center">
@@ -92,9 +92,9 @@
                                     <div class="kd-blog-post-box">
                                         <p>Kind said evening make. Divide good third saying. Subdue darkness created fill moveth bring green yielding rule, whose called Morning beginning was. It our years sea place fly saw yielding.</p>
                                         <p>Divided man that gathered greater she'd fly two very. Third sea that Had sixth won't they're lesser i give wherein there, green shall behold moving moveth rule itself saying so.</p>
-                                        <p class="mb-50"><code>assets/css/example.css</code> – Tree you'll life abundantly dry thing divide air were beginning.</p>
+                                        <p class="mb-50"><code><?php echo $_CONFIG['docsurl']; ?>/assets/css/example.css</code> – Tree you'll life abundantly dry thing divide air were beginning.</p>
                                         <h3 class="h5">Commented Code</h3>
-                                        <p>Herb day fifth moved likeness living image. Fourth void male from saw fly Fill so had thing us good you – <code>assets/js/example.js</code></p>
+                                        <p>Herb day fifth moved likeness living image. Fourth void male from saw fly Fill so had thing us good you – <code><?php echo $_CONFIG['docsurl']; ?>/assets/js/example.js</code></p>
                                         <code class="kd-gist" data-gist-id="a00300c1a3a9c2b66fc09e3c4083c62f" data-gist-file="contact-form.php"></code>
                                     </div>
                                     <div class="kd-separator"></div>
