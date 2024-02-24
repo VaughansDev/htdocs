@@ -207,7 +207,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         </div>
                     </div>
                     <ul class="kd-pagination mt-40">
-                        <li class="kd-pagination-icon"><a href="#"><span class="icon pe-7s-angle-left"></span></a></li>
+                        <li class="kd-pagination-icon"><a href="#"><i class="fa-solid fa-angle-left"></i></span></a></li>
                         <li><a href="#">1</a></li>
                         <li class="kd-pagination-space">...</li>
                         <li><a href="#">8</a></li>
@@ -215,7 +215,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                         <li><a href="#">10</a></li>
                         <li class="kd-pagination-space">...</li>
                         <li><a href="#">18</a></li>
-                        <li class="kd-pagination-icon"><a href="#"><span class="icon pe-7s-angle-right"></span></a></li>
+                        <li class="kd-pagination-icon"><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">

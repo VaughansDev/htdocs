@@ -123,35 +123,35 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <ul class="kd-widget-categories">
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"> </i>
                                         <span class="kd-widget-categories-category">Quantial</span>
                                         <span class="kd-widget-categories-badge">(4)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"> </i>
                                         <span class="kd-widget-categories-category">Sensific</span>
                                         <span class="kd-widget-categories-badge">(4)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"> </i>
                                         <span class="kd-widget-categories-category">Minist</span>
                                         <span class="kd-widget-categories-badge">(8)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"> </i>
                                         <span class="kd-widget-categories-category">Desty</span>
                                         <span class="kd-widget-categories-badge">(2)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Silies</span>
                                         <span class="kd-widget-categories-badge">(3)</span>
                                     </a>

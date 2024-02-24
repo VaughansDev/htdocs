@@ -203,28 +203,28 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <ul class="kd-widget-categories">
                                 <li>
                                     <a href="single-article-category.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Design & Coding</span>
                                         <span class="kd-widget-categories-badge">(12)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article-category.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">News</span>
                                         <span class="kd-widget-categories-badge">(8)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article-category.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Inspirations</span>
                                         <span class="kd-widget-categories-badge">(2)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article-category.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Theme Reviews</span>
                                         <span class="kd-widget-categories-badge">(14)</span>
                                     </a>

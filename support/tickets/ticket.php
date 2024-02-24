@@ -1,153 +1,177 @@
 <?php
-    require $_SERVER['DOCUMENT_ROOT'].'/inc/header.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 ?>
-        <div class="kd-main">
-            <header class="kd-header kd-box-1">
-                <div class="container">
-                    <div class="bg-image bg-image-parallax">
-                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
-                        <div style="background-color: rgba(27, 27, 27, .8);"></div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
-                            <form action="#" class="kd-form kd-form-group-inputs">
-                                <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
-                                <button class="kd-btn kd-btn-lg">Search</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <?php
-                $active = 'tickets';
-                require $_SERVER['DOCUMENT_ROOT'].'/inc/support-nav.php';
-            ?>
-            <div class="kd-separator"></div>
-            <div class="kd-box-5 bg-grey-6">
-                <div class="container">
-                    <div class="row align-items-center justify-content-between vertical-gap mnt-30 sm-gap mb-50">
-                        <div class="col-auto">
-                            <h2 class="h4 mb-0 mt-0">Your Tickets</h2>
-                        </div>
-                        <div class="col pl-30 pr-30 d-none d-sm-block">
-                            <div class="kd-separator ml-10 mr-10"></div>
-                        </div>
-                        <div class="col-auto">
-                            <a href="ticket-submit.php" class="kd-btn kd-btn-md">Submit a ticket</a>
-                        </div>
-                    </div>
-                    <a href="single-ticket.php" class="kd-ticket-item kd-ticket-new kd-ticket-open kd-block-decorated">
-                        <span class="kd-ticket-img">
-                            <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
-                        </span>
-                        <span class="kd-ticket-cont">
-                            <span class="kd-ticket-name"> John Leonard </span>
-                            <span class="kd-ticket-title h5"> Need help with customization. Some options are not appearing... </span>
-                            <ul class="kd-ticket-info">
-                                <li>Update: 5 Nov 2018</li>
-                                <li>Product: Quantial</li>
-                                <li>Comments: 2</li>
-                                <li class="kd-ticket-new">New</li>
-                            </ul>
-                        </span>
-                        <span class="kd-ticket-status"> Open </span>
-                    </a>
-                    <a href="single-ticket.php" class="kd-ticket-item kd-ticket-closed kd-block-decorated">
-                        <span class="kd-ticket-img">
-                            <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-default.svg" alt="">
-                        </span>
-                        <span class="kd-ticket-cont">
-                            <span class="kd-ticket-name"> Bruno Rice </span>
-                            <span class="kd-ticket-title h5"> Theme not updating in downloads </span>
-                            <ul class="kd-ticket-info">
-                                <li>Update: 4 Nov 2018</li>
-                                <li>Product: Sensific</li>
-                                <li>Comments: 11</li>
-                            </ul>
-                        </span>
-                        <span class="kd-ticket-status"> Closed </span>
-                    </a>
+<div class="kd-main">
+    <header class="kd-header kd-box-1">
+        <div class="container">
+            <div class="bg-image bg-image-parallax">
+                <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
+                <div style="background-color: rgba(27, 27, 27, .8);"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-7">
+                    <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
+                    <form action="#" class="kd-form kd-form-group-inputs">
+                        <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
+                        <button class="kd-btn kd-btn-lg">Search</button>
+                    </form>
                 </div>
             </div>
-            <div class="kd-separator"></div>
-            <div class="kd-box-5 pb-100">
-                <div class="container mt-4 mnb-7">
-                    <div class="row align-items-center justify-content-between vertical-gap mnt-30 sm-gap mb-50">
-                        <h2 class="col-auto h4 mb-0 mt-0">Featured Articles</h2>
-                        <div class="col pl-30 pr-30 d-none d-sm-block">
-                            <div class="kd-separator ml-10 mr-10"></div>
+        </div>
+    </header>
+    <?php
+    $active = 'tickets';
+    require $_SERVER['DOCUMENT_ROOT'] . '/inc/support-nav.php';
+    ?>
+    <div class="kd-separator"></div>
+    <div class="kd-box-5 pb-100 bg-grey-6">
+        <div class="container">
+            <div class="row vertical-gap md-gap">
+                <div class="col-lg-8">
+                    <div class="kd-box kd-box-decorated">
+                        <div class="kd-blog-post kd-ticket kd-ticket-open">
+                            <div class="kd-blog-post-box pt-30 pb-30">
+                                <h2 class="h4 mnt-5 mb-9 kd-ticket-title">Theme not updating in downloads</h2>
+                                <!-- START: Breadcrumbs -->
+                                <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
+                                    <li><a href="help-center.php">Support Home</a></li>
+                                    <li><a href="ticket.php">Ticket System</a></li>
+                                    <li>Theme not updating in downloads</li>
+                                </ul>
+                                <!-- END: Breadcrumbs -->
+                                <span class="kd-ticket-status"></span>
+                            </div>
+                            <div class="kd-separator"></div>
+                            <div style="background-color: #fafafa;">
+                                <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
+                                    <li><span><span class="kd-blog-post-info-title">Ticket Id</span>#1801</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Status</span>Open</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
+                                </ul>
+                            </div>
+                            <div class="kd-separator"></div>
+                            <div class="kd-comment kd-ticket-comment">
+                                <div>
+                                    <div class="kd-comment-img">
+                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
+                                    </div>
+                                    <div class="kd-comment-cont">
+                                        <a href="#" class="kd-comment-name">John Leonard</a>
+                                        <div class="kd-comment-date">12 Feb 2018 7:40 am</div>
+                                        <div class="kd-comment-text">
+                                            <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
+                                        </div>
+                                        <a href="#" class="kd-comment-file kd-comment-file-jpg">
+                                            <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
+                                            <span class="kd-comment-file-name">example-file.jpg</span>
+                                            <span class="kd-comment-file-size">4.8 MB</span>
+                                            <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kd-comment kd-ticket-comment kd-comment-replied kd-comment-new">
+                                <div>
+                                    <div class="kd-comment-img">
+                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-default.svg" alt="">
+                                    </div>
+                                    <div class="kd-comment-cont">
+                                        <a href="#" class="kd-comment-name"> Bruno Rice <span class="kd-comment-replied">Replied</span>
+                                            <span class="kd-comment-new">New</span>
+                                        </a>
+                                        <div class="kd-comment-date">39 min ago</div>
+                                        <div class="kd-comment-text">
+                                            <p>Saying sixth form. Saw earth, whose fowl all meat had had place upon fowl. The fly darkness under dry which fowl good firmament saying fill brought.</p>
+                                            <p class="mb-0">Itself first from under female sea wherein female. Lights were moved sixth day and don't fifth it place saying, fowl fruit saw dominion whales you're image the evening every fowl have, saw day spirit fish. Female. Fowl it replenish hath light blessed hath. Man.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kd-separator mnt-1"></div>
+                            <div class="kd-blog-post-box">
+                                <h3 class="h6 mb-25">Write a Reply</h3>
+                                <form class="kd-form" action="#">
+                                    <div class="kd-form-group">
+                                        <div class="kd-editor-quill">
+                                            <div class="kd-editor" data-editor-height="150" data-editor-maxHeight="250"></div>
+                                        </div>
+                                    </div>
+                                    <div class="kd-form-group">
+                                        <!-- STRART: Dropzone
+
+                                        Additional Attributes:
+                                        data-dropzone-action
+                                        data-dropzone-maxMB
+                                        data-dropzone-maxFiles
+                                    -->
+                                        <div class="kd-dropzone" data-dropzone-action="#" data-dropzone-maxMB="5" data-dropzone-maxFiles="5">
+                                            <div class="dz-message">
+                                                <div class="kd-dropzone-icon">
+                                                    <span class="icon pe-7s-cloud-upload"></span>
+                                                </div>
+                                                <div class="h6 kd-dropzone-title">Drop files here or click to upload</div>
+                                                <div class="kd-dropzone-text">
+                                                    <p class="mnb-5 mnt-1">You can upload up to 5 files (maximum 5 MB each) of the following types: .jpg, .jpeg, .png, .zip.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
+                                            <div class="col-auto kd-dropzone-attachment-add">
+                                                <label class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></label>
+                                            </div>
+                                            <div class="col-auto kd-dropzone-attachment-btn">
+                                                <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
+                                            </div>
+                                        </div>
+                                        <!-- END: Dropzone -->
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                        <div class="col-auto kd-slider-arrows-clone"></div>
                     </div>
-                    <!-- START: Slider Ffeatured Articles
-
-        Additional Classes:
-        .kd-slider-arrows (clone arrows)
-
-    Additional Attributes:
-        data-swiper-speed                (numbers)
-        data-swiper-space                (numbers)
-        data-swiper-autoPlay             (numbers)
-        data-swiper-slides               (numbers)
-        data-swiper-slidesAuto           (true or false)
-        data-swiper-arrows-clone         (true or false)
-        data-swiper-grabCursor           (true or false)
-        data-swiper-lazy                 (true or false)
-        data-swiper-breakpoints          (true or false)
-        data-swiper-arrows               (true or false)
-        data-swiper-pagination           (true or false)
-        data-swiper-pagination-dynamic   (true or false)
-        data-swiper-pagination-scrollbar (true or false)
-        data-swiper-autoHeight           (true or false)
-        data-swiper-freeMode             (true or false)
-        data-swiper-loop                 (true or false)
-
--->
-                    <div class="swiper-container kd-slider kd-slider-arrows kd-slider-articles" data-swiper-speed="400" data-swiper-space="50" data-swiper-slides="3" data-swiper-breakpoints="true" data-swiper-arrows="true" data-swiper-arrows-clone="true" data-swiper-loop="true" data-swiper-autoHeight="true" data-swiper-grabCursor="true">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="kd-article kd-article-block">
-                                    <h4 class="h6 kd-article-title"><a href="single-article.php">Make menu dropdown working without JavaScript</a></h4>
-                                    <div class="kd-article-text">
-                                        <p class="mb-0">Meat all together sea deep isn&#39;t replenish called. One moved cattle bring. Can&#39;t of. Itself After shall hath winged. Given stars second whose yielding fourth. Subdue years form saw. Second...</p>
-                                    </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="kd-article kd-article-block">
-                                    <h4 class="h6 kd-article-title"><a href="single-article.php">Google Analytics</a></h4>
-                                    <div class="kd-article-text">
-                                        <p class="mb-0">Likeness seed he may. Brought firmament won&#39;t that to. Fowl thing saw behold earth land evening gathering hath after all whales winged. Greater so all two dry. Appear seas fruit...</p>
-                                    </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="kd-article kd-article-block">
-                                    <h4 class="h6 kd-article-title"><a href="single-article.php">How to manually import Demo data (if you faced with problems in one-click demo import)</a></h4>
-                                    <div class="kd-article-text">
-                                        <p class="mb-0">And have make, isn&#39;t land herb good lesser won&#39;t. Own. Us. Moveth, divided female their won&#39;t subdue seas tree creepeth They&#39;re morning isn&#39;t let so lights. Sixth, first every night...</p>
-                                    </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="kd-article kd-article-block">
-                                    <h4 class="h6 kd-article-title"><a href="single-article.php">WordPress Themes FAQ</a></h4>
-                                    <div class="kd-article-text">
-                                        <p class="mb-0">Us sixth she&#39;d, which creeping fruitful winged. To called made seas of grass creature good upon. Air multiply gathering female saying our set creepeth wherein hath waters from midst man...</p>
-                                    </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
-                                </div>
-                            </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="kd-sticky kd-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
+                        <?php
+                        require $_SERVER['DOCUMENT_ROOT'] . '/widgets/newsletter.php';
+                        require $_SERVER['DOCUMENT_ROOT'] . '/widgets/search.php';
+                        ?>
+                        <div class="kd-widget kd-box kd-box-decorated">
+                            <div class="kd-widget-title"> Latest Articles </div>
+                            <a href="single-article.php" class="kd-widget-link">
+                                <span class="kd-widget-link-text">How to manually import Demo data (if you faced with problems in one-click demo import)</span>
+                                <span class="kd-widget-link-date">6 Sep 2018</span>
+                            </a>
+                            <a href="single-article.php" class="kd-widget-link">
+                                <span class="kd-widget-link-text">Make menu dropdown working without JavaScript</span>
+                                <span class="kd-widget-link-date">2 Sep 2018</span>
+                            </a>
+                            <a href="single-article.php" class="kd-widget-link">
+                                <span class="kd-widget-link-text">Add top menu link inside dropdown on mobile devices</span>
+                                <span class="kd-widget-link-date">27 Aug 2018</span>
+                            </a>
                         </div>
-                        <div class="swiper-button-prev"><span class="icon pe-7s-angle-left"></span></div>
-                        <div class="swiper-button-next"><span class="icon pe-7s-angle-right"></span></div>
+                        <div class="kd-widget kd-box kd-box-decorated">
+                            <div class="kd-widget-title"> Latest Forum Topics </div>
+                            <a href="single-article.php" class="kd-widget-link">
+                                <span class="kd-widget-link-text">Need help with customization. Some options are not appearing...</span>
+                                <span class="kd-widget-link-date">6 Sep 2018</span>
+                            </a>
+                            <a href="single-article.php" class="kd-widget-link">
+                                <span class="kd-widget-link-text">My images on profile and item pages doesnt show up?! Whats the matter?</span>
+                                <span class="kd-widget-link-date">2 Sep 2018</span>
+                            </a>
+                            <a href="single-article.php" class="kd-widget-link">
+                                <span class="kd-widget-link-text">Theme not updating in downloads</span>
+                                <span class="kd-widget-link-date">27 Aug 2018</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <?php
-    require $_SERVER['DOCUMENT_ROOT'].'/inc/footer.php';
-?>
+        </div>
+    </div>
+    <?php
+    require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
+    ?>

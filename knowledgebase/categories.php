@@ -47,28 +47,28 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                                     <div class="kd-article-text">
                                         <p class="mb-0">Meat all together sea deep isn&#39;t replenish called. One moved cattle bring. Can&#39;t of. Itself After shall hath winged. Given stars second whose yielding fourth. Subdue years form saw. Second...</p>
                                     </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
+                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <i class="fa-solid fa-caret-right"></i></a>
                                 </div>
                                 <div class="kd-article kd-article-block">
                                     <h4 class="h6 kd-article-title"><a href="single-article.php">Google Analytics</a></h4>
                                     <div class="kd-article-text">
                                         <p class="mb-0">Likeness seed he may. Brought firmament won&#39;t that to. Fowl thing saw behold earth land evening gathering hath after all whales winged. Greater so all two dry. Appear seas fruit...</p>
                                     </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
+                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <i class="fa-solid fa-caret-right"></i></a>
                                 </div>
                                 <div class="kd-article kd-article-block">
                                     <h4 class="h6 kd-article-title"><a href="single-article.php">How to manually import Demo data (if you faced with problems in one-click demo import)</a></h4>
                                     <div class="kd-article-text">
                                         <p class="mb-0">And have make, isn&#39;t land herb good lesser won&#39;t. Own. Us. Moveth, divided female their won&#39;t subdue seas tree creepeth They&#39;re morning isn&#39;t let so lights. Sixth, first every night...</p>
                                     </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
+                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <i class="fa-solid fa-caret-right"></i></a>
                                 </div>
                                 <div class="kd-article kd-article-block">
                                     <h4 class="h6 kd-article-title"><a href="single-article.php">WordPress Themes FAQ</a></h4>
                                     <div class="kd-article-text">
                                         <p class="mb-0">Us sixth she&#39;d, which creeping fruitful winged. To called made seas of grass creature good upon. Air multiply gathering female saying our set creepeth wherein hath waters from midst man...</p>
                                     </div>
-                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <span class="icon pe-7s-angle-right"></span></a>
+                                    <a href="single-article.php" class="kd-btn kd-btn-link d-flex kd-article-link">Read More <i class="fa-solid fa-caret-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -85,35 +85,35 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <ul class="kd-widget-categories">
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Quantial</span>
                                         <span class="kd-widget-categories-badge">(4)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Sensific</span>
                                         <span class="kd-widget-categories-badge">(4)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Minist</span>
                                         <span class="kd-widget-categories-badge">(8)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Desty</span>
                                         <span class="kd-widget-categories-badge">(2)</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="single-article.php">
-                                        <span class="icon pe-7s-angle-right"></span>
+                                        <i class="fa-solid fa-caret-right"></i>
                                         <span class="kd-widget-categories-category">Silies</span>
                                         <span class="kd-widget-categories-badge">(3)</span>
                                     </a>

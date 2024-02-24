@@ -7,8 +7,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     if ($result) {
         header("location: " . $_CONFIG['domain'] . "/home.php?mailist=success");
     } else {
-        header("location: " . $_CONFIG['domain'] . "/home.php?mailist=error");
+        header("location: ".$_CONFIG['domain']."/home.php?mailist=error");
     }
 } else {
-    header("location: " . $_CONFIG['domain'] . "/home.php?mailist=error");
+    header("location: ".$_CONFIG['domain']."/home.php?mailist=error");
 }
