@@ -2,7 +2,6 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/config.php';
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/titles.php';
-session_name('Khaos Development');
 session_set_cookie_params(
     time() + 3600,      // $lifetime
     '/',                // $path 

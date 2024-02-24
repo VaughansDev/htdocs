@@ -34,7 +34,6 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                 $result2 = mysqli_query($dbcon, $sql2);
                 if ($result2) {
 
-                    session_name('KhaosDevelopment');
                     session_set_cookie_params(
                         time() + 3600,      // $lifetime
                         '/',                // $path 
@@ -133,7 +132,6 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                 
                     mail($to, $subject, $message, $headers);
 
-                    session_name('KhaosDevelopment');
                     session_set_cookie_params(
                         time() + 3600,      // $lifetime
                         '/',                // $path 
