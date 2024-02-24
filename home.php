@@ -72,7 +72,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                                 <i class="fa-solid fa-gauge-high"></i>
                             </div>
                             <div class="kd-feature-title">Beautiful UIs</div>
-                            <div class="kd-feature-text">All of our Apps use Clean and Modern UIs.</div>
+                            <div class="kd-feature-text">All of our Web Applications use Clean and Modern UIs.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -119,7 +119,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <div class="kd-feature-icon">
                                 <i class="fa-solid fa-hand-holding-dollar"></i>
                             </div>
-                            <div class="kd-feature-title"></div>
+                            <div class="kd-feature-title">Reseller Program</div>
                             <div class="kd-feature-text">Take advantage of discounted licenses the more you sell.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
