@@ -132,7 +132,7 @@
                     <h2 class="text-center mb-60">Latest Products</h2>
                     <div class="row vertical-gap">
                         <?php
-                            require 'inc/featured-products.php';
+                            require $_SERVER['DOCUMENT_ROOT'] . '/inc/featured-products.php';
                         ?>
                     </div>
                     <div class="text-center mt-70">
