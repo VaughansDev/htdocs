@@ -2,23 +2,6 @@
     require $_SERVER['DOCUMENT_ROOT'].'/inc/header.php';
 ?>
         <div class="kd-main">
-            <header class="kd-header kd-box-1">
-                <div class="container">
-                    <div class="bg-image bg-image-parallax">
-                        <img src="<?php echo $_CONFIG['docsurl']; ?>/assets/images/bg-header-4.png" class="jarallax-img" alt="">
-                        <div style="background-color: rgba(27, 27, 27, .8);"></div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <h1 class="h2 mb-30 text-white text-center">How can we help you?</h1>
-                            <form action="#" class="kd-form kd-form-group-inputs">
-                                <input type="text" name="" value="" class="form-control" placeholder="Keyword search...">
-                                <button class="kd-btn kd-btn-lg">Search</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </header>
             <?php
                 $active = 'docs';
                 require $_SERVER['DOCUMENT_ROOT'].'/inc/support-nav.php';

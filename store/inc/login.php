@@ -37,7 +37,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $_SESSION['users_dicordlinked'] = $users_dicordlinked;
                     $_SESSION['loggedin'] = TRUE;
                     echo 'test';
-                    header("location: " . $_CONFIG['domain'] . "/dashboard.php");
+                    header("location: " . $_CONFIG['accounturl']);
                 } else {
                     $msg = urlencode("No account was found with that username.");
                     header("Location: " . $_CONFIG['domain'] . "/login.php?status=error&msg=" . $msg);
