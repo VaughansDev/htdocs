@@ -21,6 +21,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $stmt2->execute();
 
 
+                    session_name('KhaosDevelopment');
                     session_set_cookie_params(
                         time() + 3600,      // $lifetime
                         '/',                // $path 
@@ -74,7 +75,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_username = '$username'");
                 $stmt2->execute();
 
-                session_name('Khaos Development');
+                session_name('KhaosDevelopment');
                 session_set_cookie_params(
                     time() + 3600,      // $lifetime
                     '/',                // $path 
