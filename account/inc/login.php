@@ -1,7 +1,4 @@
 <?php
-session_name('Khaos Development');
-session_set_cookie_params(0, '/', '.khaosdevelopment.com');
-session_start();
 require 'dbcon.php';
 if (isset($_GET['method']) && $_GET['method'] == 'discord') {
     $discord_id = $_GET['discord_id'];
@@ -23,6 +20,9 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_accountid = '$accountid'");
                     $stmt2->execute();
 
+                    session_name('Khaos Development');
+                    session_set_cookie_params(0, '/', '.khaosdevelopment.com');
+                    session_start();
                     $_SESSION['id'] = $users_id;
                     $_SESSION['username'] = $users_username;
                     $_SESSION['firstname'] = $users_firstname;
@@ -36,20 +36,21 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $_SESSION['lastlogin'] = $users_lastlogin;
                     $_SESSION['users_dicordlinked'] = $users_dicordlinked;
                     $_SESSION['loggedin'] = TRUE;
+                    
                     echo 'test';
                     header("location: " . $_CONFIG['accounturl']);
                 } else {
                     $msg = urlencode("No account was found with that username.");
-                    header("Location: " . $_CONFIG['domain'] . "/login.php?status=error&msg=" . $msg);
+                    header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
                 }
             } else {
                 $msg = urlencode("No account was found with that username.");
-                header("Location: " . $_CONFIG['domain'] . "/login.php?status=error&msg=" . $msg);
+                header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
             }
         }
     } else {
         $msg = urlencode("An error occured while dbconecting to the database, please try again.");
-        header("Location: " . $_CONFIG['domain'] . "/login.php?status=error&msg=" . $msg);
+        header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
     }
 
     $stmt->close();
@@ -69,6 +70,9 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_username = '$username'");
                 $stmt2->execute();
 
+                session_name('Khaos Development');
+                session_set_cookie_params(0, '/', '.khaosdevelopment.com');
+                session_start();
                 $_SESSION['id'] = $users_id;
                 $_SESSION['username'] = $users_username;
                 $_SESSION['firstname'] = $users_firstname;
@@ -82,19 +86,19 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $_SESSION['lastlogin'] = $users_lastlogin;
                 $_SESSION['users_dicordlinked'] = $users_dicordlinked;
                 $_SESSION['loggedin'] = TRUE;
-                header("location: " . $_CONFIG['domain'] . "/dashboard.php");
+                header("location: " . $_CONFIG['accounturl']);
             }
         } else {
             $msg = urlencode("No account was found with that username.");
-            header("Location: " . $_CONFIG['domain'] . "/login.php?status=error&msg=" . $msg);
+            header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
         }
     } else {
         $msg = urlencode("An error occured while dbconecting to the database, please try again.");
-        header("Location: " . $_CONFIG['domain'] . "/login.php?status=error&msg=" . $msg);
+        header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
     }
 
     $stmt->close();
     mysqli_close($dbcon);
 } else {
-    header("Location: " . $_CONFIG['domain'] . "/login.php");
+    header("Location: " . $_CONFIG['accounturl'] . "/login.php");
 }
