@@ -57,7 +57,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <i class="fa-solid fa-pen-ruler fa-2x"></i>
+                                <i class="fa-solid fa-pen-ruler"></i>
                             </div>
                             <div class="kd-feature-title">Modern Design</div>
                             <div class="kd-feature-text">Beautiful and Modern Design in all of our Apps.</div>
@@ -69,7 +69,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                <i class="fa-solid fa-gauge-high"></i>
                             </div>
                             <div class="kd-feature-title">Beautiful UIs</div>
                             <div class="kd-feature-text">All of our Apps use Clean and Modern UIs.</div>
@@ -81,7 +81,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <i class="fa-solid fa-link fa-2x"></i>
+                                <i class="fa-solid fa-link"></i>
                             </div>
                             <div class="kd-feature-title">Fully Discord Integrated</div>
                             <div class="kd-feature-text">Webhooks Link our systems to your Discord server.</div>
@@ -93,7 +93,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <i class="fa-solid fa-ticket fa-2x"></i>
+                                <i class="fa-solid fa-ticket"></i>
                             </div>
                             <div class="kd-feature-title">Dedicated Support</div>
                             <div class="kd-feature-text">Brfore Buying, During Setup or Found a Bug. We're Here.</div>
@@ -105,7 +105,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <i class="fa-solid fa-server fa-2x"></i>
+                                <i class="fa-solid fa-server"></i>
                             </div>
                             <div class="kd-feature-title">Cloud Hosting</div>
                             <div class="kd-feature-text">Don't want to manage your system? We can for you.</div>
@@ -117,7 +117,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <i class="fa-solid fa-hand-holding-dollar fa-2x"></i>
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
                             </div>
                             <div class="kd-feature-title"></div>
                             <div class="kd-feature-text">Take advantage of discounted licenses the more you sell.</div>
