@@ -1,3 +1,3 @@
 <?php
-    header("location my-account.php");
+    header("location: my-account.php");
 ?>
