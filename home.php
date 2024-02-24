@@ -45,7 +45,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 </div>
                 <div class="col-lg-6">
                     <h2>Who we are</h2>
-                    <p class="mb-0">We a team of enthusiasts that creating powerful digital products, that help your businesses growth. For all products, we provide a year of support and lifetime security updates.</p>
+                    <p class="mb-0">We a team of gamers and developers who like to push the limits and create beautiful and functional web applications for gaming communities.</p>
                 </div>
             </div>
         </div>
@@ -57,10 +57,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <span class="icon pe-7s-edit"></span>
+                                <i class="fa-solid fa-pen-ruler fa-2x"></i>
                             </div>
-                            <div class="kd-feature-title">Easy Setup</div>
-                            <div class="kd-feature-text">We make our products easy to setup and customize.</div>
+                            <div class="kd-feature-title">Modern Design</div>
+                            <div class="kd-feature-text">Beautiful and Modern Design in all of our Apps.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -69,10 +69,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <span class="icon pe-7s-paint-bucket"></span>
+                                <i class="fa-solid fa-gauge-high fa-2x"></i>
                             </div>
-                            <div class="kd-feature-title">Perfect Design</div>
-                            <div class="kd-feature-text">Choose our solutions and your website will be in a trend always.</div>
+                            <div class="kd-feature-title">Beautiful UIs</div>
+                            <div class="kd-feature-text">All of our Apps use Clean and Modern UIs.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -81,10 +81,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <span class="icon pe-7s-timer"></span>
+                                <i class="fa-solid fa-link fa-2x"></i>
                             </div>
-                            <div class="kd-feature-title">Lifetime Updates</div>
-                            <div class="kd-feature-text">We improve our products after release and you will get it for free.</div>
+                            <div class="kd-feature-title">Fully Discord Integrated</div>
+                            <div class="kd-feature-text">Webhooks Link our systems to your Discord server.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -93,10 +93,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <span class="icon pe-7s-cloud-download"></span>
+                                <i class="fa-solid fa-ticket fa-2x"></i>
                             </div>
-                            <div class="kd-feature-title">Freebies</div>
-                            <div class="kd-feature-text">Not only paid products, but also freebies available.</div>
+                            <div class="kd-feature-title">Dedicated Support</div>
+                            <div class="kd-feature-text">Brfore Buying, During Setup or Found a Bug. We're Here.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -105,10 +105,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <span class="icon pe-7s-portfolio"></span>
+                                <i class="fa-solid fa-server fa-2x"></i>
                             </div>
-                            <div class="kd-feature-title">Clean Code</div>
-                            <div class="kd-feature-text">All our products provided with best code quality and high performance.</div>
+                            <div class="kd-feature-title">Cloud Hosting</div>
+                            <div class="kd-feature-text">Don't want to manage your system? We can for you.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -117,10 +117,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                     <div class="kd-feature kd-feature-2">
                         <div class="kd-feature-cont">
                             <div class="kd-feature-icon">
-                                <span class="icon pe-7s-headphones"></span>
+                                <i class="fa-solid fa-hand-holding-dollar fa-2x"></i>
                             </div>
-                            <div class="kd-feature-title">Outstanding Support</div>
-                            <div class="kd-feature-text">We provide fast and professional support through support system.</div>
+                            <div class="kd-feature-title"></div>
+                            <div class="kd-feature-text">Take advantage of discounted licenses the more you sell.</div>
                         </div>
                         <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-dark.svg');"></span>
                     </div>
@@ -273,7 +273,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 <div class="col-12 col-lg-10">
                     <div class="container">
                         <div class="kd-box-1">
-                            <h2 class="text-white">Latest Products</h2>
+                            <h2 class="text-white">Stay in the Loop</h2>
                             <p class="text-2">Join our newsletter to receive news, updates, new products and freebies in your inbox.</p>
                             <a data-fancybox data-touch="false" data-src="#subscribe" href="javascript:;" class="kd-btn kd-btn-lg kd-btn-transparent">Subscribe</a>
                         </div>
@@ -286,9 +286,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 <div class="col-12 col-lg-10">
                     <div class="container">
                         <div class="kd-box-1">
-                            <h2 class="text-white">Visit our Support Desk</h2>
+                            <h2 class="text-white">Visit our Support Center</h2>
                             <p class="text-white op-8">Need some help? Head over to our support center to quickly answer your questions.</p>
-                            <a href="help-center.php" class="kd-btn kd-btn-lg kd-btn-transparent">Get support</a>
+                            <a href="<?php echo $_CONFIG['supporturl']; ?>" class="kd-btn kd-btn-lg kd-btn-transparent">Get support</a>
                         </div>
                     </div>
                 </div>
