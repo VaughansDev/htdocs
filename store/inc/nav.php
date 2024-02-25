@@ -50,6 +50,9 @@
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/my-inovices.php"> My Invoices </a>
                             </li>
                             <li>
+                                <a class="kd-nav-link" href="<?php echo $_CONFIG['ticketsurl']; ?>"> My Tickets </a>
+                            </li>
+                            <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/settings.php"> Account Settings </a>
                             </li>
                             <li>
@@ -121,6 +124,9 @@
                             </li>
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/my-inovices.php"> My Invoices </a>
+                            </li>
+                            <li>
+                                <a class="kd-nav-link" href="<?php echo $_CONFIG['ticketsurl']; ?>"> My Tickets </a>
                             </li>
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/settings.php"> Account Settings </a>
