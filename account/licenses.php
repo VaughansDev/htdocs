@@ -1,5 +1,8 @@
 <?php
     require $_SERVER['DOCUMENT_ROOT'].'/inc/header.php';
+        if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) {
+            header("location: " . $_CONFIG['accounturl'] . "/login.php");
+        }
 ?>
         <div class="kd-main">
             <header class="kd-header kd-box-5">
