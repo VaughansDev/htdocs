@@ -36,6 +36,7 @@
                         <ul class="kd-widget-list">
                             <li><a href="<?php echo $_CONFIG['accounturl']; ?>help-center.php">My Account</a></li>
                             <li><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">My Licenses</a></li>
+                            <li><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">My Invoices</a></li>
                         </ul>
                     </div>
                 </div>
