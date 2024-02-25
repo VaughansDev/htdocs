@@ -1,9 +1,10 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
-    if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) {
-        header("location: " . $_CONFIG['accounturl'] . "/login.php");
-    }
-?>
+if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
+    <script>
+        window.location.href = "<?php echo $_CONFIG['accounturl']; ?>/login.php";
+    </script>
+<?php } ?>
 <div class="kd-main">
     <?php
     $active = 'tickets';

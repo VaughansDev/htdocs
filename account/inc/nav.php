@@ -17,11 +17,16 @@
                 <li class="kd-nav-item kd-nav-item-drop">
                     <a class="kd-nav-link" href="<?php echo $_CONFIG['cloudhosturl']; ?>"> Cloud Hosting </a>
                 </li>
-                <li class="kd-nav-item kd-nav-item-drop">
-                    <a class="kd-nav-link" href="<?php echo $_CONFIG['blogurl']; ?>"> Blog </a>
+                <!--<li class="kd-nav-item kd-nav-item-drop">
+                    <a class="kd-nav-link" href="<?php //echo $_CONFIG['blogurl']; 
+                                                    ?>"> Blog </a>
                 </li>
                 <li class="kd-nav-item kd-nav-item-drop">
-                    <a class="kd-nav-link" href="<?php echo $_CONFIG['supporturl']; ?>"> Help Center </a>
+                    <a class="kd-nav-link" href="<?php //echo $_CONFIG['domain']; 
+                                                    ?>/partners.php"> Our Partners </a>
+                </li>-->
+                <li class="kd-nav-item kd-nav-item-drop">
+                    <a class="kd-nav-link" href="<?php echo $_CONFIG['supporturl']; ?>"> Support </a>
                 </li>
             </ul>
             <ul class="kd-nav kd-nav-align-right">
@@ -78,11 +83,16 @@
                 <li class="kd-nav-item kd-nav-item-drop">
                     <a class="kd-nav-link" href="<?php echo $_CONFIG['cloudhosturl']; ?>"> Cloud Hosting </a>
                 </li>
-                <li class="kd-nav-item kd-nav-item-drop">
-                    <a class="kd-nav-link" href="<?php echo $_CONFIG['blogurl']; ?>"> Blog </a>
+                <!--<li class="kd-nav-item kd-nav-item-drop">
+                    <a class="kd-nav-link" href="<?php //echo $_CONFIG['blogurl']; 
+                                                    ?>"> Blog </a>
                 </li>
                 <li class="kd-nav-item kd-nav-item-drop">
-                    <a class="kd-nav-link" href="<?php echo $_CONFIG['supporturl']; ?>"> Help Center </a>
+                    <a class="kd-nav-link" href="<?php //echo $_CONFIG['domain']; 
+                                                    ?>/partners.php"> Our Partners </a>
+                </li>-->
+                <li class="kd-nav-item kd-nav-item-drop">
+                    <a class="kd-nav-link" href="<?php echo $_CONFIG['supporturl']; ?>"> Support </a>
                 </li>
             </ul>
             <ul class="kd-nav kd-nav-align-right">

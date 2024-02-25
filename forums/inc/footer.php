@@ -3,7 +3,7 @@
     <div class="kd-box-1">
         <div class="container">
             <div class="row vertical-gap lg-gap">
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-4">
                     <div class="kd-widget-footer">
                         <div class="kd-widget-title">
                             <a href="index-2.php" class="kd-widget-logo">
@@ -11,7 +11,9 @@
                             </a>
                         </div>
                         <div class="kd-widget-text">
-                            <p class="mb-0">&copy; 2019 <span class="dib">All rights reserved.</span> <span class="dib">Dexad &amp; nK.</span></p>
+                            <p class="mb-0">Copyright &copy; <?php echo date('Y'); ?> <span class="dib">Khaos Development</span>. <span class="dib">All rights reserved.</span></p><br>
+                            <p class="mb-0"><a href="mailto:contact@khaosdevelopment.com"> contact@khaosdevelopment.com</a></p>
+                            <p class="mb-0"><a href="mailto:support@khaosdevelopment.com"> support@khaosdevelopment.com</a></p>
                         </div>
                         <div class="kd-widget-text">
                             <ul class="kd-social-links mnt-3">
@@ -27,47 +29,40 @@
                     <div class="kd-widget-footer">
                         <div class="kd-widget-title"> Useful Links </div>
                         <ul class="kd-widget-list">
-                            <li><a href="store.php">Store</a></li>
-                            <li><a href="checkout.php">Checkout</a></li>
-                            <li><a href="forums.php">Forums</a></li>
-                            <li><a href="blog.php">Blog</a></li>
+                            <li><a href="<?php echo $_CONFIG['storeurl']; ?>">Store</a></li>
+                            <li><a href="<?php echo $_CONFIG['domain']; ?>/reseller-program.php">Resellers</a></li>
+                            <li><a href="<?php echo $_CONFIG['domain']; ?>/cloud-hosting.php">Cloud Hosting</a></li>
                         </ul>
                         <ul class="kd-widget-list">
-                            <li><a href="help-center.php">Help Center</a></li>
-                            <li>
-                                <a data-fancybox data-touch="false" data-close-existing="true" data-src="#signup" href="javascript:;">Sign Up</a>
-                            </li>
-                            <li>
-                                <a data-fancybox data-touch="false" data-close-existing="true" data-src="#login" href="javascript:;">Log In</a>
-                            </li>
+                            <li><a href="<?php echo $_CONFIG['accounturl']; ?>help-center.php">My Account</a></li>
+                            <li><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">My Licenses</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="kd-widget-footer">
-                        <div class="kd-widget-title"> Latest Products </div>
-                        <div class="kd-widget-portfolio">
-                            <a href="product.php">Quantial – Moving Upon Signs Moveth Lesser</a>
-                            <a href="product.php">Sensific – Saying Beast Lesser for in Fruitful</a>
-                            <a href="product.php">Minist – Subdue Above for Signs Dry is Have Great</a>
-                        </div>
+                        <div class="kd-widget-title"> Support Center </div>
+                        <ul class="kd-widget-list">
+                            <li><a href="<?php echo $_CONFIG['supporturl']; ?>">Support Home</a></li>
+                            <li><a href="<?php echo $_CONFIG['knowledgebaseurl']; ?>">Knowledge Base</a></li>
+                            <li><a href="<?php echo $_CONFIG['docsurl']; ?>">Documentation</a></li>
+                        </ul>
+                        <ul class="kd-widget-list">
+                            <li><a href="<?php echo $_CONFIG['forumsurl']; ?>">Forums</a></li>
+                            <li><a href="<?php echo $_CONFIG['ticketsurl']; ?>">My Tickets</a></li>
+                            <li><a href="<?php echo $_CONFIG['ticketsurl']; ?>/new-ticket.php">New Ticket</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-2">
                     <div class="kd-widget-footer">
-                        <div class="kd-widget-title"> Latest Posts </div>
-                        <a href="single-post.php" class="kd-widget-post">
-                            <span class="kd-widget-post-text">
-                                <span class="kd-widget-post-title">The Big Thing in Design</span>
-                                <span class="kd-widget-post-date">25 Sep 2018</span>
-                            </span>
-                        </a>
-                        <a href="single-post.php" class="kd-widget-post">
-                            <span class="kd-widget-post-text">
-                                <span class="kd-widget-post-title">Will Coding Ever Rule the World?</span>
-                                <span class="kd-widget-post-date">24 Sep 2018</span>
-                            </span>
-                        </a>
+                        <div class="kd-widget-title"> Legal </div>
+                        <ul class="kd-widget-list">
+                            <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/terms.php">Terms & Conditions</a></li>
+                            <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/privacy.php">Privacy Policy</a></li>
+                            <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/cookies.php">Cookie Policy</a></li>
+                            <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/refunds.php">Refund Policy</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
