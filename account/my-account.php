@@ -33,8 +33,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="documentations.php">Documentations</a></div>
-                            <div class="kd-feature-text">Phasellus interdum est diam, eu varius odio tincidunt eget ultrices et</div>
-                            <a href="documentations.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <div class="kd-feature-text">You have active licenses</div>
+                            <a href="documentations.php" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Licenses <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -44,9 +44,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <i class="fa-solid fa-book-bookmark"></i>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="articles.php">Knowledge Base</a></div>
-                            <div class="kd-feature-text">Aliquam id nisi sit amet massa mollis lobortis interdum felis integer at arcu</div>
-                            <a href="articles.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <div class="kd-feature-title"><a href="articles.php">Due Invoices</a></div>
+                            <div class="kd-feature-text">You have 0 due invoices</div>
+                            <a href="articles.php" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Invoices <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -57,20 +57,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="forum.php">Forums</a></div>
-                            <div class="kd-feature-text">Sed eget nibh justo euismod maximus et vel nisl pellentesque suscipit nisi</div>
-                            <a href="forum.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 col-lg-3 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-feature-color-4 kd-block-decorated">
-                        <div class="kd-feature-icon">
-                            <i class="fa-solid fa-ticket"></i>
-                        </div>
-                        <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="ticket.php">Ticket System</a></div>
-                            <div class="kd-feature-text">Vivamus sceleriue libero velit blandit, hendrerit nisl at,dapibus sollicitudin</div>
-                            <a href="ticket.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <div class="kd-feature-text">You have 0 open tickets</div>
+                            <a href="forum.php" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Tickets <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
