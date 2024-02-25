@@ -67,7 +67,7 @@
         </div>
     </div>
 </nav>
-<div class="kd-navbar kd-navbar-fullscreen">
+<div class="kd-navbar kd-navbar-fullscreen kd-navbar-fullscreen-closed" style="z-index: -1000;">
     <div class="container">
         <button class="kd-navbar-burger">
             <span></span><span></span><span></span>
