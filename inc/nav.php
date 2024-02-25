@@ -9,8 +9,7 @@
         <div class="kd-navbar-content">
             <ul class="kd-nav">
                 <li class="kd-nav-item kd-nav-item-drop">
-                    <a class="kd-nav-link" href="<?php echo $_CONFIG['domain']; ?>">
-                        <?php echo $_SESSION['loggedin']; ?> </a>
+                    <a class="kd-nav-link" href="<?php echo $_CONFIG['domain']; ?>"> Home </a>
                 </li>
                 <li class="kd-nav-item kd-nav-item-drop">
                     <a class="kd-nav-link" href="<?php echo $_CONFIG['storeurl']; ?>"> Store </a>
@@ -30,8 +29,8 @@
                 require $_SERVER['DOCUMENT_ROOT'] . '/inc/cart.php';
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 ?>
-                    <li class="kd-nav-item">
-                        <a class="kd-nav-link" href="javascript:;"> Account </a>
+                    <li class="kd-nav-item kd-nav-item-drop">
+                        <a class="kd-nav-link" href="javascript:;"> <?php echo $_SESSION['username']; ?> </a>
                         <ul class="kd-navbar-dropdown">
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>"> My Account </a>
@@ -89,8 +88,8 @@
                 <?php
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 ?>
-                    <li class="kd-nav-item">
-                        <a class="kd-nav-link" href="javascript:;"> Account </a>
+                    <li class="kd-nav-item kd-nav-item-drop">
+                        <a class="kd-nav-link" href="javascript:;"> <?php echo $_SESSION['username']; ?> </a>
                         <ul class="kd-navbar-dropdown">
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>"> My Account </a>
