@@ -31,7 +31,7 @@
                 ?>
                     <li class="kd-nav-item kd-nav-item-drop">
                         <a class="kd-nav-link" href="javascript:;">
-                            <img height="100px" src="<?php echo $_SESSION['profilepic']; ?>">
+                            <img height="50px" src="<?php echo $_SESSION['profilepic']; ?>">
                             <?php echo $_SESSION['username']; ?>
                         </a>
                         <ul class="kd-navbar-dropdown">
