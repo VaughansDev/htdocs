@@ -27,9 +27,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
         <div class="container">
             <div class="row justify-content-center vertical-gap">
                 <div class="col-12 col-md-4 col-lg-4 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-block-decorated" style="color: #ffe600;">
+                    <div class="kd-feature kd-feature-3 kd-block-decorated">
                         <div class="kd-feature-icon">
-                            <i class="fa-solid fa-key"></i>
+                            <i class="fa-solid fa-key" style="color: #ffe600;"></i>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active">Active Licenses</a></div>
@@ -39,9 +39,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-block-decorated" style="color: #fc0b03;">
+                    <div class="kd-feature kd-feature-3 kd-block-decorated">
                         <div class="kd-feature-icon">
-                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            <i class="fa-solid fa-file-invoice-dollar" style="color: #fc0b03;"></i>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>my-licenses.php?status=due">Due Invoices</a></div>
@@ -51,9 +51,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-block-decorated" style="color: #03fc88;">
+                    <div class="kd-feature kd-feature-3 kd-block-decorated">
                         <div class="kd-feature-icon">
-                            <i class="fa-solid fa-ticket"></i>
+                            <i class="fa-solid fa-ticket" style="color: #03fc88;"></i>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open">My Tickets</a></div>
