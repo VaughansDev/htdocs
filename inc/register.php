@@ -80,7 +80,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
             $accountid = uniqid();
             $regdate = date('d/m/Y-h:i:sA');
             $email_verified = 0;
-            $profilepic = null;
+            $profilepic = 'https://khaosdevelopment.com/assets/images/user.png';
             $users_dicordlinked = 0;
             $password = $_POST['password'];
             $confpassword = $_POST['confpassword'];
