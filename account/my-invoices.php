@@ -13,16 +13,28 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                 <div style="background-color: rgba(27, 27, 27, .8);"></div>
             </div>
             <div class="container mnb-8">
-                <h1 class="h4 mb-10 text-white text-center">Invoices</h1>
-                <!-- START: Breadcrumbs -->
-                <ul class="kd-breadcrumbs text-center">
-                    <li><a href="index-2.php">Home</a></li>
-                    <li>Items &amp; Licenses</li>
-                </ul>
-                <!-- END: Breadcrumbs -->
+                <h1 class="h4 mb-10 text-white text-center">My Invoices</h1>
             </div>
         </div>
     </header>
+    <div class="kd-box bg-white">
+        <div class="container">
+            <ul class="kd-links text-center">
+                <li <?php if (!isset($_GET['status'])) {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">All Invoices</a></li>
+                <li <?php if ($_GET['status'] == 'paid') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=paid">Paid Invoices</a></li>
+                <li <?php if ($_GET['status'] == 'unpaid') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=unpaid">Unpaid Invoices</a></li>
+                <li <?php if ($_GET['status'] == 'due') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=due">Due Invoices</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="kd-box-5 pb-100 bg-grey-6">
         <div class="container">
             <div class="row justify-content-center">

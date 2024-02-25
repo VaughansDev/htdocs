@@ -13,13 +13,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                 <div style="background-color: rgba(27, 27, 27, .8);"></div>
             </div>
             <div class="container mnb-8">
-                <h1 class="h4 mb-10 text-white text-center">Account</h1>
-                <!-- START: Breadcrumbs -->
-                <ul class="kd-breadcrumbs text-center">
-                    <li><a href="index-2.php">Home</a></li>
-                    <li>Account</li>
-                </ul>
-                <!-- END: Breadcrumbs -->
+                <h1 class="h4 mb-10 text-white text-center">My Account</h1>
             </div>
         </div>
     </header>
