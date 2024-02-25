@@ -156,9 +156,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
                                 <div class="col-md-6 mt-5 mt-md-0">
                                     <h5 class="fw-bold mb-4">Legal</h5>
                                     <ul class="list-unstyled">
-                                        <li><a href="<?php echo $_CONFIG['domain']; ?>/terms.php">Terms & Conditions</a></li>
-                                        <li><a href="<?php echo $_CONFIG['domain']; ?>/privacy.php">Privacy Policy</a></li>
-                                        <li><a href="<?php echo $_CONFIG['domain']; ?>/refund.php">Refund Policy</a></li>
+                                        <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/terms.php">Terms & Conditions</a></li>
+                                        <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/privacy.php">Privacy Policy</a></li>
+                                        <li><a href="<?php echo $_CONFIG['domain']; ?>/legal/refund.php">Refund Policy</a></li>
                                     </ul>
                                 </div>
 
@@ -166,7 +166,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 
                             <div class="text-center mt-5">
                                 <p class="text-muted"><span class="fw-semibold">NOTICE: </span> An interest charge of 3.5% will be
-                                    added to unpaid balances every 30 days.</p>
+                                    added to unpaid balances on reseller accounts every 30 days.</p>
                             </div>
                         </div>
 
@@ -190,7 +190,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
     <?php }
         }
     } else {
-        //header("location: ".$_CONFIG['domain']."/dashboard");
+        header("location: ".$_CONFIG['accounturl']."/my-invoices.php");
     } ?>
 </body>
 

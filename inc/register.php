@@ -4,7 +4,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['discord_email'];
-    $email_verified = $_POST['discord_email_verified'];
+    $emailverified = $_POST['discord_email_verified'];
     $username = $_POST['discord_displayname'];
     $discord_id = $_POST['discord_id'];
     $discord_username = $_POST['discord_username'];
@@ -16,7 +16,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
     $accountid = uniqid();
     $regdate = date('d/m/Y-h:i:sA');
     $password = 'discordauth';
-    $users_dicordlinked = 1;
+    $dicordlinked = 1;
     if ($stmt = $dbcon->prepare('SELECT * FROM users where users_username = ?')) {
         $stmt->bind_param('s', $username);
         $stmt->execute();
@@ -26,7 +26,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
             header("Location: " . $_CONFIG['accounturl'] . "/register.php?status=error&msg=" . $msg);
         } else {
             $sql = "INSERT INTO users (users_username, users_firstname, users_lastname, users_email, users_emailverified, users_accountid, users_regdate, users_profilepic, users_password, users_lastlogin, users_dicordlinked)
-                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$password', '$regdate', '$users_dicordlinked')";
+                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$password', '$regdate', '$dicordlinked')";
             $result = mysqli_query($dbcon, $sql);
             if ($result) {
                 $sql2 = "INSERT INTO linked_discord_accounts (accountid, discord_id, discord_username, discord_displayname, discord_avatar, discord_email, discord_email_verified)
@@ -40,18 +40,17 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                         '.khaosdevelopment.com'
                     );
                     session_start();
-                    $_SESSION['id'] = $users_id;
-                    $_SESSION['username'] = $users_username;
-                    $_SESSION['firstname'] = $users_firstname;
-                    $_SESSION['lastname'] = $users_lastname;
-                    $_SESSION['email'] = $users_email;
-                    $_SESSION['emailverified'] = $users_emailverified;
-                    $_SESSION['accountid'] = $users_accountid;
-                    $_SESSION['regdate'] = $users_regdate;
-                    $_SESSION['profilepic'] = $users_profilepic;
-                    $_SESSION['password'] = $users_password;
-                    $_SESSION['lastlogin'] = $users_lastlogin;
-                    $_SESSION['users_dicordlinked'] = $users_dicordlinked;
+                    $_SESSION['username'] = $username;
+                    $_SESSION['firstname'] = $firstname;
+                    $_SESSION['lastname'] = $lastname;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['emailverified'] = $emailverified;
+                    $_SESSION['accountid'] = $accountid;
+                    $_SESSION['regdate'] = $regdate;
+                    $_SESSION['profilepic'] = $profilepic;
+                    $_SESSION['password'] = $password;
+                    $_SESSION['lastlogin'] = $regdate;
+                    $_SESSION['users_dicordlinked'] = $dicordlinked;
                     $_SESSION['loggedin'] = TRUE;
 
                     header("location: " . $_CONFIG['accounturl']);
@@ -79,9 +78,9 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
             $username = $_POST['username'];
             $accountid = uniqid();
             $regdate = date('d/m/Y-h:i:sA');
-            $email_verified = 0;
+            $emailverified = 0;
             $profilepic = 'https://khaosdevelopment.com/assets/images/user.png';
-            $users_dicordlinked = 0;
+            $dicordlinked = 0;
             $password = $_POST['password'];
             $confpassword = $_POST['confpassword'];
             if ($password === $confpassword) {
@@ -92,7 +91,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                 die();
             }
             $sql = "INSERT INTO users (users_username, users_firstname, users_lastname, users_email, users_emailverified, users_accountid, users_regdate, users_profilepic, users_password, users_lastlogin, users_dicordlinked)
-                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$hashedpass', '$regdate', '$users_dicordlinked')";
+                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$hashedpass', '$regdate', '$dicordlinked')";
             $result = mysqli_query($dbcon, $sql);
             if ($result) {
                 $verificationcode = random_int(100000, 999999);
@@ -138,18 +137,17 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                         '.khaosdevelopment.com'
                     );
                     session_start();
-                    $_SESSION['id'] = $users_id;
-                    $_SESSION['username'] = $users_username;
-                    $_SESSION['firstname'] = $users_firstname;
-                    $_SESSION['lastname'] = $users_lastname;
-                    $_SESSION['email'] = $users_email;
-                    $_SESSION['emailverified'] = $users_emailverified;
-                    $_SESSION['accountid'] = $users_accountid;
-                    $_SESSION['regdate'] = $users_regdate;
-                    $_SESSION['profilepic'] = $users_profilepic;
-                    $_SESSION['password'] = $users_password;
-                    $_SESSION['lastlogin'] = $users_lastlogin;
-                    $_SESSION['users_dicordlinked'] = $users_dicordlinked;
+                    $_SESSION['username'] = $username;
+                    $_SESSION['firstname'] = $firstname;
+                    $_SESSION['lastname'] = $lastname;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['emailverified'] = $emailverified;
+                    $_SESSION['accountid'] = $accountid;
+                    $_SESSION['regdate'] = $regdate;
+                    $_SESSION['profilepic'] = $profilepic;
+                    $_SESSION['password'] = $password;
+                    $_SESSION['lastlogin'] = $regdate;
+                    $_SESSION['users_dicordlinked'] = $dicordlinked;
                     $_SESSION['loggedin'] = TRUE;
                     header("location: " . $_CONFIG['accounturl']);
                 } else {

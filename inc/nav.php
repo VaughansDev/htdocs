@@ -35,7 +35,7 @@
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 ?>
                     <li class="kd-nav-item kd-nav-item-drop">
-                        <a class="kd-nav-link" href="javascript:;">
+                        <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>">
                             <img height="50px" src="<?php echo $_SESSION['profilepic']; ?>">
                             <?php echo $_SESSION['username']; ?>
                         </a>
@@ -105,7 +105,7 @@
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 ?>
                     <li class="kd-nav-item kd-nav-item-drop">
-                        <a class="kd-nav-link" href="javascript:;">
+                        <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>">
                             <img height="50px" src="<?php echo $_SESSION['profilepic']; ?>">
                             <?php echo $_SESSION['username']; ?>
                         </a>

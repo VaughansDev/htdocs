@@ -26,7 +26,6 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                         '.khaosdevelopment.com'
                     );
                     session_start();
-                    $_SESSION['id'] = $users_id;
                     $_SESSION['username'] = $users_username;
                     $_SESSION['firstname'] = $users_firstname;
                     $_SESSION['lastname'] = $users_lastname;
@@ -79,7 +78,6 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     '.khaosdevelopment.com'
                 );
                 session_start();
-                $_SESSION['id'] = $users_id;
                 $_SESSION['username'] = $users_username;
                 $_SESSION['firstname'] = $users_firstname;
                 $_SESSION['lastname'] = $users_lastname;
