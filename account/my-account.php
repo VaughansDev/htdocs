@@ -29,36 +29,36 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                 <div class="col-12 col-md-4 col-lg-3 kd-feature-variable">
                     <div class="kd-feature kd-feature-3 kd-feature-color-1 kd-block-decorated">
                         <div class="kd-feature-icon">
-                            <i class="fa-solid fa-file-lines"></i>
+                            <a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active"><i class="fa-solid fa-file-lines"></i></a>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="documentations.php">Documentations</a></div>
-                            <div class="kd-feature-text">You have active licenses</div>
-                            <a href="documentations.php" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Licenses <i class="fa-solid fa-angle-right"></i></span></a>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active">Active Licenses</a></div>
+                            <div class="kd-feature-text">You have 0 active license(s)</div>
+                            <a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Licenses <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-3 kd-feature-variable">
                     <div class="kd-feature kd-feature-3 kd-feature-color-2 kd-block-decorated">
                         <div class="kd-feature-icon">
-                            <i class="fa-solid fa-book-bookmark"></i>
+                            <a href="<?php echo $_CONFIG['accounturl']; ?>/my-licenses.php?status=due"><i class="fa-solid fa-book-bookmark"></i></a>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="articles.php">Due Invoices</a></div>
-                            <div class="kd-feature-text">You have 0 due invoices</div>
-                            <a href="articles.php" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Invoices <i class="fa-solid fa-angle-right"></i></span></a>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>my-licenses.php?status=due">Due Invoices</a></div>
+                            <div class="kd-feature-text">You have 0 due invoice(s)</div>
+                            <a href="<?php echo $_CONFIG['accounturl']; ?>my-licenses.php?status=due" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Invoices <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-3 kd-feature-variable">
                     <div class="kd-feature kd-feature-3 kd-feature-color-3 kd-block-decorated">
                         <div class="kd-feature-icon">
-                            <i class="fa-solid fa-comments"></i>
+                            <a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open"><i class="fa-solid fa-comments"></i></a>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="forum.php">Forums</a></div>
-                            <div class="kd-feature-text">You have 0 open tickets</div>
-                            <a href="forum.php" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Tickets <i class="fa-solid fa-angle-right"></i></span></a>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open">My Tickets</a></div>
+                            <div class="kd-feature-text">You have 0 open ticket(s)</div>
+                            <a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Tickets <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
