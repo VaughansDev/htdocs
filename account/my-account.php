@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
         <div class="container">
             <div class="row justify-content-center vertical-gap">
                 <div class="col-12 col-md-4 col-lg-4 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-feature-color-1 kd-block-decorated">
+                    <div class="kd-feature kd-feature-3 kd-block-decorated" style="color: #ffe600;">
                         <div class="kd-feature-icon">
                             <i class="fa-solid fa-key"></i>
                         </div>
@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-feature-color-2 kd-block-decorated">
+                    <div class="kd-feature kd-feature-3 kd-block-decorated" style="color: #fc0b03;">
                         <div class="kd-feature-icon">
                             <i class="fa-solid fa-file-invoice-dollar"></i>
                         </div>
@@ -51,7 +51,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 col-lg-4 kd-feature-variable">
-                    <div class="kd-feature kd-feature-3 kd-feature-color-3 kd-block-decorated">
+                    <div class="kd-feature kd-feature-3 kd-block-decorated" style="color: #03fc88;">
                         <div class="kd-feature-icon">
                             <i class="fa-solid fa-ticket"></i>
                         </div>
