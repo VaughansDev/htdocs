@@ -38,9 +38,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <i class="fa-solid fa-file-invoice-dollar" style="color: #fc0b03;"></i>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>my-invoices.php?status=due">Due Invoices</a></div>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=due">Due Invoices</a></div>
                             <div class="kd-feature-text">You have 0 due invoice(s)</div>
-                            <a href="<?php echo $_CONFIG['accounturl']; ?>my-invoices.php?status=due" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Invoices <i class="fa-solid fa-angle-right"></i></span></a>
+                            <a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=due" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Invoices <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
