@@ -45,7 +45,7 @@
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/settings.php"> Account Settings </a>
                             </li>
                             <li>
-                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/logout.php"> Account Settings </a>
+                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/logout.php"> Logout </a>
                             </li>
                             <div class="kd-navbar-dropdown-triangle"></div>
                         </ul>
@@ -108,6 +108,9 @@
                             </li>
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/settings.php"> Account Settings </a>
+                            </li>
+                            <li>
+                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/logout.php"> Logout </a>
                             </li>
                             <div class="kd-navbar-dropdown-triangle"></div>
                         </ul>
