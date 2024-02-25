@@ -30,7 +30,10 @@
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 ?>
                     <li class="kd-nav-item kd-nav-item-drop">
-                        <a class="kd-nav-link" href="javascript:;"> <?php echo $_SESSION['profilepic'] . ' ' . $_SESSION['username']; ?> </a>
+                        <a class="kd-nav-link" href="javascript:;">
+                            <img src="<?php echo $_SESSION['profilepic']; ?>">
+                            <?php echo $_SESSION['username']; ?>
+                        </a>
                         <ul class="kd-navbar-dropdown">
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>"> My Account </a>
@@ -89,7 +92,10 @@
                 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
                 ?>
                     <li class="kd-nav-item kd-nav-item-drop">
-                        <a class="kd-nav-link" href="javascript:;"> <?php echo $_SESSION['username']; ?> </a>
+                        <a class="kd-nav-link" href="javascript:;">
+                            <img src="<?php echo $_SESSION['profilepic']; ?>">
+                            <?php echo $_SESSION['username']; ?>
+                        </a>
                         <ul class="kd-navbar-dropdown">
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>"> My Account </a>

@@ -101,7 +101,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                 if ($result2) {
                     $to = $email;
                     $subject = $_CONFIG['sitename'] . " Account Verification";
-                
+
                     $message = "
                         <html>
                         <head>
@@ -122,14 +122,14 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                         <p>" . $_CONFIG['sitename'] . " Staff Team</p>
                         </body>
                         </html>";
-                
+
                     // Always set content-type when sending HTML email
                     $headers = "MIME-Version: 1.0" . "\r\n";
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-                
+
                     // More headers
                     $headers .= "From: " . $_CONFIG['sitename'] . "Staff Team" . "\r\n";
-                
+
                     mail($to, $subject, $message, $headers);
 
                     session_set_cookie_params(
