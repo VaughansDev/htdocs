@@ -137,7 +137,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 ?>
             </div>
             <div class="text-center mt-70">
-                <a href="#" class="kd-btn kd-btn-lg">View Our Products</a>
+                <a href="<?php echo $_CONFIG['storeurl']; ?>" class="kd-btn kd-btn-lg">View Our Products</a>
             </div>
             <div class="kd-box-1">
                 <span class="kd-decorated" style="background-image: url('<?php echo $_CONFIG['domain']; ?>/assets/images/decorated-pattern-light.svg');"></span>
