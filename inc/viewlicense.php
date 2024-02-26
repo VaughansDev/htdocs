@@ -29,13 +29,13 @@ if (isset($_GET['lid'])) {
                         <li><span><span class="kd-blog-post-info-title">Status</span>
                             <?php
                             if ($row['status'] == 'active') {
-                                echo '<p style="color: green;">ACTIVE</p>';
+                                echo '<div style="color: green;">ACTIVE</div>';
                             } elseif ($row['status'] == 'inactive') {
-                                echo '<p style="color: red;">INACTIVE</p>';
+                                echo '<div style="color: red;">INACTIVE</div>';
                             } elseif ($row['status'] == 'suspended') {
-                                echo '<p style="color: orange;">SUSPENDED</p>';
+                                echo '<div style="color: orange;">SUSPENDED</div>';
                             } else {
-                                echo '<p style="color: blue;">UNKNOWN</p>';
+                                echo '<div style="color: blue;">UNKNOWN</div>';
                             }
                             ?>
                         </span></li>
