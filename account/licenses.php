@@ -49,60 +49,13 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <th scope="col">License Type</th>
                                         <th scope="col">Domain</th>
                                         <th scope="col">IP Address</th>
-                                        <th scope="col">Purchase Date</th>
+                                        <th scope="col">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row" class="kd-table-default-product">
-                                            <a href="product.php">Quantial – Moving Upon Signs Moveth Lesser</a>
-                                        </th>
-                                        <td class="kd-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
-                                        <td>Standard</td>
-                                        <td class="kd-table-website kd-table-default-website"><a href="#">https://example.info/</a></td>
-                                        <td>21.07.2018</td>
-                                        <td>21.07.2018</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="kd-table-default-product">
-                                            <a href="product.php">Sensific – Saying Beast Lesser for in Fruitful</a>
-                                        </th>
-                                        <td class="kd-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
-                                        <td>Extended</td>
-                                        <td class="kd-table-website kd-table-default-website">Not activated</td>
-                                        <td>18.07.2018</td>
-                                        <td>21.07.2018</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="kd-table-default-product">
-                                            <a href="product.php">Minist – Subdue Above for Signs Dry is Have Great</a>
-                                        </th>
-                                        <td class="kd-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
-                                        <td>Standard</td>
-                                        <td class="kd-table-website kd-table-default-website"><a href="#" class="kd-btn kd-btn-md kd-btn-grey-2">Deactivate</a></td>
-                                        <td>18.07.2018</td>
-                                        <td>21.07.2018</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="kd-table-default-product">
-                                            <a href="product.php">Desty – She'd Under Light Over Multiply Stars Winged</a>
-                                        </th>
-                                        <td class="kd-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
-                                        <td>Extended</td>
-                                        <td class="kd-table-website kd-table-default-website">Not activated</td>
-                                        <td>15.07.2018</td>
-                                        <td>21.07.2018</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" class="kd-table-default-product">
-                                            <a href="product.php">Silies – Grass Living Fly Subdue After Fruitful</a>
-                                        </th>
-                                        <td class="kd-table-licenseKey">98vbjy-t46879ug-fd9iytvh-578g0-8ubfyj00</td>
-                                        <td>Extended</td>
-                                        <td class="kd-table-website kd-table-default-website">Not activated</td>
-                                        <td>03.07.2018</td>
-                                        <td>21.07.2018</td>
-                                    </tr>
+                                    <?php
+                                    require $_SERVER['DOCUMENT_ROOT'] . '/inc/mylicenses.php';
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
