@@ -18,12 +18,12 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     <div class="kd-box kd-box-decorated">
                         <div class="kd-blog-post kd-ticket kd-ticket-open">
                             <div class="kd-blog-post-box pt-30 pb-30">
-                                <h2 class="h4 mnt-5 mb-9 kd-ticket-title">Theme not updating in downloads</h2>
+                                <h2 class="h4 mnt-5 mb-9 kd-ticket-title">License: <?php echo ''; ?></h2>
                                 <!-- START: Breadcrumbs -->
                                 <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
-                                    <li><a href="help-center.php">Support Home</a></li>
-                                    <li><a href="ticket.php">Ticket System</a></li>
-                                    <li>Theme not updating in downloads</li>
+                                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>">My Account</a></li>
+                                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">My Licenses</a></li>
+                                    <li>License: <?php echo $row['product'] . ' - ' . $row['license_type']; ?></li>
                                 </ul>
                                 <!-- END: Breadcrumbs -->
                                 <span class="kd-ticket-status"></span>
@@ -34,6 +34,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <li><span><span class="kd-blog-post-info-title">Ticket Id</span>#1801</span></li>
                                     <li><span><span class="kd-blog-post-info-title">Status</span>Open</span></li>
                                     <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
                                     <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
                                 </ul>
                             </div>
