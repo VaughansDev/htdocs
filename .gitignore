@@ -14,3 +14,4 @@ support/inc/config.php
 copy.bat
 download-file.php
 get-file.php
+cdn-config.php
