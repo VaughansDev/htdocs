@@ -37,13 +37,13 @@ if (isset($_GET['lid'])) {
                 <div class="kd-separator"></div>
                 <div class="kd-comment kd-ticket-comment">
                     <div>
-                        <div class="col-lg-6">
-                            <a href="#" class="kd-comment-name"><?php echo $row['product']; ?></a>
+                        <div class="col-lg-4">
+                            <div class="kd-comment-name"><?php echo $row['product']; ?></div>
                             <div class="kd-comment-date"><?php echo $row['license_type']; ?></div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-8">
                             <a href="#" class="kd-comment-file kd-comment-file-jpg">
-                                <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
+                                <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
                                 <span class="kd-comment-file-name">example-file.jpg</span>
                                 <span class="kd-comment-file-size">4.8 MB</span>
                                 <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
