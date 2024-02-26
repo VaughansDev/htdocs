@@ -50,14 +50,21 @@ if (isset($_GET['lid'])) {
                             $pid = $row['productid'];
                             $sql2 = "SELECT * FROM downloads WHERE productid = '$pid'";
                             $result2 = $dbcon->query($sql2);
-                            while ($row2 = $result2->fetch_assoc()) {
+                            if ($result->num_rows > 0) {
+                                while ($row2 = $result2->fetch_assoc()) {
                             ?>
-                                <a href="https://cdn.khaosdevelopment.com/downloads/get-file.php?productid=<?php echo $row['productid']; ?>&return=<?php echo 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" class="kd-comment-file kd-comment-file-jpg">
-                                    <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['domain']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
-                                    <span class="kd-comment-file-name"><?php echo $row2['filename']; ?>.zip</span>
-                                    <span class="kd-comment-file-size"><?php echo $row2['filesize']; ?></span>
-                                    <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
-                                </a>
+                                    <a href="https://cdn.khaosdevelopment.com/downloads/get-file.php?productid=<?php echo $row['productid']; ?>&return=<?php echo 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" class="kd-comment-file kd-comment-file-jpg">
+                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['domain']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
+                                        <span class="kd-comment-file-name"><?php echo $row2['filename']; ?>.zip</span>
+                                        <span class="kd-comment-file-size"><?php echo $row2['filesize']; ?></span>
+                                        <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
+                                    </a>
+                                <?php }
+                            } else { ?>
+                                <div>
+                                    <h6>Download Disabled</h6>
+                                    <p>If you see this for more then 24 hours contact support</p>
+                                </div>
                             <?php } ?>
                         </div>
                     </div>
