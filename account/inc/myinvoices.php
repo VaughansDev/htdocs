@@ -28,11 +28,11 @@ if (isset($_GET['status'])) {
                         <?php while ($row = $result->fetch_assoc()) { ?>
                             <tr>
                                 <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicenum']; ?></a></th>
-                                <td><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicedate']; ?></a></td>
-                                <td><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicetotal']; ?></a></td>
-                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['licensetype']; ?></a></td>
-                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['producttype']; ?></a></td>
-                                <td><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['status']; ?></a></td>
+                                <td><?php echo $row['invoicedate']; ?></td>
+                                <td><?php echo $row['invoicetotal']; ?></td>
+                                <td class="kd-table-licenseKey"><?php echo $row['licensetype']; ?></td>
+                                <td class="kd-table-licenseKey"><?php echo $row['producttype']; ?></td>
+                                <td><?php echo $row['status']; ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -129,11 +129,11 @@ if (isset($_GET['status'])) {
                         <?php while ($row = $result->fetch_assoc()) { ?>
                             <tr>
                                 <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicenum']; ?></a></th>
-                                <td><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicedate']; ?></a></td>
-                                <td><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicetotal']; ?></a></td>
-                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['licensetype']; ?></a></td>
-                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['producttype']; ?></a></td>
-                                <td><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['status']; ?></a></td>
+                                <td><?php echo $row['invoicedate']; ?></td>
+                                <td><?php echo $row['invoicetotal']; ?></td>
+                                <td class="kd-table-licenseKey"><?php echo $row['licensetype']; ?></td>
+                                <td class="kd-table-licenseKey"><?php echo $row['producttype']; ?></td>
+                                <td><?php echo $row['status']; ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
