@@ -38,6 +38,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
                                     <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
                                 </ul>
+                                <div class="kd-separator"></div>
                                 <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
                                     <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
                                     <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
