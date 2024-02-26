@@ -3,7 +3,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 if (isset($_GET['ticketno'])) {
     $lid = $_GET['ticketno'];
     $accountid = $_SESSION['accountid'];
-    if ($stmt = $dbcon->prepare("SELECT * FROM tickets WHERE account_id = ? AND ticket_no = ?")) {
+    if ($stmt = $dbcon->prepare("SELECT * FROM tickets WHERE ticket_accountid = ? AND ticket_no = ?")) {
         $stmt->bind_param('ss', $accountid, $ticketno);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -43,7 +43,7 @@ if (isset($_GET['ticketno'])) {
         <?php } ?>
         <div class="kd-separator"></div>
         <?php
-        if ($stmt = $dbcon->prepare("SELECT * FROM ticket_responses WHERE account_id = ? AND ticket_no = ?")) {
+        if ($stmt = $dbcon->prepare("SELECT * FROM ticket_responses WHERE accountid = ? AND ticket_no = ?")) {
             $stmt->bind_param('ss', $accountid, $ticketno);
             $stmt->execute();
             $result = $stmt->get_result();
