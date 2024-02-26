@@ -59,6 +59,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-separator"></div>
                             <div class="kd-comment kd-ticket-comment">
                                 <div>
+                                    <div class="kd-comment-img">
+                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
+                                    </div>
                                     <div class="kd-comment-cont">
                                         <a href="#" class="kd-comment-name"><?php echo $row['product']; ?></a>
                                         <div class="kd-comment-date"><?php echo $row['license_type']; ?></div>
