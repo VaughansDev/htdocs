@@ -37,7 +37,7 @@ if (isset($_GET['lid'])) {
                 <div class="kd-separator"></div>
                 <div class="kd-comment kd-ticket-comment">
                     <div>
-                        <div class="kd-comment-img">
+                        <div class="kd-comment-cont">
                             <a href="#" class="kd-comment-name"><?php echo $row['product']; ?></a>
                             <div class="kd-comment-date"><?php echo $row['license_type']; ?></div>
                         </div>
