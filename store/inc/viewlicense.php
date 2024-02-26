@@ -35,7 +35,7 @@ if (isset($_GET['lid'])) {
                     </ul>
                 </div>
                 <div class="kd-separator"></div>
-                <h4>File Download:</h4>
+                <h4 class="h4 mnt-5 mb-9 kd-ticket-title">File Download:</h4>
                 <div class="kd-comment kd-ticket-comment">
                     <div>
                         <div class="col-lg-4">
