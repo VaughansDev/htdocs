@@ -119,12 +119,12 @@ if (isset($_GET['status'])) {
                 </span>
                 <span class="kd-ticket-status">
                     <?php
-                    if ($row['ticket_status'] == 'PAID') {
-                        echo '<div style="color: green;">PAID</div>';
-                    } elseif ($row['ticket_status'] == 'DUE') {
-                        echo '<div style="color: red;">DUE</div>';
-                    } elseif ($row['ticket_status'] == 'UNPAID') {
-                        echo '<div style="color: orange;">UNPAID</div>';
+                    if ($row['ticket_status'] == 'OPEN') {
+                        echo '<div style="color: green;">OPEN</div>';
+                    } elseif ($row['ticket_status'] == 'CLOSED') {
+                        echo '<div style="color: red;">CLOSED</div>';
+                    } elseif ($row['ticket_status'] == 'ONHOLD') {
+                        echo '<div style="color: orange;">ONHOLD</div>';
                     } else {
                         echo '<div style="color: blue;">UNKNOWN</div>';
                     }
