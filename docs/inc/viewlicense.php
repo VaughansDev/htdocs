@@ -26,6 +26,7 @@ if (isset($_GET['lid'])) {
                         <li><span><span class="kd-blog-post-info-title">Product</span><?php echo $row['product']; ?></span></li>
                         <li><span><span class="kd-blog-post-info-title">License Type</span><?php echo $row['license_type']; ?></span></li>
                         <li><span><span class="kd-blog-post-info-title">Purchase Date</span><?php echo $row['purchasedate']; ?></span></li>
+                        <li><span><span class="kd-blog-post-info-title">Status</span><?php echo $row['status']; ?></span></li>
                     </ul>
                     <div class="kd-separator"></div>
                     <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
@@ -35,10 +36,10 @@ if (isset($_GET['lid'])) {
                     </ul>
                 </div>
                 <div class="kd-separator"></div>
-                <h4 class="h4 mnt-5 mb-9 kd-ticket-title">File Download:</h4>
                 <div class="kd-comment kd-ticket-comment">
                     <div>
                         <div class="col-lg-4">
+                            <div class="kd-comment-name"><h4>File Download:</h4></div>
                             <div class="kd-comment-name"><?php echo $row['product']; ?></div>
                             <div class="kd-comment-date"><?php echo $row['license_type']; ?></div>
                         </div>
