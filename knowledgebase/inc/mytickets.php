@@ -14,7 +14,7 @@ if (isset($_GET['status'])) {
         while ($row = $result->fetch_assoc()) { ?>
             <a href="<?php echo $_CONFIG['ticketsurl']; ?>/ticket.php?ticketno=<?php echo $row['ticket_no']; ?>" class="kd-ticket-item kd-ticket-new kd-ticket-open kd-block-decorated">
                 <span class="kd-ticket-img">
-                    <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
+                    <img src="<?php echo $_CONFIG['accounturl'] . $row['lastreplyimg']; ?>" alt="">
                 </span>
                 <span class="kd-ticket-cont">
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
@@ -89,7 +89,7 @@ if (isset($_GET['status'])) {
                 <?php } ?>
             </ul>
         </div>
-    <?php }
+        <?php }
 } else {
     $accountid = $_SESSION['accountid'];
     $total_pages = $dbcon->query("SELECT * FROM tickets WHERE ticket_accountid = '$accountid'")->num_rows;
@@ -99,11 +99,11 @@ if (isset($_GET['status'])) {
         $calc_page = ($page - 1) * $num_results_on_page;
         $stmt->bind_param('sii', $accountid, $calc_page, $num_results_on_page);
         $stmt->execute();
-        $result = $stmt->get_result(); 
+        $result = $stmt->get_result();
         while ($row = $result->fetch_assoc()) { ?>
             <a href="<?php echo $_CONFIG['ticketsurl']; ?>/ticket.php?ticketno=<?php echo $row['ticket_no']; ?>" class="kd-ticket-item kd-ticket-new kd-ticket-open kd-block-decorated">
                 <span class="kd-ticket-img">
-                    <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
+                    <img src="<?php echo $_CONFIG['accounturl'] . $row['lastreplyimg']; ?>" alt="">
                 </span>
                 <span class="kd-ticket-cont">
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
