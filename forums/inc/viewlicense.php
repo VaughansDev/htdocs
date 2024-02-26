@@ -43,7 +43,7 @@ if (isset($_GET['lid'])) {
                         </div>
                         <div class="col-lg-8">
                             <a href="#" class="kd-comment-file kd-comment-file-jpg">
-                                <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
+                                <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['domain']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
                                 <span class="kd-comment-file-name">example-file.jpg</span>
                                 <span class="kd-comment-file-size">4.8 MB</span>
                                 <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
