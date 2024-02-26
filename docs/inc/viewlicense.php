@@ -50,7 +50,7 @@ if (isset($_GET['lid'])) {
                             $pid = $row['productid'];
                             $sql2 = "SELECT * FROM downloads WHERE productid = '$pid'";
                             $result2 = $dbcon->query($sql2);
-                            if ($result->num_rows > 0) {
+                            if ($result2->num_rows > 0) {
                                 while ($row2 = $result2->fetch_assoc()) {
                             ?>
                                     <a href="https://cdn.khaosdevelopment.com/downloads/get-file.php?productid=<?php echo $row['productid']; ?>&return=<?php echo 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>" class="kd-comment-file kd-comment-file-jpg">
