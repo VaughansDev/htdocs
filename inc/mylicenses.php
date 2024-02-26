@@ -1,14 +1,14 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
-if (isset($_GET['cat'])) {
-    $cat = $_GET['cat'];
+if (isset($_GET['status'])) {
+    $status = $_GET['status'];
     $accountid = $_SESSION['accountid'];
-    $total_pages = $dbcon->query("SELECT * FROM licenses WHERE account_id = '$accountid' AND category = '$cat'")->num_rows;
+    $total_pages = $dbcon->query("SELECT * FROM licenses WHERE account_id = '$accountid' AND category = '$status'")->num_rows;
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
     $num_results_on_page = 12;
     if ($stmt = $dbcon->prepare("SELECT * FROM licenses WHERE account_id = ? AND category = ? LIMIT ?,?")) {
         $calc_page = ($page - 1) * $num_results_on_page;
-        $stmt->bind_param('ssii', $accountid, $cat, $calc_page, $num_results_on_page);
+        $stmt->bind_param('ssii', $accountid, $status, $calc_page, $num_results_on_page);
         $stmt->execute();
         $result = $stmt->get_result(); ?>
         <div class="kd-box-decorated">
