@@ -19,16 +19,16 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>">All Tickets</a></li>
                 <li <?php if ($_GET['status'] == 'open') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>status=open">Open Tickets</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>?status=open">Open Tickets</a></li>
                 <li <?php if ($_GET['status'] == 'closed') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>status=closed">Closed Tickets</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>?status=closed">Closed Tickets</a></li>
                 <li <?php if ($_GET['status'] == 'onhold') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>status=onhold">On Hold Tickets</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>?status=onhold">On Hold Tickets</a></li>
                 <li <?php if ($_GET['status'] == 'pending') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>status=pending">Pending Tickets</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketurl']; ?>?status=pending">Pending Tickets</a></li>
             </ul>
         </div>
     </div>
