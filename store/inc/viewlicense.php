@@ -62,8 +62,10 @@ if (isset($_GET['lid'])) {
                                 <?php }
                             } else { ?>
                                 <div>
-                                    <h6>Download Disabled</h6>
-                                    <p>If you see this for more then 24 hours contact support</p>
+                                    <h6 style="color: red;">Download Disabled</h6>
+                                    <p>If you see this for more then 24 hours contact support.</p>
+                                    <p>You can submit a ticket by <a href="<?php echo $_CONFIG['ticketsurl']; ?>/new-ticket.php">clicking here</a>, or</p>
+                                    <p>Email support at <a href="mailto:support@khaosdevelopment.com">support@khaosdevelopment.com</a></p>
                                 </div>
                             <?php } ?>
                         </div>
