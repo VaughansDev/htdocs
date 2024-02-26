@@ -1,7 +1,7 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 if (isset($_GET['ticketno'])) {
-    $lid = $_GET['ticketno'];
+    $ticketno = $_GET['ticketno'];
     $accountid = $_SESSION['accountid'];
     if ($stmt = $dbcon->prepare("SELECT * FROM tickets WHERE ticket_accountid = ? AND ticket_no = ?")) {
         $stmt->bind_param('ss', $accountid, $ticketno);
