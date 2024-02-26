@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     <div class="kd-box kd-box-decorated">
                         <div class="kd-blog-post kd-ticket kd-ticket-open">
                             <div class="kd-blog-post-box pt-30 pb-30">
-                                <h2 class="h4 mnt-5 mb-9 kd-ticket-title">License: <?php echo ''; ?></h2>
+                                <h2 class="h4 mnt-5 mb-9 kd-ticket-title">License: <?php echo $row['product'] . ' - ' . $row['license_type']; ?></h2>
                                 <!-- START: Breadcrumbs -->
                                 <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
                                     <li><a href="<?php echo $_CONFIG['accounturl']; ?>">My Account</a></li>
@@ -26,23 +26,21 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <li>License: <?php echo $row['product'] . ' - ' . $row['license_type']; ?></li>
                                 </ul>
                                 <!-- END: Breadcrumbs -->
-                                <span class="kd-ticket-status"></span>
+                                <span class="kd-ticket-status">Closed</span>
                             </div>
                             <div class="kd-separator"></div>
                             <div style="background-color: #fafafa;">
                                 <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
-                                    <li><span><span class="kd-blog-post-info-title">Ticket Id</span>#1801</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Status</span>Open</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Product</span>Quantial</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">License Id</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Product</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">License Type</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Purchase Date</span><?php echo $row['product']; ?></span></li>
                                 </ul>
                                 <div class="kd-separator"></div>
                                 <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
-                                    <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Date</span>1 Mar 2018, 9:17 am</span></li>
+                                    <li><span><span class="kd-blog-post-info-title">License Key</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Domain</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">IP Address</span><?php echo $row['product']; ?></span></li>
                                 </ul>
                             </div>
                             <div class="kd-separator"></div>
