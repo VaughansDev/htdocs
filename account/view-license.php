@@ -9,18 +9,10 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     <div class="kd-box bg-white">
         <div class="container">
             <ul class="kd-links text-center">
-                <li <?php if (!isset($_GET['status'])) {
-                        echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>">My Account</a></li>
-                <li <?php if ($_GET['status'] == 'paid') {
-                        echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">My Licenses</a></li>
-                <li <?php if ($_GET['status'] == 'unpaid') {
-                        echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">My Invoices</a></li>
-                <li <?php if ($_GET['status'] == 'due') {
-                        echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>">My Tickets</a></li>
+                <li><a href="<?php echo $_CONFIG['accounturl']; ?>">My Account</a></li>
+                <li><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">My Licenses</a></li>
+                <li><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">My Invoices</a></li>
+                <li><a href="<?php echo $_CONFIG['ticketsurl']; ?>">My Tickets</a></li>
             </ul>
         </div>
     </div>
