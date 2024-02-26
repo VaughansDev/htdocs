@@ -75,7 +75,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-feature-text">
                                 <?php
                                 $accountid = $_SESSION['accountid'];
-                                $sql = "SELECT * FROM tickets WHERE ticket_accountid = '$accountid' AND ticket_status = 'open'";
+                                $sql = "SELECT * FROM tickets WHERE ticket_accountid = '$accountid' AND ticket_status = 'OPEN'";
                                 $result = $dbcon->query($sql);
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
