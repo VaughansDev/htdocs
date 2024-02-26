@@ -12,3 +12,5 @@ knowledgebase/inc/config.php
 store/inc/config.php
 support/inc/config.php
 copy.bat
+download-file.php
+get-file.php
