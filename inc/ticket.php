@@ -67,7 +67,9 @@ if (isset($_GET['ticketno'])) {
                                         <span class="kd-comment-file-size"><?php echo $row['filesize'] ?></span>
                                         <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
                                     </a>
-                                <?php } ?>
+                                <?php } else {
+                                    
+                                } ?>
                             </div>
                         </div>
                     </div>
@@ -90,7 +92,9 @@ if (isset($_GET['ticketno'])) {
                                         <span class="kd-comment-file-size"><?php echo $row['filesize'] ?></span>
                                         <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
                                     </a>
-                                <?php } ?>
+                                <?php } else {
+
+                                } ?>
                             </div>
                         </div>
                     </div>
