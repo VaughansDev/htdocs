@@ -38,11 +38,10 @@ if (isset($_GET['lid'])) {
                 <div class="kd-comment kd-ticket-comment">
                     <div>
                         <div class="kd-comment-img">
-                            <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
-                        </div>
-                        <div class="kd-comment-cont">
                             <a href="#" class="kd-comment-name"><?php echo $row['product']; ?></a>
                             <div class="kd-comment-date"><?php echo $row['license_type']; ?></div>
+                        </div>
+                        <div class="kd-comment-cont">
                             <a href="#" class="kd-comment-file kd-comment-file-jpg">
                                 <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
                                 <span class="kd-comment-file-name">example-file.jpg</span>
@@ -53,7 +52,7 @@ if (isset($_GET['lid'])) {
                     </div>
                 </div>
             </div>
-        <?php }
+    <?php }
     }
 } else { ?>
     <script>
