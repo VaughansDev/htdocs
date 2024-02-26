@@ -45,7 +45,21 @@ if (isset($_GET['status'])) {
         <div class="kd-box-decorated">
             <div class="table-responsive">
                 <table class="kd-table kd-table-default">
-                    <h4>No Licenses Found</h4>
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">License Key</th>
+                            <th scope="col">License Type</th>
+                            <th scope="col">Domain</th>
+                            <th scope="col">IP Address</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <h4>No Licenses Found</h4>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -134,7 +148,21 @@ if (isset($_GET['status'])) {
         <div class="kd-box-decorated">
             <div class="table-responsive">
                 <table class="kd-table kd-table-default">
-                    <h4>No Licenses Found</h4>
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">License Key</th>
+                            <th scope="col">License Type</th>
+                            <th scope="col">Domain</th>
+                            <th scope="col">IP Address</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <h4>No Licenses Found</h4>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
