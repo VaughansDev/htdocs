@@ -22,7 +22,7 @@ if (isset($_GET['ticketno'])) {
             <div class="kd-separator"></div>
             <div style="background-color: #fafafa;">
                 <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
-                    <li><span><span class="kd-blog-post-info-title">Ticket #</span><?php echo $row['ticket_no']; ?>/span></li>
+                    <li><span><span class="kd-blog-post-info-title">Ticket #</span><?php echo $row['ticket_no']; ?></span></li>
                     <li><span><span class="kd-blog-post-info-title">Status</span>
                             <?php
                             if ($row['ticket_status'] == 'OPEN') {
