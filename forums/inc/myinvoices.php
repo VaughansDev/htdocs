@@ -6,7 +6,7 @@ if (isset($_GET['status'])) {
     $total_pages = $dbcon->query("SELECT * FROM invoices WHERE accountid = '$accountid' AND paymentstatus = '$status'")->num_rows;
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
     $num_results_on_page = 12;
-    if ($stmt = $dbcon->prepare("SELECT * FROM licenses WHERE accountid = ? AND paymentstatus = ? LIMIT ?,?")) {
+    if ($stmt = $dbcon->prepare("SELECT * FROM invoices WHERE accountid = ? AND paymentstatus = ? LIMIT ?,?")) {
         $calc_page = ($page - 1) * $num_results_on_page;
         $stmt->bind_param('ssii', $accountid, $status, $calc_page, $num_results_on_page);
         $stmt->execute();
