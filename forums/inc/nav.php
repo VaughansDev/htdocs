@@ -47,7 +47,7 @@
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php"> My Licenses </a>
                             </li>
                             <li>
-                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/my-inovices.php"> My Invoices </a>
+                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php"> My Invoices </a>
                             </li>
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['ticketsurl']; ?>"> My Tickets </a>
@@ -123,7 +123,7 @@
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php"> My Licenses </a>
                             </li>
                             <li>
-                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/my-inovices.php"> My Invoices </a>
+                                <a class="kd-nav-link" href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php"> My Invoices </a>
                             </li>
                             <li>
                                 <a class="kd-nav-link" href="<?php echo $_CONFIG['ticketsurl']; ?>"> My Tickets </a>
