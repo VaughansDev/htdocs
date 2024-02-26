@@ -48,7 +48,7 @@ if (isset($_GET['ticketno'])) {
             $stmt->execute();
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()) {
-                if ($accountid == $row['']) { ?>
+                if ($accountid == $row['accountid']) { ?>
                     <div class="kd-comment kd-ticket-comment">
                         <div>
                             <div class="kd-comment-img">
@@ -103,6 +103,6 @@ if (isset($_GET['ticketno'])) {
     }
 } else { ?>
     <script>
-        window.location.href = "<?php echo $_CONFIG['accounturl']; ?>/licenses.php";
+        window.location.href = "<?php echo $_CONFIG['ticketsurl']; ?>";
     </script>
 <?php } ?>
