@@ -14,7 +14,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     <div class="kd-box-5 pb-100 bg-grey-6">
         <div class="container">
             <div class="row vertical-gap md-gap">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="kd-box kd-box-decorated">
                         <div class="kd-blog-post kd-ticket kd-ticket-open">
                             <div class="kd-blog-post-box pt-30 pb-30">
@@ -58,101 +58,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="kd-comment kd-ticket-comment kd-comment-replied kd-comment-new">
-                                <div>
-                                    <div class="kd-comment-img">
-                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-default.svg" alt="">
-                                    </div>
-                                    <div class="kd-comment-cont">
-                                        <a href="#" class="kd-comment-name"> Bruno Rice <span class="kd-comment-replied">Replied</span>
-                                            <span class="kd-comment-new">New</span>
-                                        </a>
-                                        <div class="kd-comment-date">39 min ago</div>
-                                        <div class="kd-comment-text">
-                                            <p>Saying sixth form. Saw earth, whose fowl all meat had had place upon fowl. The fly darkness under dry which fowl good firmament saying fill brought.</p>
-                                            <p class="mb-0">Itself first from under female sea wherein female. Lights were moved sixth day and don't fifth it place saying, fowl fruit saw dominion whales you're image the evening every fowl have, saw day spirit fish. Female. Fowl it replenish hath light blessed hath. Man.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="kd-separator mnt-1"></div>
-                            <div class="kd-blog-post-box">
-                                <h3 class="h6 mb-25">Write a Reply</h3>
-                                <form class="kd-form" action="#">
-                                    <div class="kd-form-group">
-                                        <div class="kd-editor-quill">
-                                            <div class="kd-editor" data-editor-height="150" data-editor-maxHeight="250"></div>
-                                        </div>
-                                    </div>
-                                    <div class="kd-form-group">
-                                        <!-- STRART: Dropzone
-
-                                        Additional Attributes:
-                                        data-dropzone-action
-                                        data-dropzone-maxMB
-                                        data-dropzone-maxFiles
-                                    -->
-                                        <div class="kd-dropzone" data-dropzone-action="#" data-dropzone-maxMB="5" data-dropzone-maxFiles="5">
-                                            <div class="dz-message">
-                                                <div class="kd-dropzone-icon">
-                                                    <span class="icon pe-7s-cloud-upload"></span>
-                                                </div>
-                                                <div class="h6 kd-dropzone-title">Drop files here or click to upload</div>
-                                                <div class="kd-dropzone-text">
-                                                    <p class="mnb-5 mnt-1">You can upload up to 5 files (maximum 5 MB each) of the following types: .jpg, .jpeg, .png, .zip.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
-                                            <div class="col-auto kd-dropzone-attachment-add">
-                                                <label class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></label>
-                                            </div>
-                                            <div class="col-auto kd-dropzone-attachment-btn">
-                                                <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
-                                            </div>
-                                        </div>
-                                        <!-- END: Dropzone -->
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="kd-sticky kd-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
-                        <?php
-                        require $_SERVER['DOCUMENT_ROOT'] . '/widgets/newsletter.php';
-                        require $_SERVER['DOCUMENT_ROOT'] . '/widgets/search.php';
-                        ?>
-                        <div class="kd-widget kd-box kd-box-decorated">
-                            <div class="kd-widget-title"> Latest Articles </div>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">How to manually import Demo data (if you faced with problems in one-click demo import)</span>
-                                <span class="kd-widget-link-date">6 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Make menu dropdown working without JavaScript</span>
-                                <span class="kd-widget-link-date">2 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Add top menu link inside dropdown on mobile devices</span>
-                                <span class="kd-widget-link-date">27 Aug 2018</span>
-                            </a>
-                        </div>
-                        <div class="kd-widget kd-box kd-box-decorated">
-                            <div class="kd-widget-title"> Latest Forum Topics </div>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Need help with customization. Some options are not appearing...</span>
-                                <span class="kd-widget-link-date">6 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">My images on profile and item pages doesnt show up?! Whats the matter?</span>
-                                <span class="kd-widget-link-date">2 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Theme not updating in downloads</span>
-                                <span class="kd-widget-link-date">27 Aug 2018</span>
-                            </a>
                         </div>
                     </div>
                 </div>
