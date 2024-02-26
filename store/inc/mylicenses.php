@@ -41,9 +41,15 @@ if (isset($_GET['status'])) {
                 </table>
             </div>
         </div>
-    <?php } else {
-        echo '<h4>No Licenses Found</h4>';
-    } ?>
+    <?php } else { ?>
+        <div class="kd-box-decorated">
+            <div class="table-responsive">
+                <table class="kd-table kd-table-default">
+                    <h4>No Licenses Found</h4>
+                </table>
+            </div>
+        </div>
+    <?php } ?>
     <br>
     <?php if (ceil($total_pages / $num_results_on_page) > 0) { ?>
         <div class="text-center mt-70">
@@ -124,9 +130,15 @@ if (isset($_GET['status'])) {
                 </table>
             </div>
         </div>
-    <?php } else {
-        echo '<h4>No Licenses Found</h4>';
-    } ?>
+    <?php } else { ?>
+        <div class="kd-box-decorated">
+            <div class="table-responsive">
+                <table class="kd-table kd-table-default">
+                    <h4>No Licenses Found</h4>
+                </table>
+            </div>
+        </div>
+    <?php } ?>
     <br>
     <?php if (ceil($total_pages / $num_results_on_page) > 0) { ?>
         <div class="text-center mt-70">
