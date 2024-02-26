@@ -1,7 +1,3 @@
-<?php echo $_CONFIG['ticketsurl']; ?>/ticket.php?ticketno=<?php echo $row['ticket_no']; ?>
-
-
-
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 if (isset($_GET['status'])) {
