@@ -14,7 +14,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     <div class="kd-box-5 pb-100 bg-grey-6">
         <div class="container">
             <div class="row vertical-gap md-gap">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="kd-box kd-box-decorated">
                         <div class="kd-blog-post kd-ticket kd-ticket-open">
                             <div class="kd-blog-post-box pt-30 pb-30">
@@ -115,44 +115,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     </div>
                                 </form>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="kd-sticky kd-sidebar" data-sticky-offsetTop="120" data-sticky-offsetBot="40">
-                        <?php
-                        require $_SERVER['DOCUMENT_ROOT'] . '/widgets/newsletter.php';
-                        require $_SERVER['DOCUMENT_ROOT'] . '/widgets/search.php';
-                        ?>
-                        <div class="kd-widget kd-box kd-box-decorated">
-                            <div class="kd-widget-title"> Latest Articles </div>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">How to manually import Demo data (if you faced with problems in one-click demo import)</span>
-                                <span class="kd-widget-link-date">6 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Make menu dropdown working without JavaScript</span>
-                                <span class="kd-widget-link-date">2 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Add top menu link inside dropdown on mobile devices</span>
-                                <span class="kd-widget-link-date">27 Aug 2018</span>
-                            </a>
-                        </div>
-                        <div class="kd-widget kd-box kd-box-decorated">
-                            <div class="kd-widget-title"> Latest Forum Topics </div>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Need help with customization. Some options are not appearing...</span>
-                                <span class="kd-widget-link-date">6 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">My images on profile and item pages doesnt show up?! Whats the matter?</span>
-                                <span class="kd-widget-link-date">2 Sep 2018</span>
-                            </a>
-                            <a href="single-article.php" class="kd-widget-link">
-                                <span class="kd-widget-link-text">Theme not updating in downloads</span>
-                                <span class="kd-widget-link-date">27 Aug 2018</span>
-                            </a>
                         </div>
                     </div>
                 </div>
