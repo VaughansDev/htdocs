@@ -31,7 +31,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 <?php
                                 require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
                                 $accountid = $_SESSION['accountid'];
-                                $sql = "SELECT * FROM licenses WHERE accountid = '$accountid' AND status = 'active'";
+                                $sql = "SELECT * FROM licenses WHERE account_id = '$accountid' AND status = 'active'";
                                 $result = $dbcon->query($sql);
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
@@ -53,7 +53,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-feature-text">
                                 <?php
                                 $accountid = $_SESSION['accountid'];
-                                $sql = "SELECT * FROM invoices WHERE accountid = '$accountid' AND status = 'due'";
+                                $sql = "SELECT * FROM invoices WHERE accountid = '$accountid' AND paymentstatus = 'due'";
                                 $result = $dbcon->query($sql);
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
@@ -75,7 +75,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-feature-text">
                                 <?php
                                 $accountid = $_SESSION['accountid'];
-                                $sql = "SELECT * FROM tickets WHERE accountid = '$accountid' AND status = 'open'";
+                                $sql = "SELECT * FROM tickets WHERE ticket_accountid = '$accountid' AND ticket_status = 'open'";
                                 $result = $dbcon->query($sql);
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
