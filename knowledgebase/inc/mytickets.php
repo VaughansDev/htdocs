@@ -7,10 +7,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 if (isset($_GET['status'])) {
     $status = $_GET['status'];
     $accountid = $_SESSION['accountid'];
-    $total_pages = $dbcon->query("SELECT * FROM invoices WHERE accountid = '$accountid' AND paymentstatus = '$status'")->num_rows;
+    $total_pages = $dbcon->query("SELECT * FROM tickets WHERE accountid = '$accountid' AND ticket_status = '$status'")->num_rows;
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
     $num_results_on_page = 12;
-    if ($stmt = $dbcon->prepare("SELECT * FROM invoices WHERE accountid = ? AND paymentstatus = ? LIMIT ?,?")) {
+    if ($stmt = $dbcon->prepare("SELECT * FROM tickets WHERE accountid = ? AND ticket_status = ? LIMIT ?,?")) {
         $calc_page = ($page - 1) * $num_results_on_page;
         $stmt->bind_param('ssii', $accountid, $status, $calc_page, $num_results_on_page);
         $stmt->execute();
@@ -34,12 +34,12 @@ if (isset($_GET['status'])) {
                 </span>
                 <span class="kd-ticket-status">
                     <?php
-                    if ($row['paymentstatus'] == 'PAID') {
-                        echo '<div style="color: green;">PAID</div>';
-                    } elseif ($row['paymentstatus'] == 'DUE') {
-                        echo '<div style="color: red;">DUE</div>';
-                    } elseif ($row['paymentstatus'] == 'UNPAID') {
-                        echo '<div style="color: orange;">UNPAID</div>';
+                    if ($row['ticket_status'] == 'OPEN') {
+                        echo '<div style="color: green;">OPEN</div>';
+                    } elseif ($row['ticket_status'] == 'CLOSED') {
+                        echo '<div style="color: red;">CLOSED</div>';
+                    } elseif ($row['ticket_status'] == 'ONHOLD') {
+                        echo '<div style="color: orange;">ONHOLD</div>';
                     } else {
                         echo '<div style="color: blue;">UNKNOWN</div>';
                     }
@@ -96,10 +96,10 @@ if (isset($_GET['status'])) {
     <?php }
 } else {
     $accountid = $_SESSION['accountid'];
-    $total_pages = $dbcon->query("SELECT * FROM invoices WHERE accountid = '$accountid'")->num_rows;
+    $total_pages = $dbcon->query("SELECT * FROM tickets WHERE accountid = '$accountid'")->num_rows;
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
     $num_results_on_page = 5;
-    if ($stmt = $dbcon->prepare("SELECT * FROM invoices WHERE accountid = ? LIMIT ?,?")) {
+    if ($stmt = $dbcon->prepare("SELECT * FROM tickets WHERE accountid = ? LIMIT ?,?")) {
         $calc_page = ($page - 1) * $num_results_on_page;
         $stmt->bind_param('sii', $accountid, $calc_page, $num_results_on_page);
         $stmt->execute();
@@ -123,11 +123,11 @@ if (isset($_GET['status'])) {
                 </span>
                 <span class="kd-ticket-status">
                     <?php
-                    if ($row['paymentstatus'] == 'PAID') {
+                    if ($row['ticket_status'] == 'PAID') {
                         echo '<div style="color: green;">PAID</div>';
-                    } elseif ($row['paymentstatus'] == 'DUE') {
+                    } elseif ($row['ticket_status'] == 'DUE') {
                         echo '<div style="color: red;">DUE</div>';
-                    } elseif ($row['paymentstatus'] == 'UNPAID') {
+                    } elseif ($row['ticket_status'] == 'UNPAID') {
                         echo '<div style="color: orange;">UNPAID</div>';
                     } else {
                         echo '<div style="color: blue;">UNKNOWN</div>';
