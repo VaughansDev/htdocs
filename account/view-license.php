@@ -26,7 +26,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <li>License: <?php echo $row['product'] . ' - ' . $row['license_type']; ?></li>
                                 </ul>
                                 <!-- END: Breadcrumbs -->
-                                <span class="kd-ticket-status">Closed</span>
                             </div>
                             <div class="kd-separator"></div>
                             <div style="background-color: #fafafa;">
