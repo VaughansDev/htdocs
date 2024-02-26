@@ -13,11 +13,11 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                 <div style="background-color: rgba(27, 27, 27, .8);"></div>
             </div>
             <div class="container mnb-8">
-                <h1 class="h4 mb-10 text-white text-center">Settings</h1>
+                <h1 class="h4 mb-10 text-white text-center">Account Settings</h1>
                 <!-- START: Breadcrumbs -->
                 <ul class="kd-breadcrumbs text-center">
-                    <li><a href="index-2.php">Home</a></li>
-                    <li>Settings</li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>">My Account</a></li>
+                    <li>Account Settings</li>
                 </ul>
                 <!-- END: Breadcrumbs -->
             </div>
@@ -32,39 +32,47 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <h2 class="h6 mnt-5 mnb-5">Profile Information</h2>
                         </div>
                         <div class="kd-separator"></div>
-                        <form action="#" class="kd-form">
+                        <form action="<?php echo $_SERVER['DOCUMENT_ROOT'] . '/inc/accountsettings.php'; ?>" method="post" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
-                                    <label for="first-name" class="mnt-7">First Name</label>
-                                    <input type="text" class="form-control form-control-style-2" id="first-name" placeholder="Enter First Name">
+                                    <label for="firstname" class="mnt-7">First Name</label>
+                                    <input type="text" class="form-control form-control-style-2" id="firstname" name="firstname" value="<?php echo $_SESSION['firstname']; ?>" readonly>
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="last-name" class="mnt-7">Last Name</label>
-                                    <input type="text" class="form-control form-control-style-2" id="last-name" placeholder="Enter Last Name">
+                                    <label for="lastname" class="mnt-7">Last Name</label>
+                                    <input type="text" class="form-control form-control-style-2" id="lastname" name="lastname" value="<?php echo $_SESSION['lastname']; ?>" readonly>
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="display-name" class="mnt-7">Display Name</label>
-                                    <input type="text" class="form-control form-control-style-2" id="display-name" placeholder="John Leonard">
+                                    <label for="username" class="mnt-7">Display Name</label>
+                                    <input type="text" class="form-control form-control-style-2" id="username" name="username" value="<?php echo $_SESSION['username']; ?>" readonly>
                                 </div>
                                 <div class="kd-form-group">
                                     <label for="email-address" class="mnt-7">Primary Email Address</label>
-                                    <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email-address" placeholder="Enter Email Address">
+                                    <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email-address" name="email" value="<?php echo $_SESSION['email']; ?>">
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="line-one" class="mnt-7">Line 1</label>
-                                    <input type="text" class="form-control form-control-style-2" id="line-one" placeholder="">
+                                    <label for="line-one" class="mnt-7">Address Line 1</label>
+                                    <input type="text" class="form-control form-control-style-2" id="line-one" name="addressline1" <?php if (isset($_SESSION['addressline1'])) { ?> value="<?php echo $_SESSION['addressline1']; ?>" <?php } else { ?> placeholder="Enter Your Address" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="line-two" class="mnt-7">Line 2</label>
-                                    <input type="text" class="form-control form-control-style-2" id="line-two" placeholder="">
+                                    <label for="line-two" class="mnt-7">Address Line 2 (optional)</label>
+                                    <input type="text" class="form-control form-control-style-2" id="line-two" name="addressline2" <?php if (isset($_SESSION['addressline2'])) { ?> value="<?php echo $_SESSION['addressline2']; ?>" <?php } else { ?> placeholder="Apt / Suite / PO Box" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="city" class="mnt-7">City</label>
-                                    <input type="text" class="form-control form-control-style-2" id="city" placeholder="Enter City Name">
+                                    <label for="country" class="mnt-7">Country</label>
+                                    <input type="text" class="form-control form-control-style-2" id="country" name="country" <?php if (isset($_SESSION['country'])) { ?> value="<?php echo $_SESSION['country']; ?>" <?php } else { ?> placeholder="Enter Country" <?php } ?>>
+                                </div>
+                                <div class="kd-form-group">
+                                    <label for="state" class="mnt-7">State / Province</label>
+                                    <input type="text" class="form-control form-control-style-2" id="state" name="state" <?php if (isset($_SESSION['state'])) { ?> value="<?php echo $_SESSION['state']; ?>" <?php } else { ?> placeholder="Enter State / Province" <?php } ?>>
+                                </div>
+                                <div class="kd-form-group">
+                                    <label for="city" class="mnt-7">City / Town</label>
+                                    <input type="text" class="form-control form-control-style-2" id="city" name="city" <?php if (isset($_SESSION['city'])) { ?> value="<?php echo $_SESSION['city']; ?>" <?php } else { ?> placeholder="Enter City Name" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
                                     <label for="zip" class="mnt-7">ZIP / Postal Code</label>
-                                    <input type="text" class="form-control form-control-style-2" id="zip" placeholder="Enter ZIP / Postal Code">
+                                    <input type="text" class="form-control form-control-style-2" id="zip" name="zip" <?php if (isset($_SESSION['zip'])) { ?> value="<?php echo $_SESSION['zip']; ?>" <?php } else { ?> placeholder="Enter ZIP / Postal Code" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
                                     <button class="kd-btn kd-btn-xl kd-btn-block">Save Changes</button>
