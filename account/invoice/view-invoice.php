@@ -70,17 +70,20 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
                                     <ul class="list-unstyled">
                                         <?php if ($row['paymentstatus'] == 'PAID') { ?>
                                             <li><span class="fw-semibold">Payment Status: </span>
-                                                <span class="fw-bold" style="color: #66ff00;">PAID</span>
+                                                <span class="fw-bold" style="color: green;">PAID</span>
                                             </li>
                                             <li><span class="fw-semibold">Transaction No: </span> <?php echo $row['transactionnum']; ?></li>
                                             <li><span class="fw-semibold">Payment Type: </span> <?php echo $row['paymenttype']; ?></li>
                                             <li><span class="fw-semibold">Payment Date: </span> <?php echo $row['paymentdate']; ?></li>
                                         <?php } elseif ($row['paymentstatus'] == 'UNPAID') { ?>
-                                            <li><span class="fw-semibold">Payment Status: </span><span class="fw-bold" style="color: #ff3300;">UNPAID</span>
+                                            <li><span class="fw-semibold">Payment Status: </span><span class="fw-bold" style="color: orange;">UNPAID</span>
+                                            </li>
+                                        <?php } elseif ($row['paymentstatus'] == 'DUE') { ?>
+                                            <li><span class="fw-semibold">Payment Status: </span><span class="fw-bold" style="color: red;">UNPAID</span>
                                             </li>
                                         <?php } else { ?>
                                             <li><span class="fw-semibold">Payment Status: </span>
-                                                <span class="fw-bold" style="color: #ff3300;">UNPAID</span>
+                                                <span class="fw-bold" style="color: blue;">UNKNOWN</span>
                                             </li>
                                         <?php } ?>
                                     </ul>
