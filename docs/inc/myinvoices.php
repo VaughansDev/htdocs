@@ -80,37 +80,37 @@ if (isset($_GET['status'])) {
         <div class="text-center mt-70">
             <ul class="kd-pagination mt-40">
                 <?php if ($page > 1) { ?>
-                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page - 1; ?>"><i class="fa-solid fa-chevron-left"></i></a></li>
+                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page - 1; ?>"><i class="fa-solid fa-chevron-left"></i></a></li>
                 <?php }
                 if ($page > 3) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=1">1</a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=1">1</a></li>
                     <li class="kd-pagination-space">...</li>
                 <?php }
                 if ($page - 2 > 0) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page - 2 ?>"><?php echo $page - 2 ?></a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page - 2 ?>"><?php echo $page - 2 ?></a></li>
                 <?php }
                 if ($page - 1 > 0) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page - 1 ?>"><?php echo $page - 1 ?></a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page - 1 ?>"><?php echo $page - 1 ?></a></li>
                 <?php } ?>
-                <li class="active"><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page; ?>"><?php echo $page; ?></a></li>
+                <li class="active"><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page; ?>"><?php echo $page; ?></a></li>
                 <?php if ($page + 1 < ceil($total_pages / $num_results_on_page) + 1) { ?>
                     <li>
-                        <a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page + 1 ?>">
+                        <a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page + 1 ?>">
                             <?php echo $page + 1 ?>
                         </a>
                     </li>
                 <?php }
                 if ($page + 2 < ceil($total_pages / $num_results_on_page) + 2) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page + 2 ?>"><?php echo $page + 2 ?></a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page + 2 ?>"><?php echo $page + 2 ?></a></li>
                 <?php }
                 if ($page < ceil($total_pages / $num_results_on_page) - 2) { ?>
                     <li class="kd-pagination-space">...</li>
                     <li>
-                        <a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
+                        <a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
                     </li>
                 <?php }
                 if ($page < ceil($total_pages / $num_results_on_page)) { ?>
-                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page + 1 ?>"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['accounturl']; ?>?status=<?php echo $status; ?>&page=<?php echo $page + 1 ?>"><i class="fa-solid fa-chevron-right"></i></a></li>
                 <?php } ?>
             </ul>
         </div>
@@ -181,37 +181,37 @@ if (isset($_GET['status'])) {
         <div class="text-center mt-70">
             <ul class="kd-pagination mt-40">
                 <?php if ($page > 1) { ?>
-                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page - 1; ?>"><i class="fa-solid fa-chevron-left"></i></a></li>
+                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page - 1; ?>"><i class="fa-solid fa-chevron-left"></i></a></li>
                 <?php }
                 if ($page > 3) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=1">1</a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?page=1">1</a></li>
                     <li class="kd-pagination-space">...</li>
                 <?php }
                 if ($page - 2 > 0) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page - 2 ?>"><?php echo $page - 2 ?></a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page - 2 ?>"><?php echo $page - 2 ?></a></li>
                 <?php }
                 if ($page - 1 > 0) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page - 1 ?>"><?php echo $page - 1 ?></a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page - 1 ?>"><?php echo $page - 1 ?></a></li>
                 <?php } ?>
-                <li class="active"><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page; ?>"><?php echo $page; ?></a></li>
+                <li class="active"><a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page; ?>"><?php echo $page; ?></a></li>
                 <?php if ($page + 1 < ceil($total_pages / $num_results_on_page) + 1) { ?>
                     <li>
-                        <a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page + 1 ?>">
+                        <a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page + 1 ?>">
                             <?php echo $page + 1 ?>
                         </a>
                     </li>
                 <?php }
                 if ($page + 2 < ceil($total_pages / $num_results_on_page) + 2) { ?>
-                    <li><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page + 2 ?>"><?php echo $page + 2 ?></a></li>
+                    <li><a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page + 2 ?>"><?php echo $page + 2 ?></a></li>
                 <?php }
                 if ($page < ceil($total_pages / $num_results_on_page) - 2) { ?>
                     <li class="kd-pagination-space">...</li>
                     <li>
-                        <a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
+                        <a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
                     </li>
                 <?php }
                 if ($page < ceil($total_pages / $num_results_on_page)) { ?>
-                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['storeurl']; ?>?page=<?php echo $page + 1 ?>"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['accounturl']; ?>?page=<?php echo $page + 1 ?>"><i class="fa-solid fa-chevron-right"></i></a></li>
                 <?php } ?>
             </ul>
         </div>
