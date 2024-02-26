@@ -39,27 +39,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-12">
-                    <div class="kd-box-decorated">
-                        <div class="table-responsive">
-                            <table class="kd-table kd-table-default">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Product</th>
-                                        <th scope="col">License Key</th>
-                                        <th scope="col">License Type</th>
-                                        <th scope="col">Domain</th>
-                                        <th scope="col">IP Address</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    require $_SERVER['DOCUMENT_ROOT'] . '/inc/mylicenses.php';
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <?php
+                    require $_SERVER['DOCUMENT_ROOT'] . '/inc/mylicenses.php';
+                    ?>
                 </div>
             </div>
         </div>
