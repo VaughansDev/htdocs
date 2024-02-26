@@ -26,7 +26,19 @@ if (isset($_GET['lid'])) {
                         <li><span><span class="kd-blog-post-info-title">Product</span><?php echo $row['product']; ?></span></li>
                         <li><span><span class="kd-blog-post-info-title">License Type</span><?php echo $row['license_type']; ?></span></li>
                         <li><span><span class="kd-blog-post-info-title">Purchase Date</span><?php echo $row['purchasedate']; ?></span></li>
-                        <li><span><span class="kd-blog-post-info-title">Status</span><?php echo $row['status']; ?></span></li>
+                        <li><span><span class="kd-blog-post-info-title">Status</span>
+                            <?php
+                            if ($row['status'] == 'active') {
+                                echo '<p style="color: green;">ACTIVE</p>';
+                            } elseif ($row['status'] == 'inactive') {
+                                echo '<p style="color: red;">INACTIVE</p>';
+                            } elseif ($row['status'] == 'suspended') {
+                                echo '<p style="color: orange;">SUSPENDED</p>';
+                            } else {
+                                echo '<p style="color: blue;">UNKNOWN</p>';
+                            }
+                            ?>
+                        </span></li>
                     </ul>
                     <div class="kd-separator"></div>
                     <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
