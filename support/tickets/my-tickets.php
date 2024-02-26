@@ -10,6 +10,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     $active = 'tickets';
     require $_SERVER['DOCUMENT_ROOT'] . '/inc/support-nav.php';
     ?>
+    <div class="kd-separator"></div>
     <div class="kd-box bg-white">
         <div class="container">
             <ul class="kd-links text-center">
