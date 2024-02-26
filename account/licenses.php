@@ -13,10 +13,28 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                 <div style="background-color: rgba(27, 27, 27, .8);"></div>
             </div>
             <div class="container mnb-8">
-                <h1 class="h4 mb-10 text-white text-center">My& Licenses</h1>
+                <h1 class="h4 mb-10 text-white text-center">My Licenses</h1>
             </div>
         </div>
     </header>
+    <div class="kd-box bg-white">
+        <div class="container">
+            <ul class="kd-links text-center">
+                <li <?php if (!isset($_GET['status'])) {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">All Licenses</a></li>
+                <li <?php if ($_GET['status'] == 'paid') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=active">Active Licenses</a></li>
+                <li <?php if ($_GET['status'] == 'unpaid') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=suspended">Suspended Licenses</a></li>
+                <li <?php if ($_GET['status'] == 'due') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=inactive">Inactive Licenses</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="kd-box-5 pb-100 bg-grey-6">
         <div class="container">
             <div class="row justify-content-center">
@@ -26,11 +44,13 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <table class="kd-table kd-table-default">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Item</th>
+                                        <th scope="col">Product</th>
                                         <th scope="col">License Key</th>
-                                        <th scope="col">License</th>
-                                        <th scope="col">Website</th>
-                                        <th scope="col">Date</th>
+                                        <th scope="col">License Type</th>
+                                        <th scope="col">Domain</th>
+                                        <th scope="col">IP Address</th>
+                                        <th scope="col">Purchase Date</th>
+                                        <th scope="col">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -42,6 +62,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <td>Standard</td>
                                         <td class="kd-table-website kd-table-default-website"><a href="#">https://example.info/</a></td>
                                         <td>21.07.2018</td>
+                                        <td>21.07.2018</td>
+                                        <td>21.07.2018</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="kd-table-default-product">
@@ -51,6 +73,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <td>Extended</td>
                                         <td class="kd-table-website kd-table-default-website">Not activated</td>
                                         <td>18.07.2018</td>
+                                        <td>21.07.2018</td>
+                                        <td>21.07.2018</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="kd-table-default-product">
@@ -60,6 +84,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <td>Standard</td>
                                         <td class="kd-table-website kd-table-default-website"><a href="#" class="kd-btn kd-btn-md kd-btn-grey-2">Deactivate</a></td>
                                         <td>18.07.2018</td>
+                                        <td>21.07.2018</td>
+                                        <td>21.07.2018</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="kd-table-default-product">
@@ -69,6 +95,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <td>Extended</td>
                                         <td class="kd-table-website kd-table-default-website">Not activated</td>
                                         <td>15.07.2018</td>
+                                        <td>21.07.2018</td>
+                                        <td>21.07.2018</td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="kd-table-default-product">
@@ -78,6 +106,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <td>Extended</td>
                                         <td class="kd-table-website kd-table-default-website">Not activated</td>
                                         <td>03.07.2018</td>
+                                        <td>21.07.2018</td>
+                                        <td>21.07.2018</td>
                                     </tr>
                                 </tbody>
                             </table>
