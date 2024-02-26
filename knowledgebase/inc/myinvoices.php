@@ -18,10 +18,10 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Total</th>
+                            <th scope="col">Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
-                            <th scope="col">Payment Status</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,10 +60,10 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Total</th>
+                            <th scope="col">Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
-                            <th scope="col">Payment Status</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -132,10 +132,10 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Total</th>
+                            <th scope="col">Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
-                            <th scope="col">Payment Status</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -161,10 +161,10 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Total</th>
+                            <th scope="col">Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
-                            <th scope="col">Payment Status</th>
+                            <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
