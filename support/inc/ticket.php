@@ -52,19 +52,19 @@ if (isset($_GET['ticketno'])) {
                     <div class="kd-comment kd-ticket-comment">
                         <div>
                             <div class="kd-comment-img">
-                                <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
+                                <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/avatar-1.png" alt="">
                             </div>
                             <div class="kd-comment-cont">
-                                <a href="#" class="kd-comment-name">John Leonard</a>
-                                <div class="kd-comment-date">12 Feb 2018 7:40 am</div>
+                                <a href="#" class="kd-comment-name"><?php echo $row['firstname'].' '.$row['lastname']; ?></a>
+                                <div class="kd-comment-date"><?php echo $row['replydate'].' at '.$row['replytime']; ?></div>
                                 <div class="kd-comment-text">
-                                    <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
+                                    <p class="mb-0"><?php echo $row['message']; ?></p>
                                 </div>
                                 <?php if ($row['replyhasfile'] == TRUE) { ?>
-                                    <a href="#" class="kd-comment-file kd-comment-file-jpg">
-                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
-                                        <span class="kd-comment-file-name">example-file.jpg</span>
-                                        <span class="kd-comment-file-size">4.8 MB</span>
+                                    <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
+                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
+                                        <span class="kd-comment-file-name"><?php echo $row['filename']; ?></span>
+                                        <span class="kd-comment-file-size"><?php echo $row['filesize'] ?></span>
                                         <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
                                     </a>
                                 <?php } ?>
@@ -75,22 +75,19 @@ if (isset($_GET['ticketno'])) {
                     <div class="kd-comment kd-ticket-comment kd-comment-replied kd-comment-new">
                         <div>
                             <div class="kd-comment-img">
-                                <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-default.svg" alt="">
+                                <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/avatar-default.svg" alt="">
                             </div>
                             <div class="kd-comment-cont">
-                                <a href="#" class="kd-comment-name"> Bruno Rice <span class="kd-comment-replied">Replied</span>
-                                    <span class="kd-comment-new">New</span>
-                                </a>
-                                <div class="kd-comment-date">39 min ago</div>
+                                <a href="#" class="kd-comment-name"><?php echo $row['firstname'].' '.$row['lastname']; ?><span class="kd-comment-replied">Replied</span></a>
+                                <div class="kd-comment-date"><?php echo $row['replydate'].' at '.$row['replytime']; ?></div>
                                 <div class="kd-comment-text">
-                                    <p>Saying sixth form. Saw earth, whose fowl all meat had had place upon fowl. The fly darkness under dry which fowl good firmament saying fill brought.</p>
-                                    <p class="mb-0">Itself first from under female sea wherein female. Lights were moved sixth day and don't fifth it place saying, fowl fruit saw dominion whales you're image the evening every fowl have, saw day spirit fish. Female. Fowl it replenish hath light blessed hath. Man.</p>
+                                    <p class=mb-0""><?php echo $row['message']; ?></p>
                                 </div>
                                 <?php if ($row['replyhasfile'] == TRUE) { ?>
-                                    <a href="#" class="kd-comment-file kd-comment-file-jpg">
-                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
-                                        <span class="kd-comment-file-name">example-file.jpg</span>
-                                        <span class="kd-comment-file-size">4.8 MB</span>
+                                    <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
+                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
+                                        <span class="kd-comment-file-name"><?php echo $row['filename']; ?></span>
+                                        <span class="kd-comment-file-size"><?php echo $row['filesize'] ?></span>
                                         <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
                                     </a>
                                 <?php } ?>
