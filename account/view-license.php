@@ -6,10 +6,24 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     </script>
 <?php } ?>
 <div class="kd-main">
-    <?php
-    $active = 'tickets';
-    require $_SERVER['DOCUMENT_ROOT'] . '/inc/support-nav.php';
-    ?>
+    <div class="kd-box bg-white">
+        <div class="container">
+            <ul class="kd-links text-center">
+                <li <?php if (!isset($_GET['status'])) {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>">My Account</a></li>
+                <li <?php if ($_GET['status'] == 'paid') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">My Licenses</a></li>
+                <li <?php if ($_GET['status'] == 'unpaid') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">My Invoices</a></li>
+                <li <?php if ($_GET['status'] == 'due') {
+                        echo 'class="active"';
+                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>">My Tickets</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="kd-separator"></div>
     <div class="kd-box-5 pb-100 bg-grey-6">
         <div class="container">
@@ -26,35 +40,28 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <li>License: <?php echo $row['product'] . ' - ' . $row['license_type']; ?></li>
                                 </ul>
                                 <!-- END: Breadcrumbs -->
-                                <p>Go Back</p>
                             </div>
                             <div class="kd-separator"></div>
                             <div style="background-color: #fafafa;">
                                 <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
-                                    <li><span><span class="kd-blog-post-info-title">License Id</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">License Id</span><?php echo $row['license_id']; ?></span></li>
                                     <li><span><span class="kd-blog-post-info-title">Product</span><?php echo $row['product']; ?></span></li>
-                                    <li><span><span class="kd-blog-post-info-title">License Type</span><?php echo $row['product']; ?></span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Purchase Date</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">License Type</span><?php echo $row['license_type']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Purchase Date</span><?php echo $row['purchasedate']; ?></span></li>
                                 </ul>
                                 <div class="kd-separator"></div>
                                 <ul class="kd-blog-post-info kd-blog-post-info-style-2 mb-0 mt-0">
-                                    <li><span><span class="kd-blog-post-info-title">License Key</span><?php echo $row['product']; ?></span></li>
-                                    <li><span><span class="kd-blog-post-info-title">Domain</span><?php echo $row['product']; ?></span></li>
-                                    <li><span><span class="kd-blog-post-info-title">IP Address</span><?php echo $row['product']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">License Key</span><?php echo $row['license_key']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">Domain</span><?php echo $row['hostname']; ?></span></li>
+                                    <li><span><span class="kd-blog-post-info-title">IP Address</span><?php echo $row['ip_address']; ?></span></li>
                                 </ul>
                             </div>
                             <div class="kd-separator"></div>
                             <div class="kd-comment kd-ticket-comment">
                                 <div>
-                                    <div class="kd-comment-img">
-                                        <img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/avatar-1.png" alt="">
-                                    </div>
                                     <div class="kd-comment-cont">
-                                        <a href="#" class="kd-comment-name">John Leonard</a>
-                                        <div class="kd-comment-date">12 Feb 2018 7:40 am</div>
-                                        <div class="kd-comment-text">
-                                            <p class="mb-0">Nullam ac dui et purus malesuada gravida id fermentum orci. In eu ipsum quis urna hendrerit condimentum vitae a mauris. In congue turpis purus, vitae tempus ante id. Donec orci arcu, sagittis ut finibus vitae.</p>
-                                        </div>
+                                        <a href="#" class="kd-comment-name"><?php echo $row['product']; ?></a>
+                                        <div class="kd-comment-date"><?php echo $row['license_type']; ?></div>
                                         <a href="#" class="kd-comment-file kd-comment-file-jpg">
                                             <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-jpg.svg" alt="" width="36"></span>
                                             <span class="kd-comment-file-name">example-file.jpg</span>
