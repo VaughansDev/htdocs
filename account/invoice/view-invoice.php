@@ -79,7 +79,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
                                             <li><span class="fw-semibold">Payment Status: </span><span class="fw-bold" style="color: orange;">UNPAID</span>
                                             </li>
                                         <?php } elseif ($row['paymentstatus'] == 'DUE') { ?>
-                                            <li><span class="fw-semibold">Payment Status: </span><span class="fw-bold" style="color: red;">UNPAID</span>
+                                            <li><span class="fw-semibold">Payment Status: </span><span class="fw-bold" style="color: red;">DUE</span>
                                             </li>
                                         <?php } else { ?>
                                             <li><span class="fw-semibold">Payment Status: </span>
