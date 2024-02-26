@@ -43,8 +43,8 @@ if (isset($_GET['ticketno'])) {
         <?php } ?>
         <div class="kd-separator"></div>
         <?php
-        if ($stmt = $dbcon->prepare("SELECT * FROM ticket_responses WHERE accountid = ? AND ticket_no = ?")) {
-            $stmt->bind_param('ss', $accountid, $ticketno);
+        if ($stmt = $dbcon->prepare("SELECT * FROM ticket_responses WHERE ticket_no = ?")) {
+            $stmt->bind_param('s', $ticketno);
             $stmt->execute();
             $result = $stmt->get_result();
             while ($row = $result->fetch_assoc()) {
