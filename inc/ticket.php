@@ -60,7 +60,7 @@ if (isset($_GET['ticketno'])) {
                                 <div class="kd-comment-text">
                                     <p class="mb-0"><?php echo $row['message']; ?></p>
                                 </div>
-                                <?php if ($row['replyhasfile'] == TRUE) { ?>
+                                <?php if ($row['replyhasfile'] == 'TRUE') { ?>
                                     <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
                                         <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
                                         <span class="kd-comment-file-name"><?php echo $row['filename']; ?></span>
@@ -68,7 +68,7 @@ if (isset($_GET['ticketno'])) {
                                         <span class="kd-comment-file-icon"><span class="icon pe-7s-download"></span></span>
                                     </a>
                                 <?php } else {
-                                    
+
                                 } ?>
                             </div>
                         </div>
@@ -85,7 +85,7 @@ if (isset($_GET['ticketno'])) {
                                 <div class="kd-comment-text">
                                     <p class=mb-0""><?php echo $row['message']; ?></p>
                                 </div>
-                                <?php if ($row['replyhasfile'] == TRUE) { ?>
+                                <?php if ($row['replyhasfile'] == 'TRUE') { ?>
                                     <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
                                         <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
                                         <span class="kd-comment-file-name"><?php echo $row['filename']; ?></span>
