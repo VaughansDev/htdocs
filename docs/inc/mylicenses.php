@@ -27,8 +27,8 @@ if (isset($_GET['status'])) {
                     <tbody>
                         <?php while ($row = $result->fetch_assoc()) { ?>
                             <tr>
-                                <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-licenses.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['product']; ?></a></th>
-                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-licenses.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['license_key']; ?></a></td>
+                                <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-license.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['product']; ?></a></th>
+                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-license.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['license_key']; ?></a></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['license_type']; ?></td>
                                 <td class="kd-table-website kd-table-default-website"><a href="<?php echo $row['hostname']; ?>"><?php echo $row['hostname']; ?></a></td>
                                 <td><?php echo $row['ip_address']; ?></td>
@@ -128,8 +128,8 @@ if (isset($_GET['status'])) {
                     <tbody>
                         <?php while ($row = $result->fetch_assoc()) { ?>
                             <tr>
-                                <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-licenses.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['product']; ?></a></th>
-                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-licenses.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['license_key']; ?></a></td>
+                                <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-license.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['product']; ?></a></th>
+                                <td class="kd-table-licenseKey"><a href="<?php echo $_CONFIG['accounturl']; ?>/view-license.php?lid=<?php echo $row['license_id']; ?>"><?php echo $row['license_key']; ?></a></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['license_type']; ?></td>
                                 <td class="kd-table-website kd-table-default-website"><a href="<?php echo $row['hostname']; ?>"><?php echo $row['hostname']; ?></a></td>
                                 <td><?php echo $row['ip_address']; ?></td>
