@@ -27,7 +27,18 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active">Active Licenses</a></div>
-                            <div class="kd-feature-text">You have 0 active license(s)</div>
+                            <div class="kd-feature-text">
+                                <?php
+                                require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
+                                $accountid = $_SESSION['accountid'];
+                                $sql = "SELECT * FROM licenses WHERE accountid = '$accountid' AND status = 'active'";
+                                $result = $dbcon->query($sql);
+                                if ($result->num_rows > 0) {
+                                    $num = $result->num_rows;
+                                    echo 'You have ' . $num . ' active license(s)';
+                                }
+                                ?>
+                            </div>
                             <a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Licenses <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
@@ -39,7 +50,17 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=due">Due Invoices</a></div>
-                            <div class="kd-feature-text">You have 0 due invoice(s)</div>
+                            <div class="kd-feature-text">
+                                <?php
+                                $accountid = $_SESSION['accountid'];
+                                $sql = "SELECT * FROM invoices WHERE accountid = '$accountid' AND status = 'due'";
+                                $result = $dbcon->query($sql);
+                                if ($result->num_rows > 0) {
+                                    $num = $result->num_rows;
+                                    echo 'You have ' . $num . ' due invoice(s)';
+                                }
+                                ?>
+                            </div>
                             <a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=due" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Invoices <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
@@ -51,14 +72,24 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         </div>
                         <div class="kd-feature-cont">
                             <div class="kd-feature-title"><a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open">My Tickets</a></div>
-                            <div class="kd-feature-text">You have 0 open ticket(s)</div>
-                            <a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Tickets <i class="fa-solid fa-angle-right"></i></span></a>
-                        </div>
+                            <div class="kd-feature-text">
+                                <?php
+                                $accountid = $_SESSION['accountid'];
+                                $sql = "SELECT * FROM tickets WHERE accountid = '$accountid' AND status = 'open'";
+                                $result = $dbcon->query($sql);
+                                if ($result->num_rows > 0) {
+                                    $num = $result->num_rows;
+                                    echo 'You have ' . $num . ' open ticket(s)';
+                                }
+                                ?>
+                            </div>
+                        <a href="<?php echo $_CONFIG['ticketsurl']; ?>?status=open" class="kd-btn kd-btn-link d-flex kd-feature-link">View My Tickets <i class="fa-solid fa-angle-right"></i></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php
-    require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
-    ?>
+</div>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
+?>
