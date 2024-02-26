@@ -62,7 +62,7 @@ if (isset($_GET['ticketno'])) {
                                 </div>
                                 <?php if ($row['replyhasfile'] == 'TRUE') { ?>
                                     <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
-                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
+                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['domain']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
                                         <span class="kd-comment-file-name"><?php echo $row['filename']; ?></span>
                                         <span class="kd-comment-file-size"><?php echo $row['filesize'] ?></span>
                                         <span class="kd-comment-file-icon"><i class="fa-solid fa-download"></i></span>
@@ -87,7 +87,7 @@ if (isset($_GET['ticketno'])) {
                                 </div>
                                 <?php if ($row['replyhasfile'] == 'TRUE') { ?>
                                     <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
-                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['accounturl']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
+                                        <span class="kd-comment-file-img"><img src="<?php echo $_CONFIG['domain']; ?>/assets/images/icon-zip.svg" alt="" width="36"></span>
                                         <span class="kd-comment-file-name"><?php echo $row['filename']; ?></span>
                                         <span class="kd-comment-file-size"><?php echo $row['filesize'] ?></span>
                                         <span class="kd-comment-file-icon"><i class="fa-solid fa-download"></i></span>
