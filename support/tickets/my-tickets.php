@@ -19,13 +19,13 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php">All Tickets</a></li>
                 <li <?php if ($_GET['status'] == 'OPEN') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php?status=open">Open</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php?status=OPEN">Open</a></li>
                 <li <?php if ($_GET['status'] == 'CLOSED') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php?status=closed">Closed</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php?status=CLOSED">Closed</a></li>
                 <li <?php if ($_GET['status'] == 'ONHOLD') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php?status=onhold">On Hold</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['ticketsurl']; ?>/my-tickets.php?status=ONHOLD">On Hold</a></li>
             </ul>
         </div>
     </div>
