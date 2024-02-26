@@ -3,10 +3,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 if (isset($_GET['status'])) {
     $status = $_GET['status'];
     $accountid = $_SESSION['accountid'];
-    $total_pages = $dbcon->query("SELECT * FROM invoices WHERE accountid = '$accountid' AND payment_status = '$status'")->num_rows;
+    $total_pages = $dbcon->query("SELECT * FROM invoices WHERE accountid = '$accountid' AND paymentstatus = '$status'")->num_rows;
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
     $num_results_on_page = 12;
-    if ($stmt = $dbcon->prepare("SELECT * FROM licenses WHERE accountid = ? AND payment_status = ? LIMIT ?,?")) {
+    if ($stmt = $dbcon->prepare("SELECT * FROM licenses WHERE accountid = ? AND paymentstatus = ? LIMIT ?,?")) {
         $calc_page = ($page - 1) * $num_results_on_page;
         $stmt->bind_param('ssii', $accountid, $status, $calc_page, $num_results_on_page);
         $stmt->execute();
