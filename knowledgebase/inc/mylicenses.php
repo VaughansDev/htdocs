@@ -94,18 +94,36 @@ if (isset($_GET['cat'])) {
         $stmt->bind_param('sii', $accountid, $calc_page, $num_results_on_page);
         $stmt->execute();
         $result = $stmt->get_result(); ?>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-            <a href="<?php echo $_CONFIG['accounturl']; ?>/view-licenses.php?lid=<?php echo $row['license_id']; ?>">
-                <tr>
-                    <th scope="row" class="kd-table-default-product"><?php echo $row['product']; ?></th>
-                    <td class="kd-table-licenseKey"><?php echo $row['license_key']; ?></td>
-                    <td class="kd-table-licenseKey"><?php echo $row['license_type']; ?></td>
-                    <td class="kd-table-website kd-table-default-website"><?php echo $row['hostname']; ?></td>
-                    <td><?php echo $row['ip_address']; ?></td>
-                    <td><?php echo $row['status']; ?></td>
-                </tr>
-            </a>
-        <?php } ?>
+        <div class="kd-box-decorated">
+            <div class="table-responsive">
+                <table class="kd-table kd-table-default">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">License Key</th>
+                            <th scope="col">License Type</th>
+                            <th scope="col">Domain</th>
+                            <th scope="col">IP Address</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while ($row = $result->fetch_assoc()) { ?>
+                            <a href="<?php echo $_CONFIG['accounturl']; ?>/view-licenses.php?lid=<?php echo $row['license_id']; ?>">
+                                <tr>
+                                    <th scope="row" class="kd-table-default-product"><?php echo $row['product']; ?></th>
+                                    <td class="kd-table-licenseKey"><?php echo $row['license_key']; ?></td>
+                                    <td class="kd-table-licenseKey"><?php echo $row['license_type']; ?></td>
+                                    <td class="kd-table-website kd-table-default-website"><?php echo $row['hostname']; ?></td>
+                                    <td><?php echo $row['ip_address']; ?></td>
+                                    <td><?php echo $row['status']; ?></td>
+                                </tr>
+                            </a>
+                        <?php } ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     <?php } else {
         echo '<h4>No Licenses Found</h4>';
     } ?>
