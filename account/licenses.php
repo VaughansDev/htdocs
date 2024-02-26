@@ -22,16 +22,16 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
             <ul class="kd-links text-center">
                 <li <?php if (!isset($_GET['status'])) {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php">All Licenses</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php">All Licenses</a></li>
                 <li <?php if ($_GET['status'] == 'paid') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=active">Active Licenses</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=active">Active Licenses</a></li>
                 <li <?php if ($_GET['status'] == 'unpaid') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=suspended">Suspended Licenses</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=suspended">Suspended Licenses</a></li>
                 <li <?php if ($_GET['status'] == 'due') {
                         echo 'class="active"';
-                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/my-invoices.php?status=inactive">Inactive Licenses</a></li>
+                    } ?>><a href="<?php echo $_CONFIG['accounturl']; ?>/licenses.php?status=inactive">Inactive Licenses</a></li>
             </ul>
         </div>
     </div>
