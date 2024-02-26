@@ -36,6 +36,7 @@ if (isset($_GET['lid'])) {
                 </div>
                 <div class="kd-separator"></div>
                 <div class="kd-comment kd-ticket-comment">
+                    <h4>File Download:</h4>
                     <div>
                         <div class="col-lg-4">
                             <div class="kd-comment-name"><?php echo $row['product']; ?></div>
