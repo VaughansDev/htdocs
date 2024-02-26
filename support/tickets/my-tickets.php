@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                     <div class="kd-separator ml-10 mr-10"></div>
                 </div>
                 <div class="col-auto">
-                    <a href="<?php echo $_CONFIG['ticketsurl']; ?>new-ticket.php" class="kd-btn kd-btn-md">Submit a ticket</a>
+                    <a href="<?php echo $_CONFIG['ticketsurl']; ?>/new-ticket.php" class="kd-btn kd-btn-md">Submit a ticket</a>
                 </div>
             </div>
             <?php
