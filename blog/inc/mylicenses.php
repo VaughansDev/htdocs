@@ -31,7 +31,7 @@ if (isset($_GET['cat'])) {
                                     <th scope="row" class="kd-table-default-product"><?php echo $row['product']; ?></th>
                                     <td class="kd-table-licenseKey"><?php echo $row['license_key']; ?></td>
                                     <td class="kd-table-licenseKey"><?php echo $row['license_type']; ?></td>
-                                    <td class="kd-table-website kd-table-default-website"><?php echo $row['hostname']; ?></td>
+                                    <td class="kd-table-website kd-table-default-website"><a href="<?php echo $row['hostname']; ?>"><?php echo $row['hostname']; ?></a></td>
                                     <td><?php echo $row['ip_address']; ?></td>
                                     <td><?php echo $row['status']; ?></td>
                                 </tr>
@@ -114,7 +114,7 @@ if (isset($_GET['cat'])) {
                                     <th scope="row" class="kd-table-default-product"><?php echo $row['product']; ?></th>
                                     <td class="kd-table-licenseKey"><?php echo $row['license_key']; ?></td>
                                     <td class="kd-table-licenseKey"><?php echo $row['license_type']; ?></td>
-                                    <td class="kd-table-website kd-table-default-website"><?php echo $row['hostname']; ?></td>
+                                    <td class="kd-table-website kd-table-default-website"><a href="<?php echo $row['hostname']; ?>"><?php echo $row['hostname']; ?></a></td>
                                     <td><?php echo $row['ip_address']; ?></td>
                                     <td><?php echo $row['status']; ?></td>
                                 </tr>
