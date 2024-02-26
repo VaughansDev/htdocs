@@ -32,7 +32,20 @@ if (isset($_GET['status'])) {
                                 <td><?php echo $row['invoicetotal']; ?></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['licensetype']; ?></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['producttype']; ?></td>
-                                <td><?php echo $row['status']; ?></td>
+                                <td>
+                                    <?php
+                                    if ($row['paymentstatus'] == 'PAID') {
+                                    echo '<div style="color: green;">PAID</div>';
+                                    } elseif ($row['paymentstatus'] == 'DUE') {
+                                    echo '<div style="color: red;">DUE</div>';
+                                    } elseif ($row['paymentstatus'] == 'UNPAID') {
+                                    echo '<div style="color: orange;">UNPAID</div>';
+                                    } else {
+                                    echo '<div style="color: blue;">UNKNOWN</div>';
+                                    }
+                                    ?>
+
+                                </td>
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -47,7 +60,7 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Totat</th>
+                            <th scope="col">Invoice Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
                             <th scope="col">Payment Status</th>
@@ -119,7 +132,7 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Totat</th>
+                            <th scope="col">Invoice Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
                             <th scope="col">Payment Status</th>
@@ -133,7 +146,7 @@ if (isset($_GET['status'])) {
                                 <td><?php echo $row['invoicetotal']; ?></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['licensetype']; ?></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['producttype']; ?></td>
-                                <td><?php echo $row['status']; ?></td>
+                                <td><?php echo $row['paymentstatus']; ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
@@ -148,7 +161,7 @@ if (isset($_GET['status'])) {
                         <tr>
                             <th scope="col">Invoice #</th>
                             <th scope="col">Invoice Date</th>
-                            <th scope="col">Invoice Totat</th>
+                            <th scope="col">Invoice Total</th>
                             <th scope="col">License Type</th>
                             <th scope="col">Product Type</th>
                             <th scope="col">Payment Status</th>
