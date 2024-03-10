@@ -7,16 +7,16 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php'; ?>
             <ul class="kd-links text-center">
                 <li <?php if (!isset($_GET['view'])) {
                         echo 'class="active"';
-                    } ?>><a href="https://status.khaosdevelopment.com">Live Status</a></li>
-                <li <?php if ($_GET['view'] == 'OPEN') {
+                    } ?>><a href="https://status.khaosdevelopment.com/index.php">Live Status</a></li>
+                <li <?php if (isset($_GET['view']) && $_GET['view'] == 'OPEN') {
                         echo 'class="active"';
-                    } ?>><a href="https://status.khaosdevelopment.com&view=ongoing-issues">Ongoing Issues</a></li>
-                <li <?php if ($_GET['view'] == 'CLOSED') {
+                    } ?>><a href="https://status.khaosdevelopment.com/index.php?view=ongoing-issues">Ongoing Issues</a></li>
+                <li <?php if (isset($_GET['view']) && $_GET['view'] == 'CLOSED') {
                         echo 'class="active"';
-                    } ?>><a href="https://status.khaosdevelopment.com&view=past-issues">Past Issues</a></li>
-                <li <?php if ($_GET['view'] == 'ONHOLD') {
+                    } ?>><a href="https://status.khaosdevelopment.com/index.php?view=past-issues">Past Issues</a></li>
+                <li <?php if (isset($_GET['view']) && $_GET['view'] == 'ONHOLD') {
                         echo 'class="active"';
-                    } ?>><a href="https://status.khaosdevelopment.com&view=planned-maintenance">Planned Maintenance </a></li>
+                    } ?>><a href="https://status.khaosdevelopment.com/index.php?view=planned-maintenance">Planned Maintenance </a></li>
             </ul>
         </div>
     </div>
