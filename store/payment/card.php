@@ -19,7 +19,8 @@
       verificationToken,
       idempotencyKey: window.crypto.randomUUID(),
     });
-
+    session_start();
+    $_SESSION['idempotencyKey'] = idempotencyKey;
     const paymentResponse = await fetch('payment/process-payment.php', {
       method: 'POST',
       headers: {

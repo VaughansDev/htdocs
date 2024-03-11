@@ -18,8 +18,8 @@ $token = $data->token;*/
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-$chars = '1234567890abcefghijklmnopqrstuvwxyz';
-$idempotencyKey = substr(str_shuffle($chars), 0, 10).'-'.substr(str_shuffle($chars), 0, 4).'-'.substr(str_shuffle($chars), 0, 4).'-'.substr(str_shuffle($chars), 0, 4).'-'.substr(str_shuffle($chars), 0, 12);
+session_start();
+$idempotencyKey = $_SESSION['idempotencyKey'];
 
 $formattedamount = str_replace('.', '', '97.99');
 
