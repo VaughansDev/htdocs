@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'paypalconfig.php';
 
 if (array_key_exists('paymentId', $_GET) && array_key_exists('PayerID', $_GET)) {
@@ -23,6 +24,7 @@ if (array_key_exists('paymentId', $_GET) && array_key_exists('PayerID', $_GET)) 
     $dbcon->query("INSERT INTO paypal_payments(payment_id, payer_id, payer_email, amount, currency, payment_status, account_id) VALUES('". $payment_id ."', '". $payer_id ."', '". $payer_email ."', '". $amount ."', '". $currency ."', '". $payment_status ."', '". $account_id ."')");
 
     echo "Payment successful. Your transaction id is: ". $payment_id;
+    echo $_SESSION['accountid'];
   } else {
     echo $response->getMessage();
   }
