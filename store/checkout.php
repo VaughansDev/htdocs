@@ -203,7 +203,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 <div class="kd-separator"></div>
                                 <input name="price" value="97.99" hidden>
                                 <div class="kd-box-content">
-                                    <button class="kd-btn kd-btn-xl kd-btn-block">Purchase $97.99</button>
+                                    <button name="submit" value="submit" type="submit" class="kd-btn kd-btn-xl kd-btn-block">Purchase $97.99</button>
                                 </div>
                             </form>
                         </div>
