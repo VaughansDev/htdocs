@@ -134,17 +134,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <form action="#" class="kd-form">
                                 <div class="kd-box-content">
                                     <div class="kd-form-group">
-                                        <label for="name-card" class="mnt-7">Name on Card</label>
-                                        <input type="text" class="form-control form-control-style-2" id="name-card" placeholder="Enter Full Name">
-                                    </div>
-                                </div>
-                                <div class="kd-separator"></div>
-                                <div class="kd-box-content">
-                                    <div class="kd-form-group">
-                                        <label for="email" class="mnt-7">Email</label>
-                                        <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email" placeholder="Enter your Email">
-                                    </div>
-                                    <div class="kd-form-group">
                                         <label for="first-name" class="mnt-7">First Name</label>
                                         <input type="text" class="form-control form-control-style-2" id="first-name" placeholder="Enter your First Name">
                                     </div>
@@ -152,9 +141,44 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <label for="last-name" class="mnt-7">Last Name</label>
                                         <input type="text" class="form-control form-control-style-2" id="last-name" placeholder="Enter your Last Name">
                                     </div>
+                                    <div class="kd-form-group">
+                                        <label for="email" class="mnt-7">Email</label>
+                                        <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email" placeholder="Enter your Email">
+                                    </div>
                                 </div>
                                 <div class="kd-separator"></div>
                                 <div class="kd-box-content">
+                                    <div class="kd-form-group">
+                                        <label for="firstname" class="mnt-7">Address Line 1</label>
+                                        <input type="text" class="form-control form-control-style-2" id="address1" name="address1" placeholder="">
+                                    </div>
+                                    <div class="kd-form-group">
+                                        <label for="lastname" class="mnt-7">Address Line 2</label>
+                                        <input type="text" class="form-control form-control-style-2" id="address2" name="address2" placeholder="">
+                                    </div>
+                                    <div class="kd-form-group">
+                                        <label for="city" class="mnt-7">City / Town</label>
+                                        <input type="text" class="form-control form-control-style-2" id="city" name="city" placeholder="">
+                                    </div>
+                                    <div class="kd-form-group">
+                                        <label for="state" class="mnt-7">State / Province</label>
+                                        <input type="text" class="form-control form-control-style-2" id="state" name="state" placeholder="">
+                                    </div>
+                                    <div class="kd-form-group">
+                                        <label for="country" class="mnt-7">Country</label>
+                                        <input type="text" class="form-control form-control-style-2" id="country" name="country" placeholder="">
+                                    </div>
+                                    <div class="kd-form-group">
+                                        <label for="postal" class="mnt-7">ZIP / Postal Code</label>
+                                        <input type="text" class="form-control form-control-style-2" id="postal" name="postal" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="kd-separator"></div>
+                                <div class="kd-box-content">
+                                    <div class="kd-form-group">
+                                        <label for="name-card" class="mnt-7">Name on Card</label>
+                                        <input type="text" class="form-control form-control-style-2" id="name-card" placeholder="Enter Full Name">
+                                    </div>
                                     <?php
                                     require 'payment/card.php';
                                     ?>
