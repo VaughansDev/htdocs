@@ -18,8 +18,9 @@ if (array_key_exists('paymentId', $_GET) && array_key_exists('PayerID', $_GET)) 
     $amount = $arr_body['transactions'][0]['amount']['total'];
     $currency = PAYPAL_CURRENCY;
     $payment_status = $arr_body['state'];
+    $account_id = $_SESSION['accountid'];
 
-    $dbcon->query("INSERT INTO paypal_payments(payment_id, payer_id, payer_email, amount, currency, payment_status) VALUES('". $payment_id ."', '". $payer_id ."', '". $payer_email ."', '". $amount ."', '". $currency ."', '". $payment_status ."')");
+    $dbcon->query("INSERT INTO paypal_payments(payment_id, payer_id, payer_email, amount, currency, payment_status, account_id) VALUES('". $payment_id ."', '". $payer_id ."', '". $payer_email ."', '". $amount ."', '". $currency ."', '". $payment_status ."', '". $account_id ."')");
 
     echo "Payment successful. Your transaction id is: ". $payment_id;
   } else {
