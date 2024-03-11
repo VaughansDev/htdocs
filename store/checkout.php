@@ -178,7 +178,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <div class="kd-form-group">
                                         <label for="name-card" class="mnt-7">Name on Card</label>
                                         <input type="text" class="form-control form-control-style-2" id="name-card" placeholder="Enter Full Name">
-                                    </div><br>
+                                    </div>
                                     <?php
                                     require 'payment/card.php';
                                     ?>
