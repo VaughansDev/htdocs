@@ -2,46 +2,6 @@
 <link rel='stylesheet' href='../assets/css/dark-mode.css'>
 <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
 <script>
-  const darkModeCardStyle = {
-    '.input-container': {
-      borderColor: '#999999',
-      borderRadius: '6px',
-    },
-    '.input-container.is-focus': {
-      borderColor: '#26d847',
-    },
-    '.input-container.is-error': {
-      borderColor: '#ff1600',
-    },
-    '.message-text': {
-      color: '#999999',
-    },
-    '.message-icon': {
-      color: '#999999',
-    },
-    '.message-text.is-error': {
-      color: '#ff1600',
-    },
-    '.message-icon.is-error': {
-      color: '#ff1600',
-    },
-    input: {
-      backgroundColor: '#13182D',
-      color: '#FFFFFF',
-      fontFamily: 'helvetica neue, sans-serif',
-    },
-    'input::placeholder': {
-      color: '#999999',
-    },
-    'input.is-error': {
-      color: '#ff1600',
-    },
-    '@media screen and (max-width: 600px)': {
-      'input': {
-        'fontSize': '12px',
-      }
-    }
-  };
 
   const appId = 'sandbox-sq0idb-Mc0SPnKWQ3cYVJ-0EGnoiQ';
   const locationId = 'LWGA1R7B2E4WY';
