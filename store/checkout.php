@@ -199,7 +199,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             </form>
                         </div>
                         <div class="tab-pane fade kd-tab-pane" id="paypal" role="tabpanel" aria-labelledby="paypal-tab">
-                            <form method="post" action="<?php echo $_SERVER['DOCUMENT_ROOT'] . '/assets/plugins/paypal/paypalcharge.php'; ?>">
+                            <form method="post" action="<?php echo $_CONFIG['storeurl'] . '/assets/plugins/paypal/paypalcharge.php'; ?>">
                                 <div class="kd-separator"></div>
                                 <input name="price" value="97.99" hidden>
                                 <div class="kd-box-content">
