@@ -7,9 +7,7 @@
   const locationId = 'LWGA1R7B2E4WY';
 
   async function initializeCard(payments) {
-    const card = await payments.card({
-      style: darkModeCardStyle,
-    });
+    const card = await payments.card();
     await card.attach('#card-container');
 
     return card;
