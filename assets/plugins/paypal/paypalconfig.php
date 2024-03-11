@@ -4,9 +4,9 @@ require_once 'vendor/autoload.php';
 use Omnipay\Omnipay;
 
 $_CONFIG['dbhost'] = 'localhost';
-$_CONFIG['dbuser'] = 'root';
-$_CONFIG['dbpass'] = '55d7218283f672edb3f0';
-$_CONFIG['dbname'] = 'vaughansdev';
+$_CONFIG['dbuser'] = 'khaosdev_user';
+$_CONFIG['dbpass'] = 'fU6+IN)s~UmMhv;jNT';
+$_CONFIG['dbname'] = 'khaosdev_main';
 
 $dbcon = new mysqli($_CONFIG['dbhost'], $_CONFIG['dbuser'], $_CONFIG['dbpass'], $_CONFIG['dbname']);
 if ($dbcon->connect_errno) {
