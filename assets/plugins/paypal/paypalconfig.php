@@ -13,8 +13,8 @@ if ($dbcon->connect_errno) {
   die("Connect failed: ". $db->connect_error);
 }
 
-define('CLIENT_ID', 'AVi7SRZM8m4l7cW0qcMnmVHx5dqr5j17jg_qZA3e4GzmB8wptCcJne8tMgE1uP0678rEKKaSxkOJ75BF');
-define('CLIENT_SECRET', 'EADPa4N-LpwuuTRFIjsBldSwSZFj3UwuDExmTRWKR_SfvnoIIrKHtal2Fe51AyOC8u2gQkZWwYIiyvhR');
+define('CLIENT_ID', 'AeN0dme_TZjUilGYvXtlEpB9vNRlyJ9cjsSGRtpJR0MUs22R8YCKtYjUKgufCfaA0lkPFCVyfSfC3NK2');
+define('CLIENT_SECRET', 'EP30X3afr_2OSND2krbEL4ZfN6PaTUbe3GD5B8PQOLGIOujo-lrFwSqLWt40uZ5j4m5k7kib8ghBbMX8');
 
 define('PAYPAL_RETURN_URL', 'http://localhost/assets/plugins/paypal/paypalsuccess.php');
 define('PAYPAL_CANCEL_URL', 'http://localhost/assets/plugins/paypal/paypalcancel.php');
