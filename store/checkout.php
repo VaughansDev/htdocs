@@ -137,11 +137,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <label for="name-card" class="mnt-7">Name on Card</label>
                                         <input type="text" class="form-control form-control-style-2" id="name-card" placeholder="Enter Full Name">
                                     </div>
-                                    <div class="kd-form-group">
-                                        <?php
-                                            require 'payment/card.php';
-                                        ?>
-                                    </div>
                                 </div>
                                 <div class="kd-separator"></div>
                                 <div class="kd-box-content">
@@ -160,6 +155,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 </div>
                                 <div class="kd-separator"></div>
                                 <div class="kd-box-content">
+                                    <?php
+                                    require 'payment/card.php';
+                                    ?>
                                     <button class="kd-btn kd-btn-xl kd-btn-block">Purchase $98</button>
                                 </div>
                             </form>
