@@ -40,8 +40,13 @@ $body->setAmountMoney($amount_money);
 
 $api_response = $payments_api->createPayment($body);
 
+session_start();
 if ($api_response->isSuccess()) {
     $result = $api_response->getResult();
+    $_SESSION['sqapiresult'] = $result;
+    header("location: ../success.php");
 } else {
     $errors = $api_response->getErrors();
+    $_SESSION['sqapierrors'] = $errors;
+    header("location: ../error.php");
 }
