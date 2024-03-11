@@ -134,43 +134,43 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <form action="#" class="kd-form">
                                 <div class="kd-box-content">
                                     <div class="kd-form-group">
-                                        <label for="first-name" class="mnt-7">First Name</label>
-                                        <input type="text" class="form-control form-control-style-2" id="first-name" placeholder="Enter your First Name">
+                                        <label for="firstname" class="mnt-7">First Name</label>
+                                        <input type="text" class="form-control form-control-style-2" id="firstname" name="firstname" <?php if (isset($_SESSION['firstname'])) { ?> value="<?php echo $_SESSION['firstname']; ?>" <?php } else {} ?> placeholder="Enter your First Name">
                                     </div>
                                     <div class="kd-form-group">
-                                        <label for="last-name" class="mnt-7">Last Name</label>
-                                        <input type="text" class="form-control form-control-style-2" id="last-name" placeholder="Enter your Last Name">
+                                        <label for="lastname" class="mnt-7">Last Name</label>
+                                        <input type="text" class="form-control form-control-style-2" id="lastname" name="lastname" <?php if (isset($_SESSION['lastname'])) { ?> value="<?php echo $_SESSION['lastname']; ?>" <?php } else {} ?> placeholder="Enter your Last Name">
                                     </div>
                                     <div class="kd-form-group">
                                         <label for="email" class="mnt-7">Email</label>
-                                        <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email" placeholder="Enter your Email">
+                                        <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email" name="email" <?php if (isset($_SESSION['email'])) { ?> value="<?php echo $_SESSION['email']; ?>" <?php } else {} ?> placeholder="Enter your Email">
                                     </div>
                                 </div>
                                 <div class="kd-separator"></div>
                                 <div class="kd-box-content">
                                     <div class="kd-form-group">
                                         <label for="firstname" class="mnt-7">Address Line 1</label>
-                                        <input type="text" class="form-control form-control-style-2" id="address1" name="address1" placeholder="">
+                                        <input type="text" class="form-control form-control-style-2" id="address1" name="address1" <?php if (isset($_SESSION['address1'])) { ?> value="<?php echo $_SESSION['address1']; ?>" <?php } else {} ?> placeholder="">
                                     </div>
                                     <div class="kd-form-group">
                                         <label for="lastname" class="mnt-7">Address Line 2</label>
-                                        <input type="text" class="form-control form-control-style-2" id="address2" name="address2" placeholder="">
+                                        <input type="text" class="form-control form-control-style-2" id="address2" name="address2" <?php if (isset($_SESSION['address2'])) { ?> value="<?php echo $_SESSION['address2']; ?>" <?php } else {} ?> placeholder="">
                                     </div>
                                     <div class="kd-form-group">
                                         <label for="city" class="mnt-7">City / Town</label>
-                                        <input type="text" class="form-control form-control-style-2" id="city" name="city" placeholder="">
+                                        <input type="text" class="form-control form-control-style-2" id="city" name="city" <?php if (isset($_SESSION['city'])) { ?> value="<?php echo $_SESSION['city']; ?>" <?php } else {} ?> placeholder="">
                                     </div>
                                     <div class="kd-form-group">
                                         <label for="state" class="mnt-7">State / Province</label>
-                                        <input type="text" class="form-control form-control-style-2" id="state" name="state" placeholder="">
+                                        <input type="text" class="form-control form-control-style-2" id="state" name="state" <?php if (isset($_SESSION['state'])) { ?> value="<?php echo $_SESSION['state']; ?>" <?php } else {} ?> placeholder="">
                                     </div>
                                     <div class="kd-form-group">
                                         <label for="country" class="mnt-7">Country</label>
-                                        <input type="text" class="form-control form-control-style-2" id="country" name="country" placeholder="">
+                                        <input type="text" class="form-control form-control-style-2" id="country" name="country" <?php if (isset($_SESSION['country'])) { ?> value="<?php echo $_SESSION['country']; ?>" <?php } else {} ?> placeholder="">
                                     </div>
                                     <div class="kd-form-group">
                                         <label for="postal" class="mnt-7">ZIP / Postal Code</label>
-                                        <input type="text" class="form-control form-control-style-2" id="postal" name="postal" placeholder="">
+                                        <input type="text" class="form-control form-control-style-2" id="postal" name="postal" <?php if (isset($_SESSION['postal'])) { ?> value="<?php echo $_SESSION['postal']; ?>" <?php } else {} ?> placeholder="">
                                     </div>
                                 </div>
                                 <div class="kd-separator"></div>
