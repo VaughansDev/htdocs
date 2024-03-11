@@ -158,7 +158,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <?php
                                     require 'payment/card.php';
                                     ?>
-                                    <button class="kd-btn kd-btn-xl kd-btn-block">Purchase $98</button>
                                 </div>
                             </form>
                         </div>

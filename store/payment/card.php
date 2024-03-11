@@ -2,7 +2,6 @@
 <link rel='stylesheet' href='../assets/css/dark-mode.css'>
 <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
 <script>
-
   const appId = 'sandbox-sq0idb-Mc0SPnKWQ3cYVJ-0EGnoiQ';
   const locationId = 'LWGA1R7B2E4WY';
 
@@ -153,6 +152,6 @@
 </script>
 <form id="payment-form" style="height: 100px;">
   <div id="card-container"></div>
-  <button id="card-button" class="payment" type="button">Place Order</button>
+  <button id="card-button" class="kd-btn kd-btn-xl kd-btn-block payment" type="button">Purchase $98</button>
 </form>
 <div id="payment-status-container"></div>
