@@ -31,7 +31,7 @@ $square_client = new SquareClient([
 $payments_api = $client->getPaymentsApi();
 
 $amount_money = new Money();
-$amount_money->setAmount(9799);
+$amount_money->setAmount("9799");
 $amount_money->setCurrency("CAD");
 
 
