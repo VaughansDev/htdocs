@@ -55,7 +55,7 @@
   //Required in SCA Mandated Regions: Learn more at https://developer.squareup.com/docs/sca-overview
   async function verifyBuyer(payments, token) {
     const verificationDetails = {
-      amount: '<?php $_SESSION['amount']; ?>',
+      amount: '9799',
       billingContact: {
         <?php if (!empty($_SESSION['address2'])) { ?>
           addressLines: ['<?php $_SESSION['address1']; ?>', '<?php $_SESSION['address2']; ?>'],
