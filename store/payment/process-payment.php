@@ -21,7 +21,7 @@ $data = json_decode(file_get_contents('php://input'), true);
 $chars = '1234567890abcefghijklmnopqrstuvwxyz';
 $idempotencyKey = substr(str_shuffle($chars), 0, 10).'-'.substr(str_shuffle($chars), 0, 4).'-'.substr(str_shuffle($chars), 0, 4).'-'.substr(str_shuffle($chars), 0, 4).'-'.substr(str_shuffle($chars), 0, 12);
 
-$formattedamount = str_replace('.', '', $_SESSION['amount']);
+$formattedamount = str_replace('.', '', '97.99');
 
 $square_client = new SquareClient([
   'accessToken' => 'EAAAlzQbywdmmB1zTn_ObsKPZoSdOzw8W1Gnh6H-_-oUbrae08CQ-TUl4DGrUOCD',
