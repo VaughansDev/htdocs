@@ -24,7 +24,7 @@ $idempotencyKey = substr(str_shuffle($chars), 0, 10).'-'.substr(str_shuffle($cha
 $formattedamount = str_replace('.', '', $_SESSION['amount']);
 
 $square_client = new SquareClient([
-  'accessToken' => 'EAAAELKfLvN0e4Lqz8FO2L88ggsxgD_Sms1qtyQ8rj3JRrXDuN-pmWoPz7e7O4tyA',
+  'accessToken' => 'EAAAlzQbywdmmB1zTn_ObsKPZoSdOzw8W1Gnh6H-_-oUbrae08CQ-TUl4DGrUOCD',
   'environment' => Environment::SANDBOX,
 ]);
 

@@ -138,43 +138,9 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         <input type="text" class="form-control form-control-style-2" id="name-card" placeholder="Enter Full Name">
                                     </div>
                                     <div class="kd-form-group">
-                                        <label for="card-number" class="mnt-7">Card Number</label>
-                                        <input type="text" class="form-control form-control-style-2 kd-card-number" name="card-number" id="card-number" placeholder="1234 5678 9012 3456">
-                                    </div>
-                                    <div class="kd-form-group">
-                                        <div class="row vertical-gap">
-                                            <div class="col-sm-8">
-                                                <label for="date" class="mnt-7">Expiration Date</label>
-                                                <div class="kd-form-group-inputs">
-                                                    <select class="custom-select form-control form-control-style-2" id="date">
-                                                        <option value="1">January</option>
-                                                        <option value="2">February</option>
-                                                        <option value="3">March</option>
-                                                        <option value="4">April</option>
-                                                        <option value="5">May</option>
-                                                        <option value="6">June</option>
-                                                        <option value="7">July</option>
-                                                        <option value="8">August</option>
-                                                        <option value="9">September</option>
-                                                        <option value="10">October</option>
-                                                        <option value="11" selected>November</option>
-                                                        <option value="12">December</option>
-                                                    </select>
-                                                    <select class="custom-select form-control form-control-style-2 w-auto">
-                                                        <option value="1">2024</option>
-                                                        <option value="2">2023</option>
-                                                        <option value="3">2022</option>
-                                                        <option value="4">2020</option>
-                                                        <option value="5">2019</option>
-                                                        <option value="6" selected>2018</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <label for="password" class="mnt-7">CVV Number</label>
-                                                <input type="password" class="form-control form-control-style-2 kd-form-quantity-input" min="1" max="999" id="password" placeholder="XXX">
-                                            </div>
-                                        </div>
+                                        <?php
+                                            require 'payment/card.php';
+                                        ?>
                                     </div>
                                 </div>
                                 <div class="kd-separator"></div>
