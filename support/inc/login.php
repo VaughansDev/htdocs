@@ -39,7 +39,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $_SESSION['users_dicordlinked'] = $users_dicordlinked;
                     $_SESSION['address1'] = $users_address1;
                     $_SESSION['address2'] = $users_address2;
-                    $_SESSION['county'] = $users_country;
+                    $_SESSION['country'] = $users_country;
                     $_SESSION['city'] = $users_city;
                     $_SESSION['state'] = $users_state;
                     $_SESSION['postal'] = $users_postal;
@@ -98,7 +98,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $_SESSION['users_dicordlinked'] = $users_dicordlinked;
                 $_SESSION['address1'] = $users_address1;
                 $_SESSION['address2'] = $users_address2;
-                $_SESSION['county'] = $users_country;
+                $_SESSION['country'] = $users_country;
                 $_SESSION['city'] = $users_city;
                 $_SESSION['state'] = $users_state;
                 $_SESSION['postal'] = $users_postal;
