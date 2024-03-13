@@ -13,8 +13,8 @@ if ($dbcon->connect_errno) {
   die("Connect failed: ". $db->connect_error);
 }
 
-define('CLIENT_ID', 'AeN0dme_TZjUilGYvXtlEpB9vNRlyJ9cjsSGRtpJR0MUs22R8YCKtYjUKgufCfaA0lkPFCVyfSfC3NK2');
-define('CLIENT_SECRET', 'EP30X3afr_2OSND2krbEL4ZfN6PaTUbe3GD5B8PQOLGIOujo-lrFwSqLWt40uZ5j4m5k7kib8ghBbMX8');
+define('CLIENT_ID', 'AWfTrzwDyxMHq0CBAIUUZ0VMlWy9aUkUW-IYZNNezGJUiZJuD-RwGmkovx1Dh8NyNCdJMODzY7KEQ9J2');
+define('CLIENT_SECRET', 'ECPPJpj0XvLVAnrBmk5DgL-JPGlfogvNacxTWLFmB__Nb7ZATgqQ7uKJJaDdKpC11h3270HmVnSIY767');
 
 define('PAYPAL_RETURN_URL', 'http://store.khaosdevelopment.com/assets/plugins/paypal/paypalsuccess.php');
 define('PAYPAL_CANCEL_URL', 'http://store.khaosdevelopment.com/assets/plugins/paypal/paypalcancel.php');
