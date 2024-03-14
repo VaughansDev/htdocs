@@ -153,7 +153,7 @@
     });
   });
 </script>
-<form id="payment-form" style="height: 100px;">
+<form action="process-payment.php" id="payment-form" style="height: 100px;">
   <div id="card-container"></div>
   <button id="card-button" class="kd-btn kd-btn-xl kd-btn-block payment" type="button">Purchase $98</button>
 </form>
