@@ -33,13 +33,10 @@ $create_payment_request = new CreatePaymentRequest($data['sourceId'], $orderId, 
 
 $response = $payments_api->createPayment($create_payment_request);
 
-session_start();
 if ($response->isSuccess()) {
-    $result = json_encode($response->getResult());
-    $_SESSION['sqapiresult'] = $result;
+    echo json_encode($response->getResult());
     header("location: ../success.php");
 } else {
-    $errors = json_encode($response->getErrors());
-    $_SESSION['sqapierrors'] = $errors;
-    header("location: ../error.php");
+    echo json_encode($response->getErrors());
+    header("location: ../success.php");
 }
