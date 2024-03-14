@@ -35,8 +35,8 @@ $response = $payments_api->createPayment($create_payment_request);
 
 if ($response->isSuccess()) {
     echo json_encode($response->getResult());
-    header("location: ../index.php");
 } else {
     echo json_encode($response->getErrors());
-    header("location: ../item.php");
 }
+
+header("location: ../index.php");
