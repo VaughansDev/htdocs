@@ -35,11 +35,11 @@ $response = $payments_api->createPayment($create_payment_request);
 
 session_start();
 if ($response->isSuccess()) {
-    echo json_encode($response->getResult());
+    $result = json_encode($response->getResult());
     $_SESSION['sqapiresult'] = $result;
     header("location: ../success.php");
 } else {
-    echo json_encode($response->getErrors());
+    $errors = json_encode($response->getErrors());
     $_SESSION['sqapierrors'] = $errors;
     header("location: ../error.php");
 }
