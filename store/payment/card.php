@@ -13,15 +13,15 @@
   }
 
   <?php
-    session_start();
-    $_SESSION['idempotencyKey'] = uniqid();
-    ?>
+  session_start();
+  $_SESSION['idempotencyKey'] = uniqid();
+  ?>
   async function createPayment(token, verificationToken) {
     const body = JSON.stringify({
       locationId,
       sourceId: token,
       verificationToken,
-      idempotencyKey: <?php echo $_SESSION['idempotencyKey']; ?>,
+      idempotencyKey: window.crypto.randomUUID() <?php //echo $_SESSION['idempotencyKey']; ?>,
     });
     const paymentResponse = await fetch('payment/process-payment.php', {
       method: 'POST',
