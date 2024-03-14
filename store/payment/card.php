@@ -153,7 +153,6 @@
     });
   });
 </script>
-<?php echo $_SESSION['idempotencyKey']; ?>
 <form action="payment/process-payment.php" id="payment-form" style="height: 100px;">
   <div id="card-container"></div>
   <button id="card-button" class="kd-btn kd-btn-xl kd-btn-block payment" type="button">Purchase $98</button>
