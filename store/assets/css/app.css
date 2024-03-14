@@ -45,8 +45,8 @@ body {
 }
 
 #landing-page-layout {
-  width: 80%;
-  margin: 150px auto;
+  width: 100%;
+  margin: 75px auto;
   max-width: 1000px;
 }
 
@@ -90,7 +90,7 @@ label {
   width: 100%;
 }
 
-input {
+.payment input {
   padding: 12px;
   width: 100%;
   border-radius: 5px;
@@ -100,13 +100,13 @@ input {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-input:focus {
+.payment input:focus {
   border: 1px solid #006aff;
 }
 
-button {
+.payment {
   color: #ffffff;
-  background-color: #006aff;
+  background-color: #26d847;
   border-radius: 5px;
   cursor: pointer;
   border-style: none;
@@ -120,11 +120,11 @@ button {
   box-shadow: 1px;
 }
 
-button:active {
-  background-color: rgb(0, 85, 204);
+.payment:active {
+  background-color: #26d847;
 }
 
-button:disabled {
+.payment:disabled {
   background-color: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.3);
 }
@@ -148,7 +148,7 @@ button:disabled {
 
 #payment-status-container.is-success:before {
   content: '';
-  background-color: #00b23b;
+  background-color: transparent;
   width: 16px;
   height: 16px;
   margin-right: 16px;
@@ -164,7 +164,7 @@ button:disabled {
 
 #payment-status-container.is-failure:before {
   content: '';
-  background-color: #cc0023;
+  background-color: transparent;
   width: 16px;
   height: 16px;
   margin-right: 16px;
@@ -180,7 +180,7 @@ button:disabled {
 
 #payment-status-container.missing-credentials:before {
   content: '';
-  background-color: #cc0023;
+  background-color: transparent;
   width: 16px;
   height: 16px;
   margin-right: 16px;
