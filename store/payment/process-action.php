@@ -35,6 +35,10 @@ $response = $payments_api->createPayment($create_payment_request);
 
 if ($response->isSuccess()) {
     echo json_encode($response->getResult());
+    $_SESSION['sqapiresult'] = $result;
+    header("location: ../success.php");
 } else {
     echo json_encode($response->getErrors());
+    $_SESSION['sqapierrors'] = $errors;
+    header("location: ../error.php");
 }
