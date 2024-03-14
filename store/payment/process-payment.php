@@ -1,5 +1,5 @@
 <?php
-require '../assets/plugins/square-php-sdk/vendor/autoload.php';
+require '../assets/plugins/square/vendor/autoload.php';
 
 use Square\SquareClient;
 use Square\LocationsApi;
