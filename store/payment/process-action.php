@@ -33,6 +33,7 @@ $create_payment_request = new CreatePaymentRequest($data['sourceId'], $orderId, 
 
 $response = $payments_api->createPayment($create_payment_request);
 
+session_start();
 if ($response->isSuccess()) {
     echo json_encode($response->getResult());
     $_SESSION['sqapiresult'] = $result;
