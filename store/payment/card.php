@@ -13,7 +13,6 @@
   }
 
   <?php
-  session_start();
   $_SESSION['idempotencyKey'] = uniqid();
   ?>
   async function createPayment(token, verificationToken) {
@@ -21,7 +20,7 @@
       locationId,
       sourceId: token,
       verificationToken,
-      idempotencyKey: <?php echo $_SESSION['idempotencyKey']; ?>,
+      idempotencyKey: window.crypto.randomUUID() <?php //echo $_SESSION['idempotencyKey']; ?>,
     });
     const paymentResponse = await fetch('payment/process-payment.php', {
       method: 'POST',
@@ -153,6 +152,7 @@
     });
   });
 </script>
+<?php echo $_SESSION['idempotencyKey']; ?>
 <form action="payment/process-payment.php" id="payment-form" style="height: 100px;">
   <div id="card-container"></div>
   <button id="card-button" class="kd-btn kd-btn-xl kd-btn-block payment" type="button">Purchase $98</button>
