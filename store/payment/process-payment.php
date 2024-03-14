@@ -28,7 +28,7 @@ $square_client = new SquareClient([
   'environment' => Environment::SANDBOX,
 ]);
 
-$payments_api = $client->getPaymentsApi();
+$payments_api = $square_client->getPaymentsApi();
 
 $amount_money = new Money();
 $amount_money->setAmount(9799);
