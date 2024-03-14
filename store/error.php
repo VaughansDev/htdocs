@@ -1,4 +1,4 @@
 <?php
 session_start();
-echo $_SESSION['sqapierror'];
+echo $_SESSION['sqapierrors'];
 ?>
