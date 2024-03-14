@@ -20,7 +20,7 @@
       locationId,
       sourceId: token,
       verificationToken,
-      idempotencyKey: window.crypto.randomUUID() <?php //echo $_SESSION['idempotencyKey']; ?>,
+      idempotencyKey: '<?php echo $_SESSION['idempotencyKey']; ?>',
     });
     const paymentResponse = await fetch('payment/process-payment.php', {
       method: 'POST',
