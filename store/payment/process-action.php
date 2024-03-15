@@ -28,10 +28,10 @@ $orderId = uniqid();
 $create_payment_request = new CreatePaymentRequest($data['sourceId'], $orderId);
 $create_payment_request->setAmountMoney($money);
 
-$response = $payments_api->createPayment($create_payment_request);
+$api_response = $payments_api->createPayment($create_payment_request);
 
-if ($response->isSuccess()) {
-    $result = $response->getResult();
+if ($api_response->isSuccess()) {
+    $result = $api_response->getResult();
 } else {
-    $errors = $response->getErrors();
+    $errors = $api_response->getErrors();
 }
