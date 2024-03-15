@@ -15,7 +15,7 @@
             verificationToken,
             idempotencyKey: window.crypto.randomUUID(),
         });
-        <?php if ($_CART['billingCycle'] == 'onetime') { ?>
+        <?php if ($billingCycle == 'onetime') { ?>
             const paymentResponse = await fetch('/payment/process-card-ontime.php', {
                 method: 'POST',
                 headers: {
@@ -23,7 +23,7 @@
                 },
                 body,
             });
-        <?php } elseif ($_CART['billingCycle'] == 'monthly') { ?>
+        <?php } elseif ($billingCycle == 'monthly') { ?>
             const paymentResponse = await fetch('/payment/process-card-monthly.php', {
                 method: 'POST',
                 headers: {
@@ -31,7 +31,7 @@
                 },
                 body,
             });
-        <?php } elseif ($_CART['billingCycle'] == 'yearly') {?>
+        <?php } elseif ($billingCycle == 'yearly') {?>
             const paymentResponse = await fetch('/payment/process-card-yearly.php', {
                 method: 'POST',
                 headers: {
