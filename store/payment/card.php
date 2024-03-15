@@ -16,7 +16,7 @@
             idempotencyKey: window.crypto.randomUUID(),
         });
         <?php if ($_CART['billingCycle'] == 'onetime') { ?>
-            const paymentResponse = await fetch('/payment/process-card-ontime.php', {
+            const paymentResponse = await fetch('/payment/process-card-onetime.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
