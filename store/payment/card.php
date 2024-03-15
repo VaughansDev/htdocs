@@ -15,13 +15,31 @@
             verificationToken,
             idempotencyKey: window.crypto.randomUUID(),
         });
-        const paymentResponse = await fetch('/payment/process-action.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body,
-        });
+        <?php if ($_CART['billingCycle'] == 'onetime') { ?>
+            const paymentResponse = await fetch('/payment/process-card-ontime.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body,
+            });
+        <?php } elseif ($_CART['billingCycle'] == 'monthly') { ?>
+            const paymentResponse = await fetch('/payment/process-card-monthly.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body,
+            });
+        <?php } elseif ($_CART['billingCycle'] == 'yearly') {?>
+            const paymentResponse = await fetch('/payment/process-card-yearly.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body,
+            });
+        <?php } ?>
         if (paymentResponse.ok) {
             return paymentResponse.json();
         }

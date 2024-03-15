@@ -4,7 +4,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     <script>
         window.location.href = "<?php echo $_CONFIG['accounturl']; ?>/login.php";
     </script>
-<?php } ?>
+<?php } 
+$_CART['billingCycle'] == 'onetime'; ?>
 <div class="kd-main">
     <header class="kd-header kd-box-5">
         <div class="bg-image bg-image-parallax">
@@ -131,7 +132,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         </div>
                         <div class="tab-pane fade show active kd-tab-pane" id="card" role="tabpanel" aria-labelledby="card-tab">
                             <div class="kd-separator"></div>
-                            <form id="payment-form" action="payment/process-action.php" class="kd-form">
+                            <form id="payment-form" class="kd-form">
                                 <div class="kd-box-content">
                                     <div class="kd-form-group">
                                         <label for="firstname" class="mnt-7">First Name</label>
