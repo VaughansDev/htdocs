@@ -31,7 +31,7 @@ $create_payment_request->setAmountMoney($money);
 $response = $payments_api->createPayment($create_payment_request);
 
 if ($response->isSuccess()) {
-    echo json_encode($response->getResult());
+    $result = $response->getResult();
 } else {
-    echo json_encode($response->getErrors());
+    $errors = $response->getErrors();
 }
