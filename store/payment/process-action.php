@@ -24,17 +24,14 @@ $money = new Money();
 $money->setAmount(100000);
 $money->setCurrency("CAD");
 
-// Every payment you process with the SDK must have a unique idempotency key.
-// If you're unsure whether a particular payment succeeded, you can reattempt
-// it with the same idempotency key without worrying about double charging
-// the buyer.
 $orderId = uniqid();
-$create_payment_request = new CreatePaymentRequest($data['sourceId'], $orderId, $money);
+$create_payment_request = new CreatePaymentRequest($data['sourceId'], $orderId);
+$create_payment_request->setAmountMoney($money);
 
 $response = $payments_api->createPayment($create_payment_request);
 
 if ($response->isSuccess()) {
-    echo json_encode($response->getResult());
+    $result = $api_response->getResult();
 } else {
-    echo json_encode($response->getErrors());
+    $errors = $api_response->getErrors();
 }
