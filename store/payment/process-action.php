@@ -28,10 +28,16 @@ $orderId = uniqid();
 $create_payment_request = new CreatePaymentRequest($data['sourceId'], $orderId);
 $create_payment_request->setAmountMoney($money);
 
-$api_response = $payments_api->createPayment($create_payment_request);
+$response = $payments_api->createPayment($create_payment_request);
 
-if ($api_response->isSuccess()) {
-    $result = $api_response->getResult();
+if ($response->isSuccess()) {
+    echo json_encode($response->getResult());
+    session_start();
+    $_SESSION['sqapiresult'];
+    header("location: ../success.php");
 } else {
-    $errors = $api_response->getErrors();
+    echo json_encode($response->getErrors());
+    session_start();
+    $_SESSION['sqapierrors'];
+    header("location: ../error.php");
 }
