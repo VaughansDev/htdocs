@@ -123,7 +123,7 @@
 <!-- Quill -->
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.min.js"></script>
 <!-- The Amdesk -->
-<script src="<?php echo $_CONFIG['domain']; ?>/assets/js/khaos.min.css"></script>
+<script src="<?php echo $_CONFIG['domain']; ?>/assets/js/khaos.min.js"></script>
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/js/khaos-init.js"></script>
 <!-- END: Scripts -->
 </body>

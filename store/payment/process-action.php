@@ -38,5 +38,3 @@ if ($response->isSuccess()) {
 } else {
     echo json_encode($response->getErrors());
 }
-
-header("location: ../index.php");
