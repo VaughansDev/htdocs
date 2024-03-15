@@ -21,7 +21,7 @@ $square_client = new SquareClient ([
 $payments_api = $square_client->getPaymentsApi();
 
 $money = new Money();
-$money->setAmount(100);
+$money->setAmount(100000);
 $money->setCurrency("CAD");
 
 // Every payment you process with the SDK must have a unique idempotency key.
