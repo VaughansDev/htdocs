@@ -59,7 +59,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         </td>
                                         <td class="kd-table-checkout-delete">
                                             <a href="#">
-                                                <span class="icon pe-7s-close"></span>
+                                                <i class="fa-regular text-danger fa-circle-xmark"></i>
                                             </a>
                                         </td>
                                     </tr>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         </td>
                                         <td class="kd-table-checkout-delete">
                                             <a href="#">
-                                                <span class="icon pe-7s-close"></span>
+                                                <i class="fa-regular text-danger fa-circle-xmark"></i>
                                             </a>
                                         </td>
                                     </tr>
