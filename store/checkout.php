@@ -5,7 +5,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
         window.location.href = "<?php echo $_CONFIG['accounturl']; ?>/login.php";
     </script>
 <?php } 
-$billingCycle == 'onetime'; ?>
+$_CART['billingCycle'] = 'onetime'; ?>
 <div class="kd-main">
     <header class="kd-header kd-box-5">
         <div class="bg-image bg-image-parallax">
