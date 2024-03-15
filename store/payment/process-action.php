@@ -21,7 +21,7 @@ $square_client = new SquareClient ([
 $payments_api = $square_client->getPaymentsApi();
 
 $money = new Money();
-$money->setAmount(100000);
+$money->setAmount(5000);
 $money->setCurrency("CAD");
 
 $orderId = uniqid();
