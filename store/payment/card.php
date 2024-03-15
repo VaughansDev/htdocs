@@ -126,6 +126,6 @@
         });
     });
 </script>
-<div id="card-container"></div>
+<div class="form-control form-control-style-2" id="card-container"></div>
 <button id="card-button" class="kd-btn kd-btn-xl kd-btn-block payment" type="submit">Pay $1.00</button>
 <div id="payment-status-container"></div>
