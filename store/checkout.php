@@ -132,7 +132,7 @@ $_CART['billingCycle'] = 'onetime'; ?>
                         </div>
                         <div class="tab-pane fade show active kd-tab-pane" id="card" role="tabpanel" aria-labelledby="card-tab">
                             <div class="kd-separator"></div>
-                            <form id="payment-form" class="kd-form">
+                            <form class="kd-form">
                                 <div class="kd-box-content">
                                     <div class="kd-form-group">
                                         <label for="firstname" class="mnt-7">First Name</label>

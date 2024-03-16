@@ -10,7 +10,6 @@ body {
   max-width: 550px;
   min-width: 300px;
   margin: 150px auto;
-  margin-top: 0px;
 }
 
 .buyer-inputs {
@@ -45,8 +44,8 @@ body {
 }
 
 #landing-page-layout {
-  width: 100%;
-  margin: 75px auto;
+  width: 80%;
+  margin: 150px auto;
   max-width: 1000px;
 }
 
@@ -90,33 +89,23 @@ label {
   width: 100%;
 }
 
-.payment input {
-  height: 54px;
-  font-family: "Nunito Sans", sans-serif;
-  text-align: left;
-  text-transform: none;
-  border: 0;
-  border-radius: 3px;
-  opacity: 1;
-  padding: 12px 19px;
-  color: rgba(122, 122, 122, 0.8);
-  background-color: #fafafa;
-  -webkit-box-shadow: inset 0 0 0 1px #e8e8e8;
-  box-shadow: inset 0 0 0 1px #e8e8e8;
-  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
-  -o-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  border-width: 1px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.payment input:focus {
+input:focus {
   border: 1px solid #006aff;
 }
 
-.payment {
+button {
   color: #ffffff;
-  background-color: #0051ff;
+  background-color: #006aff;
   border-radius: 5px;
   cursor: pointer;
   border-style: none;
@@ -130,11 +119,11 @@ label {
   box-shadow: 1px;
 }
 
-.payment:active {
-  background-color: #26d847;
+button:active {
+  background-color: rgb(0, 85, 204);
 }
 
-.payment:disabled {
+button:disabled {
   background-color: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.3);
 }
@@ -158,7 +147,7 @@ label {
 
 #payment-status-container.is-success:before {
   content: '';
-  background-color: transparent;
+  background-color: #00b23b;
   width: 16px;
   height: 16px;
   margin-right: 16px;
@@ -174,7 +163,7 @@ label {
 
 #payment-status-container.is-failure:before {
   content: '';
-  background-color: transparent;
+  background-color: #cc0023;
   width: 16px;
   height: 16px;
   margin-right: 16px;
@@ -190,7 +179,7 @@ label {
 
 #payment-status-container.missing-credentials:before {
   content: '';
-  background-color: transparent;
+  background-color: #cc0023;
   width: 16px;
   height: 16px;
   margin-right: 16px;
