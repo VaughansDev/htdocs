@@ -3,7 +3,7 @@
         <a data-fancybox data-touch="false" data-src="#create-new-thread" href="javascript:;" class="kd-btn kd-btn-lg" style="color: white; width: 100%;">Create New Topic</a>
     </div>
 </div>
-<div id="reate-new-thread" class="kd-popup kd-popup-modal kd-popup-subscribe">
+<div id="create-new-thread" class="kd-popup kd-popup-modal kd-popup-subscribe">
     <button type="button" data-fancybox-close class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24">
             <path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
         </svg></button>
