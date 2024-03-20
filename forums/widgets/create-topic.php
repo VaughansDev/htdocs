@@ -15,7 +15,7 @@
         <div class="kd-box-content">
             <p class="mnt-5 fs-15">Enter the name of your new topic and click create.</p>
             <form action="<?php echo $_CONFIG['forumsurl']; ?>/inc/create-topic.php" method="post" class="kd-form kd-form-group-inputs">
-                <input type="text" name="topicTitle" class="form-control form-control-style-2" placeholder="Topic Title">
+                <input type="text" name="topicTitle" class="form-control form-control-style-2" placeholder="Topic Title"><br>
                 <input type="text" name="threadId" value="<?php echo $_GET['threadId']; ?>" hidden>
                 <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
                 <button type="submit" value="submit" name="submit" class="kd-btn kd-btn-lg">Create</button>
