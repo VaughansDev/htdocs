@@ -13,9 +13,9 @@
         </a>
     <?php } 
     } else { ?>
-        <div class="kd-widget-link">
+        <a class="kd-widget-link">
             <span class="kd-widget-link-text">No new topics found</span>
-        </div>
+        </a>
     <?php } 
     $dbcon->close(); ?>
 </div>
