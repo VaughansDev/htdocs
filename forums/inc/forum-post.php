@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
     <form class="kd-form" action="#">
         <div class="kd-form-group">
             <div class="kd-editor-quill">
-                <textarea name="post_content" data-editor-height="150" data-editor-maxHeight="250"></textarea>
+                <textarea name="post_content" class="kd-editor" data-editor-height="150" data-editor-maxHeight="250"></textarea>
             </div>
         </div>
         <div class="kd-form-group">
