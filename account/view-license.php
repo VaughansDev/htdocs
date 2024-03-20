@@ -23,7 +23,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                 <div class="col-lg-12">
                     <div class="kd-box kd-box-decorated">
                         <?php
-                        require $_SERVER['DOCUMENT_ROOT'] . '/inc/viewlicense.php';
+                        require $_SERVER['DOCUMENT_ROOT'] . '/account/inc/viewlicense.php';
                         ?>
                     </div>
                 </div>
