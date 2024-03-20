@@ -18,7 +18,7 @@ $method = $_GET['method'];
                     </div>
                     <br>
                     <div class="login__form input__form">
-                        <form action="<?php echo $_CONFIG['domain']; ?>/inc/register.php" method="post">
+                        <form action="<?php echo $_CONFIG['accounturl']; ?>/inc/register.php" method="post">
                             <div class="input-group">
                                 <div class="single-input">
                                     <label for="firstname">First Name</label>

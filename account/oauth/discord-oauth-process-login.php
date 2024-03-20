@@ -4,19 +4,20 @@ require '../inc/config.php';
 if (!isset($_GET['code'])) {
     echo 'no code';
     exit();
-} 
+}
 
 $discord_code = $_GET['code'];
 
 $payload = [
     'code' => $discord_code,
-    'client_id' => '1206308062714011708',
-    'client_secret' => 'AgW60anmcHE406T90j1ZZCdk_8kiAGoC',
+    'client_id' => '1206308014936690799',
+    'client_secret' => '5HnaJgiOEKBlUB7lY7sI4Lqm5Cwoeu9I',
     'grant_type' => 'authorization_code',
-    'redirect_uri' => 'http://khaosdevelopment.com/oauth/discord-oauth-process-register.php',
+    'redirect_uri' => 'http://khaosdevelopment.com/account/oauth/discord-oauth-process-login.php',
     'scope' => 'identify%20email',
 ];
 
+print_r($payload);
 
 $payload_string = http_build_query($payload);
 $discord_token_url = "https://discordapp.com/api/oauth2/token";
@@ -28,6 +29,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $payload_string);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $result = curl_exec($ch);
+
 $result = json_decode($result, true);
 $access_token = $result['access_token'];
 
@@ -42,7 +44,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
 $result = curl_exec($ch);
 $result = json_decode($result, true);
-
 $discord_id = $result['id'];
 $discord_username = $result['username'];
 $discord_displayname = $result['global_name'];
@@ -50,4 +51,5 @@ $discord_avatar = $result['avatar'];
 $discord_email = $result['email'];
 $discord_email_verified = $result['verified'];
 
-header("location: " . $_CONFIG['domain'] . "/oauth/external-registration.php?method=discord&discord_id=". $discord_id."&discord_username=". $discord_username."&discord_displayname=". $discord_displayname."&discord_avatar=". $discord_avatar."&discord_email=". $discord_email."&discord_email_verified=". $discord_email_verified);
+header("location: " . $_CONFIG['accounturl'] . "/inc/login.php?method=discord&discord_id=" . $discord_id . "&discord_username=" . $discord_username . "&discord_displayname=" . $discord_displayname . "&discord_avatar=" . $discord_avatar . "&discord_email=" . $discord_email . "&discord_email_verified=" . $discord_email_verified);
+
