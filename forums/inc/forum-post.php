@@ -31,7 +31,8 @@ while ($row2 = $result2->fetch_assoc()) { ?>
         </ul>
         <!-- END: Breadcrumbs -->
     </div>
-<?php }
+    <div class="kd-separator"></div>
+    <?php }
 $sql = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId'";
 $result = $dbcon->query($sql);
 if ($result->num_rows > 0) {
@@ -45,14 +46,15 @@ if ($result->num_rows > 0) {
                     <div class="kd-comment-head">
                         <a href="#" class="kd-comment-name"><?php echo $row['post_username']; ?></a>
                     </div>
-                    <div class="kd-comment-date"><?php echo $row['post_create_date'].', '.$row['post_create_time']; ?></div>
+                    <div class="kd-comment-date"><?php echo $row['post_create_date'] . ', ' . $row['post_create_time']; ?></div>
                     <div class="kd-comment-text">
                         <p class="mb-0"><?php echo $row['post_content']; ?></p>
                     </div>
                 </div>
             </div>
         </div>
-    <?php }
+        <div class="kd-separator"></div>
+<?php }
 } ?>
 
 
