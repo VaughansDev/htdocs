@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                 </div>
                 <div class="kd-comment-cont">
                     <div class="kd-comment-head">
-                        <a href="javascript:;" class="kd-comment-name"><?php if ($row3['post_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;">[ADMIN]</span>'.$row3['post_username']; } else { echo $row3['post_username'];} ?></a>
+                        <a href="javascript:;" class="kd-comment-name"><?php if ($row['post_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;">[ADMIN]</span>'.$row['post_username']; } else { echo $row['post_username'];} ?></a>
                     </div>
                     <div class="kd-comment-date"><?php echo $row['post_create_date'] . ', ' . $row['post_create_time']; ?></div>
                     <div class="kd-comment-text">
