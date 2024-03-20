@@ -3,7 +3,7 @@ require 'dbcon.php';
 $threadId = $_GET['threadId'];
 $topicId = $_GET['topicId'];
 
-$sql3 = "SELECT topic_views FROM froum_topics WHERE topic_thread_id = '$threadId' AND topic_id = '$topicId'";
+$sql3 = "SELECT topic_views FROM forum_topics WHERE topic_thread_id = '$threadId' AND topic_id = '$topicId'";
 $curViews = $dbcon->query($sql3);
 $newViews = $curViews + 1;
 $sql4 = "UPDATE forum_topics SET topic_views = '$newViews' WHERE topic_thread_id = '$threadId' AND topic_id = '$topicId'";
