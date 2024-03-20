@@ -6,7 +6,7 @@ $topicId = $_GET['topicId'];
 $sql3 = "SELECT topic_views FROM forum_topics WHERE topic_thread_id = '$threadId' AND topic_id = '$topicId'";
 $result3 = $dbcon->query($sql3);
 while ($row3 = $result3->fetch_assoc()) {
-    $curViews = $row4['topic_views'];
+    $curViews = $row3['topic_views'];
     $newViews = $curViews + 1;
     $sql4 = "UPDATE forum_topics SET topic_views = '$newViews' WHERE topic_thread_id = '$threadId' AND topic_id = '$topicId'";
     $dbcon->query($sql4);
