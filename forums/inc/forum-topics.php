@@ -26,7 +26,7 @@ while ($row2 = $result2->fetch_assoc()) { ?>
             </tr>
         </thead>
         <tbody>
-            <?php $sql = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId'";
+            <?php $sql = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId' ORDER BY id DESC";
             $result = $dbcon->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
