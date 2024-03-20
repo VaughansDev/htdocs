@@ -12,8 +12,11 @@ while ($row3 = $result3->fetch_assoc()) {
     $dbcon->query($sql4);
 }
 
-$sql5 = "SELECT thread_title FROM forum_threads WHERE thread_id = '$threadId'";
-$threadTitle = $dbcon->query($sql5);
+$sql5 = "SELECT * FROM forum_threads WHERE thread_id = '$threadId'";
+$result5 = $dbcon->query($sql5);
+while ($row5 = $result5->fetch_assoc()) {
+    $threadTitle = $row5['thread_title'];
+}
 $sql2 = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId' AND topic_id = '$topicId'";
 $result2 = $dbcon->query($sql2);
 while ($row2 = $result2->fetch_assoc()) { ?>
