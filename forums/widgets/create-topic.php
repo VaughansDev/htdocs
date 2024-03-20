@@ -18,7 +18,7 @@
                 <input type="text" name="topicTitle" class="form-control form-control-style-2" placeholder="Topic Title">
                 <input type="text" name="threadId" value="<?php echo $_GET['threadId']; ?>" hidden>
                 <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
-                <button type="submit" value="submit" name="submit" class="kd-btn kd-btn-lg kd-btn-icon"><span class="icon fas fa-paper-plane"></span></button>
+                <button type="submit" value="submit" name="submit" class="kd-btn kd-btn-lg">Create</button>
             </form>
         </div>
     </div>
