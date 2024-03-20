@@ -9,7 +9,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit'){
         $topicId = '20151693' . date('YmdHis');
         $topicViews = 0;
         $topicCreateDate = date('j M Y');
-        $topicCreateTime = date('h:i a');
+        $topicCreateTime = date('g:i a');
 
         $sql = "INSERT INTO forum_topics (topic_id, topic_thread_id, topic_title, topic_creator_id, topic_create_date, topic_create_time, topic_creator_username, topic_views) 
         VALUES ('$topicId', '$threadId', '$topicTitle', '$accountId', '$topicCreateDate', '$topicCreateTime', '$username', '$topicViews')";

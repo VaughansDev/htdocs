@@ -9,7 +9,7 @@
         while ($row = $result->fetch_assoc()) { ?>
         <a href="topic.php?tid=<?php echo $row['topic_id']; ?>" class="kd-widget-link">
             <span class="kd-widget-link-text"><?php echo $row['topic_title']; ?></span>
-            <span class="kd-widget-link-date"><?php echo $row['topic_post_date']; ?></span>
+            <span class="kd-widget-link-date"><?php echo $row['topic_create_date']; ?></span>
         </a>
     <?php }
     } else { ?>
