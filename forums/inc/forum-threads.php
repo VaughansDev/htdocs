@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
                 while ($row3 = $result3->fetch_assoc()) { ?>
                     <td class="kd-table-lastPost">
                         <div class="kd-table-default-info">
-                            <p class="mb-0">by <?php if ($row3['post_username']) == 'VaughanHD' { echo '<span style="color: #FF0000;">[ADMIN]</span>'.$row3['post_username']; } else { echo $row3['post_username'];} ?><br>
+                            <p class="mb-0">by <?php if ($row3['post_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;">[ADMIN]</span>'.$row3['post_username']; } else { echo $row3['post_username'];} ?><br>
                             <span class="dib"><?php echo $row3['post_create_date']; ?>,</span> <span class="dib"><?php echo $row3['post_create_time']; ?></span></p>
                         </div>
                     </td>
