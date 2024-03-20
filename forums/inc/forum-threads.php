@@ -1,6 +1,5 @@
 <?php
-$userAuthLevel = $_SESSION[''];
-$sql = "SELECT * FROM forum_threads WHERE thread_auth_level = '$userAuthLevel'";
+$sql = "SELECT * FROM forum_threads";
 $result = $dbcon->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
@@ -36,6 +35,6 @@ if ($result->num_rows > 0) {
             <?php }
             ?>
         </tr>
-<? }
+<?php }
 }
 $dbcon->close(); ?>
