@@ -1,17 +1,20 @@
 <?php
+require 'dbcon.php';
 $threadId = $_GET['threadId'];
-
-?>
-<div class="kd-blog-post-box pt-30 pb-30">
-    <h2 class="h4 mnt-5 mb-9">Design with pleasure</h2>
-    <!-- START: Breadcrumbs -->
-    <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
-        <li><a href="<?php echo $_CONFIG['supporturl']; ?>">Support Home</a></li>
-        <li><a href="<?php echo $_CONFIG['forumsurl']; ?>">Forums</a></li>
-        <li>Design with pleasure</li>
-    </ul>
-    <!-- END: Breadcrumbs -->
-</div>
+$sql2 = "SELECT * FROM forum_threads WHERE thread_id = '$threadId'";
+$result2 = $dbcon->query($sql2);
+while ($row2 = $result2->fetch_assoc()) {?>
+    <div class="kd-blog-post-box pt-30 pb-30">
+        <h2 class="h4 mnt-5 mb-9"><?php echo $row['thread_title']; ?></h2>
+        <!-- START: Breadcrumbs -->
+        <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
+            <li><a href="<?php echo $_CONFIG['supporturl']; ?>">Support Home</a></li>
+            <li><a href="<?php echo $_CONFIG['forumsurl']; ?>">Forums</a></li>
+            <li><?php echo $row['thread_title']; ?></li>
+        </ul>
+        <!-- END: Breadcrumbs -->
+    </div>
+<?php } ?>
 <div class="table-responsive">
     <table class="kd-table kd-table-default">
         <thead>

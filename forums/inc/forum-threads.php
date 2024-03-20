@@ -1,4 +1,5 @@
 <?php
+require 'dbcon.php';
 $sql = "SELECT * FROM forum_threads";
 $result = $dbcon->query($sql);
 if ($result->num_rows > 0) {
