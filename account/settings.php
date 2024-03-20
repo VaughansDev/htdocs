@@ -51,12 +51,12 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <input type="email" aria-describedby="emailHelp" class="form-control form-control-style-2" id="email-address" name="email" value="<?php echo $_SESSION['email']; ?>">
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="line-one" class="mnt-7">Address Line 1</label>
-                                    <input type="text" class="form-control form-control-style-2" id="line-one" name="addressline1" <?php if (isset($_SESSION['addressline1'])) { ?> value="<?php echo $_SESSION['addressline1']; ?>" <?php } else { ?> placeholder="Enter Your Address" <?php } ?>>
+                                    <label for="address1" class="mnt-7">Address Line 1</label>
+                                    <input type="text" class="form-control form-control-style-2" id="address1" name="address1" <?php if (isset($_SESSION['address1'])) { ?> value="<?php echo $_SESSION['address1']; ?>" <?php } else { ?> placeholder="Enter Your Address" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="line-two" class="mnt-7">Address Line 2 (optional)</label>
-                                    <input type="text" class="form-control form-control-style-2" id="line-two" name="addressline2" <?php if (isset($_SESSION['addressline2'])) { ?> value="<?php echo $_SESSION['addressline2']; ?>" <?php } else { ?> placeholder="Apt / Suite / PO Box" <?php } ?>>
+                                    <label for="address2" class="mnt-7">Address Line 2 (optional)</label>
+                                    <input type="text" class="form-control form-control-style-2" id="address2" name="address2" <?php if (isset($_SESSION['address2'])) { ?> value="<?php echo $_SESSION['address2']; ?>" <?php } else { ?> placeholder="Apt / Suite / PO Box" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
                                     <label for="country" class="mnt-7">Country</label>
@@ -71,8 +71,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                     <input type="text" class="form-control form-control-style-2" id="city" name="city" <?php if (isset($_SESSION['city'])) { ?> value="<?php echo $_SESSION['city']; ?>" <?php } else { ?> placeholder="Enter City Name" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
-                                    <label for="zip" class="mnt-7">ZIP / Postal Code</label>
-                                    <input type="text" class="form-control form-control-style-2" id="zip" name="zip" <?php if (isset($_SESSION['zip'])) { ?> value="<?php echo $_SESSION['zip']; ?>" <?php } else { ?> placeholder="Enter ZIP / Postal Code" <?php } ?>>
+                                    <label for="postal" class="mnt-7">ZIP / Postal Code</label>
+                                    <input type="text" class="form-control form-control-style-2" id="postal" name="postal" <?php if (isset($_SESSION['postal'])) { ?> value="<?php echo $_SESSION['postal']; ?>" <?php } else { ?> placeholder="Enter ZIP / Postal Code" <?php } ?>>
                                 </div>
                                 <div class="kd-form-group">
                                     <button class="kd-btn kd-btn-xl kd-btn-block">Save Changes</button>
