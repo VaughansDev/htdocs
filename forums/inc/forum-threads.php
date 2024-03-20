@@ -15,11 +15,13 @@ if ($result->num_rows > 0) {
             $topicCount = $result2->num_rows; ?>
             <td><?php echo $topicCount; ?></td>
             <?php
-            $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' ORDER BY id DESC LIMIT 1";
-            $result3 = $dbcon->query($sql3);
-            $postCount = $result3->num_rows; ?>
+            $sql4 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId'";
+            $result4 = $dbcon->query($sql4);
+            $postCount = $result4->num_rows; ?>
             <td><?php echo $postCount; ?></td>
-            <?php if ($postCount > 0) {
+            <?php if ($postCount > 0) {           
+                $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' ORDER BY id DESC LIMIT 1";
+                $result3 = $dbcon->query($sql3);
                 while ($row3 = $result3->fetch_assoc()) { ?>
                     <td class="kd-table-lastPost">
                         <div class="kd-table-default-info">
