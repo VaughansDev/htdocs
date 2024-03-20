@@ -35,7 +35,8 @@ while ($row2 = $result2->fetch_assoc()) { ?>
                         <th scope="row" class="kd-table-topics">
                             <a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadId=<?php echo $threadId; ?>&topicId=<?php echo $topicId; ?>" class="kd-table-default-title"><?php echo $row['topic_title']; ?></a>
                             <div class="kd-table-default-info">
-                                <p class="mb-0">by <?php if ($row['topic_creator_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>'.$row['topic_creator_username']; } else { echo $row['topic_creator_username'];} ?> <span class="dib"><?php echo $row['topic_create_date']; ?>,</span> <span class="dib"><?php echo $row['topic_create_time']; ?></span></p>
+                                <p class="mb-0">by <?php if ($row['topic_creator_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>'.$row['topic_creator_username']; } else { echo $row['topic_creator_username'];} ?><br>
+                                on <span class="dib"><?php echo $row['topic_create_date']; ?>,</span> <span class="dib"><?php echo $row['topic_create_time']; ?></span></p>
                             </div>
                         </th>
                         <td><?php echo $row['topic_views']; ?></td>
@@ -51,7 +52,7 @@ while ($row2 = $result2->fetch_assoc()) { ?>
                                 <td class="kd-table-lastPost">
                                     <div class="kd-table-default-info">
                                         <p class="mb-0">by <?php if ($row3['post_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>'.$row3['post_username']; } else { echo $row3['post_username'];} ?><br>
-                                            <span class="dib"><?php echo $row3['post_create_date']; ?>,</span> <span class="dib"><?php echo $row3['post_create_time']; ?></span>
+                                            on <span class="dib"><?php echo $row3['post_create_date']; ?>,</span> <span class="dib"><?php echo $row3['post_create_time']; ?></span>
                                         </p>
                                     </div>
                                 </td>
