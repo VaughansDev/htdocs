@@ -76,7 +76,7 @@ if ($result->num_rows > 0) {
 <div class="kd-separator"></div>
 <div class="kd-blog-post-box">
     <h3 class="h6 mb-25">Write a Reply</h3>
-    <form class="kd-form" action="#">
+    <form class="kd-form" method="post" action="<?php echo $_CONFIG['forumsurl']; ?>/inc/post-reply.php">
         <div class="kd-form-group">
             <div class="kd-editor-quill">
                 <textarea class="kd-editor" data-editor-height="150" data-editor-maxHeight="250"></textarea>
@@ -85,7 +85,7 @@ if ($result->num_rows > 0) {
         <div class="kd-form-group">
             <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                 <div class="col-auto kd-dropzone-attachment-btn">
-                    <button class="kd-btn kd-btn-lg" type="button" name="button">Post Reply</button>
+                    <button class="kd-btn kd-btn-lg" type="submit" name="submit">Post Reply</button>
                 </div>
             </div>
             <!-- END: Dropzone -->
