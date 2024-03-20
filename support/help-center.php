@@ -16,9 +16,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <i class="fa-solid fa-file-lines"></i>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="documentations.php">Documentations</a></div>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['docsurl']; ?>">Documentations</a></div>
                             <div class="kd-feature-text">Phasellus interdum est diam, eu varius odio tincidunt eget ultrices et</div>
-                            <a href="documentations.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <a href="<?php echo $_CONFIG['docsurl']; ?>" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -28,9 +28,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <i class="fa-solid fa-book-bookmark"></i>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="articles.php">Knowledge Base</a></div>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['knowledgebaseurl']; ?>">Knowledge Base</a></div>
                             <div class="kd-feature-text">Aliquam id nisi sit amet massa mollis lobortis interdum felis integer at arcu</div>
-                            <a href="articles.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <a href="<?php echo $_CONFIG['knowledgebaseurl']; ?>" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -40,9 +40,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <i class="fa-solid fa-comments"></i>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="forum.php">Forums</a></div>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['forumsurl']; ?>">Forums</a></div>
                             <div class="kd-feature-text">Sed eget nibh justo euismod maximus et vel nisl pellentesque suscipit nisi</div>
-                            <a href="forum.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <a href="<?php echo $_CONFIG['forumsurl']; ?>" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>
@@ -52,9 +52,9 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                             <i class="fa-solid fa-ticket"></i>
                         </div>
                         <div class="kd-feature-cont">
-                            <div class="kd-feature-title"><a href="ticket.php">Ticket System</a></div>
+                            <div class="kd-feature-title"><a href="<?php echo $_CONFIG['ticketsurl']; ?>">Support Tickets</a></div>
                             <div class="kd-feature-text">Vivamus sceleriue libero velit blandit, hendrerit nisl at,dapibus sollicitudin</div>
-                            <a href="ticket.php" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
+                            <a href="<?php echo $_CONFIG['ticketsurl']; ?>" class="kd-btn kd-btn-link d-flex kd-feature-link">Read More <i class="fa-solid fa-angle-right"></i></span></a>
                         </div>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ if (isset($_GET['status'])) {
                     <tbody>
                         <?php while ($row = $result->fetch_assoc()) { ?>
                             <tr>
-                                <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>"><?php echo $row['invoicenum']; ?></a></th>
+                                <th scope="row" class="kd-table-default-product"><a href="<?php echo $_CONFIG['accounturl']; ?>/invoice/view-invoice.php?invnum=<?php echo $row['invoicenum']; ?>" target="_blank"><?php echo $row['invoicenum']; ?></a></th>
                                 <td><?php echo $row['invoicedate']; ?></td>
                                 <td><?php echo $row['invoicetotal']; ?></td>
                                 <td class="kd-table-licenseKey"><?php echo $row['licensetype']; ?></td>
