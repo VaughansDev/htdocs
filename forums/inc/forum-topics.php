@@ -3,7 +3,7 @@ require 'dbcon.php';
 $threadId = $_GET['threadId'];
 $sql2 = "SELECT * FROM forum_threads WHERE thread_id = '$threadId'";
 $result2 = $dbcon->query($sql2);
-while ($row2 = $result2->fetch_assoc()) {?>
+while ($row2 = $result2->fetch_assoc()) { ?>
     <div class="kd-blog-post-box pt-30 pb-30">
         <h2 class="h4 mnt-5 mb-9"><?php echo $row2['thread_title']; ?></h2>
         <!-- START: Breadcrumbs -->
@@ -13,7 +13,9 @@ while ($row2 = $result2->fetch_assoc()) {?>
             <li><?php echo $row2['thread_title']; ?></li>
         </ul>
         <!-- END: Breadcrumbs -->
-    </div>
+        <div class="col-auto">
+            <a href="<?php echo $_CONFIG['ticketsurl']; ?>/new-ticket.php" class="kd-btn kd-btn-md">Submit a ticket</a>
+        </div>    </div>
 <?php } ?>
 <div class="table-responsive">
     <table class="kd-table kd-table-default">
@@ -47,11 +49,12 @@ while ($row2 = $result2->fetch_assoc()) {?>
                         <?php if ($postCount > 0) {
                             $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId' ORDER BY id DESC LIMIT 1";
                             $result3 = $dbcon->query($sql3);
-                            while ($row3 = $result3->fetch_assoc()) {?>
+                            while ($row3 = $result3->fetch_assoc()) { ?>
                                 <td class="kd-table-lastPost">
                                     <div class="kd-table-default-info">
                                         <p class="mb-0">by <?php echo $row3['post_username']; ?><br>
-                                        <span class="dib"><?php echo $row3['post_create_date']; ?>,</span> <span class="dib"><?php echo $row3['post_create_time']; ?></span></p>
+                                            <span class="dib"><?php echo $row3['post_create_date']; ?>,</span> <span class="dib"><?php echo $row3['post_create_time']; ?></span>
+                                        </p>
                                     </div>
                                 </td>
                             <?php }
