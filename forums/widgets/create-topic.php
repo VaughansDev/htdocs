@@ -18,6 +18,7 @@
                 <input type="text" name="topicTitle" class="form-control form-control-style-2" placeholder="Topic Title"><br>
                 <input type="text" name="threadId" value="<?php echo $_GET['threadId']; ?>" hidden>
                 <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
+                <input type="text" name="username" value="<?php echo $_SESSION['username']; ?>" hidden>
                 <button type="submit" value="submit" name="submit" class="kd-btn kd-btn-lg">Create</button>
             </form>
         </div>
