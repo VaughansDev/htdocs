@@ -40,7 +40,7 @@ while ($row2 = $result2->fetch_assoc()) {?>
                         </th>
                         <td><?php echo $row['topic_views']; ?></td>
                         <?php
-                        $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId' ORDER BY id DESC";
+                        $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId' ORDER BY id DESC LIMIT 1";
                         $result3 = $dbcon->query($sql3);
                         $postCount = $result3->num_rows; ?>
                         <td><?php echo $postCount; ?></td>

@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
             $topicCount = $result2->num_rows; ?>
             <td><?php echo $topicCount; ?></td>
             <?php
-            $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' ORDER BY id DESC";
+            $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' ORDER BY id DESC LIMIT 1";
             $result3 = $dbcon->query($sql3);
             $postCount = $result3->num_rows; ?>
             <td><?php echo $postCount; ?></td>
