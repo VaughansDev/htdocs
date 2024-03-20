@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/inc/dbcon.php';
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit'){
     if (isset($_POST['topicTitle'])) {
         $threadId = $_POST['threadId'];
