@@ -6,14 +6,12 @@ if ($result->num_rows > 0) {
         $threadId = $row['thread_id']; ?>
         <tr>
             <th scope="row">
-                <a href="<?php echo $_CONFIG['forumsurl']; ?>/topics.php?threadId=<?php echo $threadId; ?>" class="kd-table-default-title"><h5><?php echo $row['thread_title']; ?></h5></a>
+                <a href="<?php echo $_CONFIG['forumsurl']; ?>/topics.php?threadId=<?php echo $threadId; ?>" class="kd-table-default-title"><?php echo $row['thread_title']; ?></a>
                 <p class="mb-0"><?php echo $row['thread_description']; ?></p>
             </th>
-            <?php
-            $sql2 = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId'";
+            <?php $sql2 = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId'";
             $result2 = $dbcon->query($sql2);
-            $topicCount = $result2->num_rows;
-            ?>
+            $topicCount = $result2->num_rows; ?>
             <td><?php echo $topicCount; ?></td>
             <?php
             $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId'";
