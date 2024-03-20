@@ -11,7 +11,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit'){
         $topicCreateDate = date('j M Y');
         $topicCreateTime = date('h:i a');
 
-        $sql = "INSERT INTO forum_topics (topic_id, topid_thread_id, topic_title, topic_creator_id, topic_create_date, topic_create_time, topic_creator_username, topic_views) 
+        $sql = "INSERT INTO forum_topics (topic_id, topic_thread_id, topic_title, topic_creator_id, topic_create_date, topic_create_time, topic_creator_username, topic_views) 
         VALUES ('$topicId', '$threadId', '$topicTitle', '$accountId', '$topicCreateDate', '$topicCreateTime', '$username', '$topicViews')";
         if ($result = $dbcon->query($sql)) {
             header("location: " . $_CONFIG['forumsurl'] . "/topic.php?threadId=" . $threadId . "&topicId=".$topicId);
