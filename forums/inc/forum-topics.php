@@ -1,0 +1,64 @@
+<?php
+$threadId = $_GET['threadId'];
+
+?>
+<div class="kd-blog-post-box pt-30 pb-30">
+    <h2 class="h4 mnt-5 mb-9">Design with pleasure</h2>
+    <!-- START: Breadcrumbs -->
+    <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
+        <li><a href="<?php echo $_CONFIG['supporturl']; ?>">Support Home</a></li>
+        <li><a href="<?php echo $_CONFIG['forumsurl']; ?>">Forums</a></li>
+        <li>Design with pleasure</li>
+    </ul>
+    <!-- END: Breadcrumbs -->
+</div>
+<div class="table-responsive">
+    <table class="kd-table kd-table-default">
+        <thead>
+            <tr>
+                <th scope="col">Topic</th>
+                <th scope="col">Views</th>
+                <th scope="col">Replies</th>
+                <th scope="col">Last Post</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $sql = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId'";
+            $result = $dbcon->query($sql);
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    $topicId = $row['topic_id']; ?>
+                    <tr>
+                        <th scope="row" class="kd-table-topics">
+                            <a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadId=<?php echo $threadId; ?>&topicId=<?php echo $topicId; ?>" class="kd-table-default-title"><?php echo $row['topic_title']; ?></a>
+                            <div class="kd-table-default-info">
+                                <p class="mb-0">by <?php echo $row['topic_creator_username']; ?> <span class="dib"><?php echo $row['topic_create_date']; ?>,</span> <span class="dib"><?php echo $row['topic_create_time']; ?></span></p>
+                            </div>
+                        </th>
+                        <td><?php echo $row['topic_views']; ?></td>
+                        <?php
+                        $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId'";
+                        $result3 = $dbcon->query($sql3);
+                        $postCount = $result3->num_rows; ?>
+                        <td><?php echo $postCount; ?></td>
+                        <?php if ($postCount > 0) { ?>
+                            <td class="kd-table-lastPost">
+                                <div class="kd-table-default-info">
+                                    <p class="mb-0">by <?php echo $row['post_username']; ?><span class="dib"><?php echo $row['post_create_date']; ?>,</span> <span class="dib"><?php echo $row['post_create_time']; ?></span></p>
+                                </div>
+                            </td>
+                        <?php } else { ?>
+                            <td class="kd-table-lastPost">
+                                <div class="kd-table-default-info">
+                                    <p class="mb-0">No recent posts</p>
+                                </div>
+                            </td>
+                        <?php }
+                        ?>
+                    </tr>
+            <?php }
+            }
+            $dbcon->close(); ?>
+        </tbody>
+    </table>
+</div>
