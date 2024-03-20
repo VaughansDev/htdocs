@@ -40,24 +40,25 @@ while ($row2 = $result2->fetch_assoc()) {?>
                         </th>
                         <td><?php echo $row['topic_views']; ?></td>
                         <?php
-                        $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId'";
+                        $sql3 = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId' ORDER BY id DESC";
                         $result3 = $dbcon->query($sql3);
                         $postCount = $result3->num_rows; ?>
                         <td><?php echo $postCount; ?></td>
-                        <?php if ($postCount > 0) { ?>
-                            <td class="kd-table-lastPost">
-                                <div class="kd-table-default-info">
-                                    <p class="mb-0">by <?php echo $row['post_username']; ?><span class="dib"><?php echo $row['post_create_date']; ?>,</span> <span class="dib"><?php echo $row['post_create_time']; ?></span></p>
-                                </div>
-                            </td>
-                        <?php } else { ?>
+                        <?php if ($postCount > 0) { 
+                            while ($row3 = $result3->fetch_assoc()) {?>                            
+                                <td class="kd-table-lastPost">
+                                    <div class="kd-table-default-info">
+                                        <p class="mb-0">by <?php echo $row3['post_username']; ?><span class="dib"><?php echo $row3['post_create_date']; ?>,</span> <span class="dib"><?php echo $row3['post_create_time']; ?></span></p>
+                                    </div>
+                                </td>
+                            <?php }
+                        } else { ?>
                             <td class="kd-table-lastPost">
                                 <div class="kd-table-default-info">
                                     <p class="mb-0">No recent posts</p>
                                 </div>
                             </td>
-                        <?php }
-                        ?>
+                        <?php } ?>
                     </tr>
             <?php }
             }
