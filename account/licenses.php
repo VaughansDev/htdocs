@@ -40,7 +40,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
             <div class="row justify-content-center">
                 <div class="col-xl-12">
                     <?php
-                    require $_SERVER['DOCUMENT_ROOT'] . '/inc/mylicenses.php';
+                    require $_SERVER['DOCUMENT_ROOT'] . '/account/inc/mylicenses.php';
                     ?>
                 </div>
             </div>
