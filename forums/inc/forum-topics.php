@@ -13,9 +13,11 @@ while ($row2 = $result2->fetch_assoc()) { ?>
             <li><?php echo $row2['thread_title']; ?></li>
         </ul>
         <!-- END: Breadcrumbs -->
-        <div class="col-auto">
-            <a href="<?php echo $_CONFIG['ticketsurl']; ?>/new-ticket.php" class="kd-btn kd-btn-md">Submit a ticket</a>
-        </div>    </div>
+    </div>
+
+    <div class="col-auto">
+        <a href="<?php echo $_CONFIG['ticketsurl']; ?>/new-ticket.php" class="kd-btn kd-btn-md">Submit a ticket</a>
+    </div>
 <?php } ?>
 <div class="table-responsive">
     <table class="kd-table kd-table-default">
