@@ -9,10 +9,10 @@ require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
                 <div class="col-xl-7">
                     <h2 class="text-center">Create an Account</h2>
                     <div class="kd-box kd-box-decorated">
-                        <form action="<?php echo $_CONFIG['domain']; ?>/inc/register.php" method="post" class="kd-form">
+                        <form action="<?php echo $_CONFIG['accounturl']; ?>/inc/register.php" method="post" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
-                                    <a href="<?php echo $_CONFIG['domain']; ?>/oauth/discord-oauth.php?req_type=register" class="kd-btn kd-btn-block kd-btn-popup kd-btn-discord d-flex align-items-center justify-content-center">
+                                    <a href="<?php echo $_CONFIG['accounturl']; ?>/oauth/discord-oauth.php?req_type=register" class="kd-btn kd-btn-block kd-btn-popup kd-btn-discord d-flex align-items-center justify-content-center">
                                         <span class="fa-brands fa-discord mr-20"></span><span>Sign Up with Discord</span>
                                     </a>
                                 </div>
