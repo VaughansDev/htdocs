@@ -175,7 +175,7 @@ if ($result->num_rows > 0) {
 </div>
 
 <script>
-    var quill = new Quill('#ql-editor', {
+    var quill = new Quill('#kd-editor', {
       theme: 'snow'
     });
   </script>
