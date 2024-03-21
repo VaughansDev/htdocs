@@ -179,13 +179,4 @@ if ($result->num_rows > 0) {
     </form>
 </div>
 
-<script>
-    var quill = new Quill('#kd-editor', {
-        modules: {
-            toolbar: '#ql-toolbar'
-        },
-        theme: 'snow'
-    });
-</script>
-
 <?php $dbcon->close(); ?>
