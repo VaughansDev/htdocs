@@ -79,7 +79,7 @@ if ($result->num_rows > 0) {
     <form class="kd-form" method="post" action="<?php echo $_CONFIG['forumsurl']; ?>/inc/post-reply.php">
         <div class="kd-form-group">
             <div class="kd-editor-quill">
-                <textarea class="kd-form-control" data-editor-height="150" data-editor-maxHeight="250"></textarea>
+                <textarea class="kd-form-control form-control-style-2" data-editor-height="150" data-editor-maxHeight="250"></textarea>
             </div>
         </div>
         <div class="kd-form-group">
