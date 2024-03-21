@@ -44,7 +44,11 @@ if ($result->num_rows > 0) {
                 </div>
                 <div class="kd-comment-cont">
                     <div class="kd-comment-head">
-                        <a href="javascript:;" class="kd-comment-name"><?php if ($row['post_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>'.$row['post_username']; } else { echo $row['post_username'];} ?></a>
+                        <a href="javascript:;" class="kd-comment-name"><?php if ($row['post_username'] == 'VaughanHD') {
+                                                                            echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>' . $row['post_username'];
+                                                                        } else {
+                                                                            echo $row['post_username'];
+                                                                        } ?></a>
                     </div>
                     <div class="kd-comment-date"><?php echo $row['post_create_date'] . ', ' . $row['post_create_time']; ?></div>
                     <div class="kd-comment-text">
@@ -83,7 +87,8 @@ if ($result->num_rows > 0) {
                     <span class="ql-formats">
                         <button type="button" class="ql-bold">
                             <svg viewBox="0 0 18 18">
-                                <path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path> <path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path>
+                                <path class="ql-stroke" d="M5,4H9.5A2.5,2.5,0,0,1,12,6.5v0A2.5,2.5,0,0,1,9.5,9H5A0,0,0,0,1,5,9V4A0,0,0,0,1,5,4Z"></path>
+                                <path class="ql-stroke" d="M5,9h5.5A2.5,2.5,0,0,1,13,11.5v0A2.5,2.5,0,0,1,10.5,14H5a0,0,0,0,1,0,0V9A0,0,0,0,1,5,9Z"></path>
                             </svg>
                         </button>
                         <button type="button" class="ql-italic">
@@ -152,11 +157,11 @@ if ($result->num_rows > 0) {
                     </span>
                 </div>
                 <div class="kd-editor ql-container ql-snow" data-editor-height="150" data-editor-maxheight="250" style="min-height: 150px; max-height: 250px;">
-                <div class="ql-editor" data-gramm="false" contenteditable="true"></div>
-                <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
-                <div class="ql-tooltip ql-editing ql-hidden" style="left: -18.3646px; top: 34px;" data-mode="link">
-                    <a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
-                    <input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL" placeholder="https://quilljs.com">
+                    <div class="ql-editor" data-gramm="false" contenteditable="true"></div>
+                    <div class="ql-clipboard" contenteditable="true" tabindex="-1"></div>
+                    <div class="ql-tooltip ql-editing ql-hidden" style="left: -18.3646px; top: 34px;" data-mode="link">
+                        <a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a>
+                        <input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL" placeholder="https://quilljs.com">
                         <a class="ql-action"></a>
                         <a class="ql-remove"></a>
                     </div>
@@ -176,8 +181,11 @@ if ($result->num_rows > 0) {
 
 <script>
     var quill = new Quill('#kd-editor', {
-      theme: 'snow'
+        modules: {
+            toolbar: '#ql-toolbar'
+        },
+        theme: 'snow'
     });
-  </script>
+</script>
 
 <?php $dbcon->close(); ?>
