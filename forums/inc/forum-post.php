@@ -1,5 +1,5 @@
-<link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.snow.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.css">
+<!--<link rel="stylesheet" type="text/css" href="<?php //echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.snow.css">
+<link rel="stylesheet" type="text/css" href="<?php //echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.css">-->
 <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.bubble.css">
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.js"></script>
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.min.js"></script>
@@ -102,7 +102,7 @@ if ($result->num_rows > 0) {
 </div>
 <script>
     const quill = new Quill('#editor', {
-        theme: 'snow'
+        theme: 'bubble'
     });
 </script>
 <?php $dbcon->close(); ?>
