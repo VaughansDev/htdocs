@@ -158,7 +158,9 @@ if ($result->num_rows > 0) {
     </script>
     <script>
         $("#post-reply").on("submit", function() {
-            $("#textarea").val($("#editor").html());
+            var editor = document.querySelector('#editor')
+            var content = editor.children[0].innerHTML
+            $("#textarea").val(content);
         })
     </script>
 <?php } else { ?>
@@ -172,3 +174,11 @@ if ($result->num_rows > 0) {
     </div>
 <?php }
 $dbcon->close(); ?>
+
+
+
+
+<div class="ql-editor" contenteditable="true" spellcheck="false">
+    <p>vccccccccccccccccc</p>
+</div><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: -1px; pointer-events: none; z-index: auto;" class="dnXmp"></grammarly-extension><grammarly-extension data-grammarly-shadow-root="true" style="position: absolute; top: 0px; left: -1px; pointer-events: none; z-index: auto;" class="dnXmp"></grammarly-extension>
+<div class="ql-tooltip ql-hidden"><a class="ql-preview" rel="noopener noreferrer" target="_blank" href="about:blank"></a><input type="text" data-formula="e=mc^2" data-link="https://quilljs.com" data-video="Embed URL"><a class="ql-action"></a><a class="ql-remove"></a></div>
