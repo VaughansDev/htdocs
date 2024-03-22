@@ -17,8 +17,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == "submit-reply") {
     } else {
         header("location: " . $_CONFIG['forumsurl'] . "/topic.php?threadId=" . $threadId . "&topicId=" . $topicId."&postStatus=dbError");
     }
+    $dbcon->close();
 } else {
     header("location: " . $_CONFIG['forumsurl'] . "/topic.php?threadId=" . $threadId . "&topicId=" . $topicId."&postStatus=submitError");
 }
-$dbcon->close();
 ?>
