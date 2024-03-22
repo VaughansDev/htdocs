@@ -151,8 +151,8 @@ if ($result->num_rows > 0) {
 <?php } else { ?>
     <div class="kd-separator"></div>
     <div class="kd-blog-post-box">
-        <h3 class="h6 mb-25">You must be logged in to reply</h3>
         <div class="align-center text-center center" style="text-align:center;">
+            <h3 class="h6 mb-25">You must be logged in to reply</h3>
             <span><a href="<?php echo $_CONFIG['accounturl']; ?>/login.php" class="kd-btn kd-btn-md">Login</a></span>
             <span><a href="<?php echo $_CONFIG['accounturl']; ?>/register.php" class="kd-btn kd-btn-md">Sign Up</a></span>
         </div>
