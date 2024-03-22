@@ -78,74 +78,82 @@ if ($result->num_rows > 0) {
     </ul>
 </div>
 
-
-<div class="kd-separator"></div>
-<div class="kd-blog-post-box">
-    <h3 class="h6 mb-25">Write a Reply</h3>
-    <form class="kd-form" method="post" action="<?php echo $_CONFIG['forumsurl']; ?>/inc/post-reply.php">
-        <div class="kd-form-group">
-            <div id="toolbar">
-                <span class="ql-formats">
-                    <select class="ql-size"></select>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-bold"></button>
-                    <button class="ql-italic"></button>
-                    <button class="ql-underline"></button>
-                    <button class="ql-strike"></button>
-                </span>
-                <span class="ql-formats">
-                    <select class="ql-color"></select>
-                    <select class="ql-background"></select>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-script" value="sub"></button>
-                    <button class="ql-script" value="super"></button>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-header" value="1"></button>
-                    <button class="ql-header" value="2"></button>
-                    <button class="ql-blockquote"></button>
-                    <button class="ql-code-block"></button>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-list" value="ordered"></button>
-                    <button class="ql-list" value="bullet"></button>
-                    <button class="ql-indent" value="-1"></button>
-                    <button class="ql-indent" value="+1"></button>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-direction" value="rtl"></button>
-                    <select class="ql-align"></select>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-link"></button>
-                    <button class="ql-image"></button>
-                    <button class="ql-video"></button>
-                </span>
-                <span class="ql-formats">
-                    <button class="ql-clean"></button>
-                </span>
-            </div>
-            <div id="editor" style="height: 200px;"></div>
-        </div>
-        <div class="kd-form-group">
-            <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
-                <div class="col-auto kd-dropzone-attachment-btn">
-                    <button class="kd-btn kd-btn-lg" type="submit" name="submit">Post Reply</button>
+<?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 'true') { ?>
+    <div class="kd-separator"></div>
+    <div class="kd-blog-post-box">
+        <h3 class="h6 mb-25">Write a Reply</h3>
+        <form class="kd-form" method="post" action="<?php echo $_CONFIG['forumsurl']; ?>/inc/post-reply.php">
+            <div class="kd-form-group">
+                <div id="toolbar">
+                    <span class="ql-formats">
+                        <select class="ql-size"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                        <button class="ql-strike"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <select class="ql-color"></select>
+                        <select class="ql-background"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-script" value="sub"></button>
+                        <button class="ql-script" value="super"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-header" value="1"></button>
+                        <button class="ql-header" value="2"></button>
+                        <button class="ql-blockquote"></button>
+                        <button class="ql-code-block"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-indent" value="-1"></button>
+                        <button class="ql-indent" value="+1"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-direction" value="rtl"></button>
+                        <select class="ql-align"></select>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-link"></button>
+                        <button class="ql-image"></button>
+                        <button class="ql-video"></button>
+                    </span>
+                    <span class="ql-formats">
+                        <button class="ql-clean"></button>
+                    </span>
                 </div>
+                <div id="editor" style="height: 200px;"></div>
             </div>
-            <!-- END: Dropzone -->
-        </div>
-    </form>
-</div>
-<script>
-    const options = {
-        theme: 'snow',
-        modules: {
-            toolbar: '#toolbar'
-        }
-    };
-    const quill = new Quill('#editor', options);
-</script>
-<?php $dbcon->close(); ?>
+            <div class="kd-form-group">
+                <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
+                    <div class="col-auto kd-dropzone-attachment-btn">
+                        <button class="kd-btn kd-btn-lg" type="submit" name="submit">Post Reply</button>
+                    </div>
+                </div>
+                <!-- END: Dropzone -->
+            </div>
+        </form>
+    </div>
+    <script>
+        const options = {
+            theme: 'snow',
+            modules: {
+                toolbar: '#toolbar'
+            }
+        };
+        const quill = new Quill('#editor', options);
+    </script>
+<?php } else { ?>
+    <div class="kd-separator"></div>
+    <div class="kd-blog-post-box">
+        <h3 class="h6 mb-25">You must be logged in to reply</h3>
+        <span><a href="<?php echo $_CONFIG['accounturl']; ?>/login.php" class="kd-btn kd-btn-md kd-btn-transparent">Login</a></span>
+        <span><a href="<?php echo $_CONFIG['accounturl']; ?>/register.php" class="kd-btn kd-btn-md">Sign Up</a></span>
+    </div>
+<?php }
+$dbcon->close(); ?>
