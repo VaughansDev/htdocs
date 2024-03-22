@@ -31,12 +31,12 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
                                     <label for="select-product" class="mnt-7">Select Product</label>
-                                    <select class="form-control kd-select-ticket" name="" id="select-product" tabindex="null">
-                                        <option value="1" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-1-xs.png' alt=''> Quantial"></option>
-                                        <option value="2" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-2-xs.png' alt=''> Sensific"></option>
-                                        <option value="3" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-3-xs.png' alt=''> Minist"></option>
-                                        <option value="4" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-4-xs.png' alt=''> Desty"></option>
-                                        <option value="5" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-5-xs.png' alt=''> Silies"></option>
+                                    <select class="form-control form-control-style-2" name="" id="select-product" tabindex="null">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
                                     </select>
                                 </div>
                                 <div class="kd-form-group">
