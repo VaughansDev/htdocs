@@ -4,7 +4,7 @@ require 'dbcon.php';
 $threadId = $_POST['threadId'];
 $topicId = $_POST['topicId'];
 $username = $_POST['username'];
-$accountId = $_POST['AccountId'];
+$accountId = $_POST['accountId'];
 $profilePic = $_POST['profilePic'];
 $replyContent = $_POST['replyContent'];
 $replyDate = date('j M Y');
