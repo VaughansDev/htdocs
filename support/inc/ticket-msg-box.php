@@ -12,7 +12,8 @@
                 ['fontsize', ['fontsize']],
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
-                ['insert', ['link', 'picture', 'video', 'table']]
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']]
             ],
             placeholder: 'Type your reply here...',
             tabsize: 2,
