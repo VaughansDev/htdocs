@@ -67,24 +67,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 </div>
                             </div>
                         </form>
-                        <script>
-                            $(document).ready(function() {
-                                $('#editor').summernote({
-                                    toolbar: [
-                                        // [groupName, [list of button]]
-                                        ['style', ['bold', 'italic', 'underline', 'clear']],
-                                        ['font', ['strikethrough', 'superscript', 'subscript']],
-                                        ['fontsize', ['fontsize']],
-                                        ['color', ['color']],
-                                        ['para', ['ul', 'ol', 'paragraph']],
-                                        ['height', ['height']]
-                                    ],
-                                    placeholder: 'Type your reply here...',
-                                    tabsize: 2,
-                                    height: 200
-                                });
-                            });
-                        </script>
                         <div class="kd-box-content pt-0">
                             <!-- STRART: Dropzone
 
@@ -122,3 +104,21 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
     <?php
     require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
     ?>
+
+    <script>
+        $(document).ready(function() {
+            $('#editor').summernote({
+                toolbar: [
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']]
+                ],
+                placeholder: 'Type your reply here...',
+                tabsize: 2,
+                height: 200
+            });
+        });
+    </script>
