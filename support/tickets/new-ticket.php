@@ -31,14 +31,13 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
                                     <label for="select-product" class="mnt-7">Select Product</label>
-                                        <select class="form-control kd-select-ticket" name="" id="select-product" tabindex="null">
-                                            <option value="1" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-1-xs.png' alt=''> Quantial"></option>
-                                            <option value="2" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-2-xs.png' alt=''> Sensific"></option>
-                                            <option value="3" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-3-xs.png' alt=''> Minist"></option>
-                                            <option value="4" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-4-xs.png' alt=''> Desty"></option>
-                                            <option value="5" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-5-xs.png' alt=''> Silies"></option>
-                                        </select>
-                                    </div>
+                                    <select class="form-control kd-select-ticket" name="" id="select-product" tabindex="null">
+                                        <option value="1" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-1-xs.png' alt=''> Quantial"></option>
+                                        <option value="2" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-2-xs.png' alt=''> Sensific"></option>
+                                        <option value="3" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-3-xs.png' alt=''> Minist"></option>
+                                        <option value="4" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-4-xs.png' alt=''> Desty"></option>
+                                        <option value="5" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-5-xs.png' alt=''> Silies"></option>
+                                    </select>
                                 </div>
                                 <div class="kd-form-group">
                                     <div class="alert kd-alert kd-alert-primary" role="alert">* Your License. Purchase Date: 5 Nov 2018</div>
