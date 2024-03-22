@@ -1,7 +1,5 @@
-<!--<link rel="stylesheet" type="text/css" href="<?php //echo $_CONFIG['domain']; 
-                                                    ?>/assets/vendor/quill/dist/quill.bubble.css">
-<link rel="stylesheet" type="text/css" href="<?php //echo $_CONFIG['domain']; 
-                                                ?>/assets/vendor/quill/dist/quill.core.css">-->
+<!--<link rel="stylesheet" type="text/css" href="<?php //echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.bubble.css">
+<link rel="stylesheet" type="text/css" href="<?php //echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.css">-->
 <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.css">
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.js"></script>
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.min.js"></script>
@@ -52,11 +50,7 @@ if ($result->num_rows > 0) {
                 </div>
                 <div class="kd-comment-cont">
                     <div class="kd-comment-head">
-                        <a href="javascript:;" class="kd-comment-name"><?php if ($row['post_username'] == 'VaughanHD') {
-                                                                            echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>' . $row['post_username'];
-                                                                        } else {
-                                                                            echo $row['post_username'];
-                                                                        } ?></a>
+                        <a href="javascript:;" class="kd-comment-name"><?php if ($row['post_username'] == 'VaughanHD') { echo '<span style="color: #FF0000;"><strong>[ADMIN]</strong> </span>' . $row['post_username']; } else { echo $row['post_username']; } ?></a>
                     </div>
                     <div class="kd-comment-date"><?php echo $row['post_create_date'] . ', ' . $row['post_create_time']; ?></div>
                     <div class="kd-comment-text">
