@@ -30,13 +30,23 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         <form action="#" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
+                                    <label for="select-product" class="mnt-7">Select a Department</label>
+                                    <select class="form-control form-control-style-2" name="" id="select-product" tabindex="null">
+                                        <option value="1">General</option>
+                                        <option value="2">Sales</option>
+                                        <option value="3">Support</option>
+                                        <option value="4">Billing</option>
+                                        <option value="5">Account</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="kd-separator"></div>
+                            <div class="kd-box-content">
+                                <div class="kd-form-group">
                                     <label for="select-product" class="mnt-7">Select Product</label>
                                     <select class="form-control form-control-style-2" name="" id="select-product" tabindex="null">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
+                                        <option value="1">No Product</option>
+                                        <option value="2">Khaos Applications</option>
                                     </select>
                                 </div>
                                 <div class="kd-form-group">
