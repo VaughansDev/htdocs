@@ -93,7 +93,7 @@ if ($result->num_rows > 0) {
                 <input type="text" name="username" value="<?php echo $_SESSION['username']; ?>" hidden>
                 <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
                 <input type="text" name="profilePic" value="<?php echo $_SESSION['profilepic']; ?>" hidden>
-                <textarea name="replyContent" id="editor"></textarea>
+                <textarea style="padding-right:20px;" name="replyContent" id="editor"></textarea>
             </div>
             <div class="kd-form-group">
                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
