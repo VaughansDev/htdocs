@@ -93,10 +93,7 @@ if ($result->num_rows > 0) {
                 <input type="text" name="username" value="<?php echo $_SESSION['username']; ?>" hidden>
                 <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
                 <input type="text" name="profilePic" value="<?php echo $_SESSION['profilepic']; ?>" hidden>
-                <textarea name="replyContent" id="textarea" style="display:none;" hidden></textarea>
-            </div>
-            <div class="kd-form-group">
-                <div id="editor"></div>
+                <textarea name="replyContent" id="editor"></textarea>
             </div>
             <div class="kd-form-group">
                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
@@ -111,6 +108,15 @@ if ($result->num_rows > 0) {
     <script>
         $(document).ready(function() {
             $('#editor').summernote({
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']]
+                ],
                 placeholder: 'Type your reply here...',
                 tabsize: 2,
                 height: 200
