@@ -82,7 +82,15 @@ if ($result->num_rows > 0) {
     <div class="kd-separator"></div>
     <div class="kd-blog-post-box">
         <h3 class="h6 mb-25">Write a Reply</h3>
-        <form class="kd-form" method="post" action="<?php echo $_CONFIG['forumsurl']; ?>/inc/post-reply.php">
+        <form class="kd-form" method="post" id="post-reply" action="<?php echo $_CONFIG['forumsurl']; ?>/inc/post-reply.php">
+            <div class="kd-form-group">
+                <input type="text" name="topicId" value="<?php echo $_GET['topicId']; ?>" hidden>
+                <input type="text" name="threadId" value="<?php echo $_GET['threadId']; ?>" hidden>
+                <input type="text" name="username" value="<?php echo $_SESSION['username']; ?>" hidden>
+                <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
+                <input type="text" name="profilePic" value="<?php echo $_SESSION['profilepic']; ?>" hidden>
+                <textarea name="replyContent" id="textarea" style="display:none;" hidden></textarea>
+            </div>
             <div class="kd-form-group">
                 <div id="toolbar">
                     <span class="ql-formats">
@@ -132,7 +140,7 @@ if ($result->num_rows > 0) {
             <div class="kd-form-group">
                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                     <div class="col-auto kd-dropzone-attachment-btn">
-                        <button class="kd-btn kd-btn-lg" type="submit" name="submit">Post Reply</button>
+                        <button class="kd-btn kd-btn-lg" type="submit" value="submit-reply name="submit">Post Reply</button>
                     </div>
                 </div>
                 <!-- END: Dropzone -->
@@ -147,6 +155,11 @@ if ($result->num_rows > 0) {
             }
         };
         const quill = new Quill('#editor', options);
+    </script>
+    <script>
+        $("#post-reply").on("submit", function() {
+            $("#textarea").val($("#editor").html());
+        })
     </script>
 <?php } else { ?>
     <div class="kd-separator"></div>
