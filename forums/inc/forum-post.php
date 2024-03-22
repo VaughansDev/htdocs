@@ -140,7 +140,7 @@ if ($result->num_rows > 0) {
             <div class="kd-form-group">
                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                     <div class="col-auto kd-dropzone-attachment-btn">
-                        <button class="kd-btn kd-btn-lg" type="submit" value="submit-reply name="submit">Post Reply</button>
+                        <button class="kd-btn kd-btn-lg" type="submit" value="submit-reply" name="submit">Post Reply</button>
                     </div>
                 </div>
                 <!-- END: Dropzone -->
