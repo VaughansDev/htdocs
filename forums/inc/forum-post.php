@@ -96,7 +96,7 @@ if ($result->num_rows > 0) {
                 <textarea name="replyContent" id="textarea" style="display:none;" hidden></textarea>
             </div>
             <div class="kd-form-group">
-                <div id="summernote"></div>
+                <div id="editor"></div>
             </div>
             <div class="kd-form-group">
                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
@@ -110,7 +110,7 @@ if ($result->num_rows > 0) {
     </div>
     <script>
         $(document).ready(function() {
-            $('#summernote').summernote({
+            $('#editor').summernote({
                 placeholder: 'Type your reply here...',
                 tabsize: 2,
                 height: 200
