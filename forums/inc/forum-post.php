@@ -1,5 +1,8 @@
-<script src="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.3/dist/quill.snow.css" rel="stylesheet">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <?php
 require 'dbcon.php';
 $threadId = $_GET['threadId'];
@@ -53,6 +56,7 @@ if ($result->num_rows > 0) {
                                                                         } ?></a>
                     </div>
                     <div class="kd-comment-date"><?php echo $row['post_create_date'] . ', ' . $row['post_create_time']; ?></div>
+                    <div class="kd-separator"></div>
                     <div class="kd-comment-text">
                         <?php echo $row['post_content']; ?>
                     </div>
@@ -92,50 +96,7 @@ if ($result->num_rows > 0) {
                 <textarea name="replyContent" id="textarea" style="display:none;" hidden></textarea>
             </div>
             <div class="kd-form-group">
-                <div id="toolbar">
-                    <span class="ql-formats">
-                        <select class="ql-size"></select>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-bold"></button>
-                        <button class="ql-italic"></button>
-                        <button class="ql-underline"></button>
-                        <button class="ql-strike"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <select class="ql-color"></select>
-                        <select class="ql-background"></select>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-script" value="sub"></button>
-                        <button class="ql-script" value="super"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-header" value="1"></button>
-                        <button class="ql-header" value="2"></button>
-                        <button class="ql-blockquote"></button>
-                        <button class="ql-code-block"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-list" value="ordered"></button>
-                        <button class="ql-list" value="bullet"></button>
-                        <button class="ql-indent" value="-1"></button>
-                        <button class="ql-indent" value="+1"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-direction" value="rtl"></button>
-                        <select class="ql-align"></select>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-link"></button>
-                        <button class="ql-image"></button>
-                        <button class="ql-video"></button>
-                    </span>
-                    <span class="ql-formats">
-                        <button class="ql-clean"></button>
-                    </span>
-                </div>
-                <div id="editor" style="height: 200px;"></div>
+                <div id="summernote"></div>
             </div>
             <div class="kd-form-group">
                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
@@ -148,13 +109,13 @@ if ($result->num_rows > 0) {
         </form>
     </div>
     <script>
-        const options = {
-            theme: 'snow',
-            modules: {
-                toolbar: '#toolbar'
-            }
-        };
-        const quill = new Quill('#editor', options);
+        $(document).ready(function() {
+            $('#summernote').summernote({
+                placeholder: 'Type your reply here...',
+                tabsize: 2,
+                height: 200
+            });
+        });
     </script>
     <script>
         $("#post-reply").on("submit", function() {
