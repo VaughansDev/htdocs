@@ -127,7 +127,7 @@ if ($result->num_rows > 0) {
                     <button class="ql-clean"></button>
                 </span>
             </div>
-            <div id="editor" style="height: 100px;"></div>
+            <div id="editor" style="height: 250px;"></div>
         </div>
         <div class="kd-form-group">
             <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
