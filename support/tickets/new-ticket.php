@@ -30,14 +30,33 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         <form action="#" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
-                                        <label for="select-product" class="mnt-7">Select Product</label>
-                                        <div class="dropdown bootstrap-select form-control kd-select-ticket"><select class="form-control kd-select-ticket" name="" id="select-product" tabindex="null">
+                                    <label for="select-product" class="mnt-7">Select Product</label>
+                                    <div class="dropdown bootstrap-select form-control kd-select-ticket">
+                                        <select class="form-control kd-select-ticket" name="" id="select-product" tabindex="null">
                                             <option value="1" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-1-xs.png' alt=''> Quantial"></option>
                                             <option value="2" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-2-xs.png' alt=''> Sensific"></option>
                                             <option value="3" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-3-xs.png' alt=''> Minist"></option>
                                             <option value="4" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-4-xs.png' alt=''> Desty"></option>
                                             <option value="5" data-content="<img src='<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-5-xs.png' alt=''> Silies"></option>
                                         </select>
+                                        <button type="button" tabindex="-1" class="btn dropdown-toggle btn-light" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="select-product" title="Quantial">
+                                            <div class="filter-option">
+                                                <div class="filter-option-inner">
+                                                    <div class="filter-option-inner-inner"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-1-xs.png" alt=""> Quantial</div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-menu" style="max-height: 398.422px; overflow: hidden; min-height: 224px;">
+                                            <div class="inner show" role="listbox" id="bs-select-1" tabindex="-1" aria-activedescendant="bs-select-1-0" style="max-height: 380.422px; overflow-y: auto; min-height: 206px;">
+                                                <ul class="dropdown-menu inner show" role="presentation" style="margin-top: 0px; margin-bottom: 0px;">
+                                                    <li class="selected active"><a role="option" class="dropdown-item active selected" id="bs-select-1-0" tabindex="0" aria-setsize="5" aria-posinset="1" aria-selected="true"><span class="text"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-1-xs.png" alt=""> Quantial</span></a></li>
+                                                    <li><a role="option" class="dropdown-item" id="bs-select-1-1" tabindex="0" aria-setsize="5" aria-posinset="2"><span class="text"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-2-xs.png" alt=""> Sensific</span></a></li>
+                                                    <li><a role="option" class="dropdown-item" id="bs-select-1-2" tabindex="0" aria-setsize="5" aria-posinset="3"><span class="text"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-3-xs.png" alt=""> Minist</span></a></li>
+                                                    <li><a role="option" class="dropdown-item" id="bs-select-1-3" tabindex="0" aria-setsize="5" aria-posinset="4"><span class="text"><img src="<?php echo $_CONFIG['supporturl']; ?>/assets/images/product-4-xs.png" alt=""> Desty</span></a></li>
+                                                    <li class=""><a role="option" class="dropdown-item" id="bs-select-1-4" tabindex="0" aria-setsize="5" aria-posinset="5"><span class="text"><img src=<?php echo $_CONFIG['supporturl']; ?>/"assets/images/product-5-xs.png" alt=""> Silies</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="kd-form-group">
