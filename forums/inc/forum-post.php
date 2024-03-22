@@ -119,9 +119,7 @@ if ($result->num_rows > 0) {
     </script>
     <script>
         $("#post-reply").on("submit", function() {
-            var editor = document.querySelector('#editor')
-            var content = editor.children[0].innerHTML
-            $("#textarea").val(content);
+            $("#textarea").val($("#editor").html());
         })
     </script>
 <?php } else { ?>
