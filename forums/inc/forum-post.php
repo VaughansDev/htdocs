@@ -1,3 +1,9 @@
+<link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.snow.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.bubble.css">
+<script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.js"></script>
+<script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.min.js"></script>
+<script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.js"></script>
 <?php
 require 'dbcon.php';
 $threadId = $_GET['threadId'];
