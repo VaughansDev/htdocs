@@ -37,6 +37,8 @@ session_start();
     <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/dropzone/dist/min/dropzone.min.css">
     <!-- Quill -->
     <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.snow.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.bubble.css">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/cef1fcc158.js" crossorigin="anonymous"></script>
     <!-- Amdesk -->

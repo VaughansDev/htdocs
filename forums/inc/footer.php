@@ -121,7 +121,9 @@
 <!-- Dropzone -->
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/dropzone/dist/min/dropzone.min.js"></script>
 <!-- Quill -->
+<script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.js"></script>
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.min.js"></script>
+<script src="<?php echo $_CONFIG['domain']; ?>/assets/vendor/quill/dist/quill.core.js"></script>
 <!-- The Amdesk -->
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/js/khaos.min.js"></script>
 <script src="<?php echo $_CONFIG['domain']; ?>/assets/js/khaos-init.js"></script>
