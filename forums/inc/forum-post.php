@@ -123,11 +123,6 @@ if ($result->num_rows > 0) {
             });
         });
     </script>
-    <script>
-        $("#post-reply").on("submit", function() {
-            $("#textarea").val($("#editor").html());
-        })
-    </script>
 <?php } else { ?>
     <div class="kd-separator"></div>
     <div class="kd-blog-post-box">

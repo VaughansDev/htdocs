@@ -1,3 +1,8 @@
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/inc/header.php';
 if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
@@ -30,43 +35,56 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                         <form action="#" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
-                                    <label for="select-product" class="mnt-7">Select a Department</label>
-                                    <select class="form-control form-control-style-2" name="" id="select-product" tabindex="null">
-                                        <option value="1">General</option>
-                                        <option value="2">Sales</option>
-                                        <option value="3">Support</option>
-                                        <option value="4">Billing</option>
-                                        <option value="5">Account</option>
+                                    <label for="selectDepartment" class="mnt-7">Select a Department</label>
+                                    <select class="form-control form-control-style-2" name="selectDepartment" id="selectDepartment" tabindex="null">
+                                        <option value="General">General</option>
+                                        <option value="Sales">Sales</option>
+                                        <option value="Support">Support</option>
+                                        <option value="Billing">Billing</option>
+                                        <option value="Account">Account</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="kd-separator"></div>
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
-                                    <label for="select-product" class="mnt-7">Select Product</label>
-                                    <select class="form-control form-control-style-2" name="" id="select-product" tabindex="null">
-                                        <option value="1">No Product</option>
-                                        <option value="2">Khaos Applications</option>
+                                    <label for="selectProduct" class="mnt-7">Select Product</label>
+                                    <select class="form-control form-control-style-2" name="selectProduct" id="selectProduct" tabindex="null">
+                                        <option value="No Product">No Product</option>
+                                        <option value="Khaos Applications">Khaos Applications</option>
                                     </select>
-                                </div>
-                                <div class="kd-form-group">
-                                    <div class="alert kd-alert kd-alert-primary" role="alert">* Your License. Purchase Date: 5 Nov 2018</div>
                                 </div>
                             </div>
                             <div class="kd-separator"></div>
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
-                                    <label for="subject" class="mnt-7">Subject</label>
-                                    <input type="text" class="form-control form-control-style-2" id="subject" placeholder="Enter Subject">
+                                    <label for="ticketTitle" class="mnt-7">Ticket Subject</label>
+                                    <input type="text" class="form-control form-control-style-2" id="ticketTitle" placeholder="Enter Ticket Subject">
                                 </div>
                                 <div class="kd-form-group">
-                                    <label class="mnt-7">Description</label>
-                                    <div class="kd-editor-quill">
-                                        <div class="kd-editor" data-editor-height="150" data-editor-maxHeight="250"></div>
-                                    </div>
+                                    <label class="mnt-7">Ticket Message</label>
+                                    <textarea style="padding-right:20px;" name="ticketMessage" id="editor"></textarea>
                                 </div>
                             </div>
                         </form>
+                        <script>
+                            $(document).ready(function() {
+                                $('#editor').summernote({
+                                    toolbar: [
+                                        // [groupName, [list of button]]
+                                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                                        ['font', ['strikethrough', 'superscript', 'subscript']],
+                                        ['fontsize', ['fontsize']],
+                                        ['color', ['color']],
+                                        ['para', ['ul', 'ol', 'paragraph']],
+                                        ['height', ['height']]
+                                    ],
+                                    placeholder: 'Type your reply here...',
+                                    tabsize: 2,
+                                    height: 200
+                                });
+                            });
+                        </script>
                         <div class="kd-box-content pt-0">
                             <!-- STRART: Dropzone
 
