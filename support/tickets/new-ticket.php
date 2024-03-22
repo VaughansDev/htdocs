@@ -20,8 +20,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <h2 class="h6 mb-6">Submit a Support Ticket</h2>
                             <!-- START: Breadcrumbs -->
                             <ul class="kd-breadcrumbs text-left kd-breadcrumbs-dark mnb-6 fs-14">
-                                <li><a href="help-center.php">Support Home</a></li>
-                                <li><a href="ticket.php">My Tickets</a></li>
+                                <li><a href="<?php echo $_CONFIG['supporturl']; ?>">Support Home</a></li>
+                                <li><a href="<?php echo $_CONFIG['ticketsurl']; ?>">My Tickets</a></li>
                                 <li>Submit Ticket</li>
                             </ul>
                             <!-- END: Breadcrumbs -->
