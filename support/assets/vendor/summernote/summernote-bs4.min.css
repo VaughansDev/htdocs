@@ -767,6 +767,7 @@
 .note-modal .modal-dialog {
     outline: 0;
     border-radius: 5px;
+    padding-top: 20%;
 }
 
 .note-modal .form-group {
