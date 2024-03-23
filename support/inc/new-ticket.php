@@ -24,7 +24,7 @@ $ticketRole = $_SESSION['auth'];
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     if (isset($_POST['ticketFile'])) {
         $ticketReplyHasFile = true;
-        $ticketFile = basename($_FILES['ticketFile']['name']);
+        $ticketFile = $_FILES['ticketFile']['name'];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $ticketFileName = $ticketAccountId . '-' . date('dmYHis') . '-' . uniqid().$imageFileType;
         $target_dir = $_SERVER['DOCUMENT_ROOT'].'/tickets/uploads/';
@@ -46,12 +46,28 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
             $uploadOk = 0;
         }
 
-        if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        if ($_FILES['ticketFile']['type'] != "jpg" && $_FILES['ticketFile']['type'] != "png" && $_FILES['ticketFile']['type'] != "jpeg" && $_FILES['ticketFile']['type'] != "gif") {
             $uploadOk = 0;
         }
 
         if ($uploadOk == 0) {
             $ticketReplyHasFile = false;
+
+            $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreples) 
+                                     VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
+            $result = $dbcon->query($sql);
+            if ($result) {
+                $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, role, replydate, replytime, message, replyhasfile)
+                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketRole', '$ticketReplyDate', '$ticketReplyTime', '$ticketMessage', '$ticketReplyHasFile')";
+                $result = $dbcon->query($sql);
+                if ($result) {
+                    header("location: " . $_CONFIG['ticketsurl'] . "/ticket.php?ticketno=" . $ticketNo);
+                } else {
+                    header("location: " . $_CONFIG['ticketsurl'] . "/new-ticket.php?error=dbError");
+                }
+            } else {
+                header("location: " . $_CONFIG['ticketsurl'] . "/new-ticket.php?error=dbError");
+            }
         } else {
             if (move_uploaded_file($_FILES['ticketFile']['tmp_name'], $target_file)) {
                 $ticketFileSize = $_FILES['ticketFile']['size'];
