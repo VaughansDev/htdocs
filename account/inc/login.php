@@ -112,6 +112,9 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $_SESSION['loggedin'] = TRUE;
                 echo 'debug5';
                 header("location: " . $_CONFIG['accounturl']);
+            } else {
+                $msg = urlencode("The password was incorrect.");
+                header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
             }
         } else {
             $msg = urlencode("No account was found with that username.");
