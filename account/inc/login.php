@@ -106,6 +106,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $_SESSION['phone'] = $users_phone;
                 $_SESSION['auth'] = $users_auth;
                 $_SESSION['loggedin'] = TRUE;
+                echo 'test';
                 header("location: " . $_CONFIG['accounturl']);
             }
         } else {
