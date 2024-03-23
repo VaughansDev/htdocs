@@ -21,7 +21,7 @@ $lastReplyMsg = substr($_POST['ticketMessage'], 0, 97).'...';
 $lastReplyAccountId = $_SESSION['accountid'];
 $ticketRole = $_SESSION['auth'];
 $ticketFirstName = $_SESSION['firstname'];
-$ticketLastName = $_SESSION['lastname']; 
+$ticketLastName = $_SESSION['lastname'];
 
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     if (isset($_POST["ticketFile"])) {
