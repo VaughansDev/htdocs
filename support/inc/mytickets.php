@@ -22,24 +22,22 @@ if (isset($_GET['status'])) {
                     <ul class="kd-ticket-info">
                         <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplyname']; ?></li>
                         <li>Product: <?php echo $row['ticket_product']; ?></li>
-                        <li>Comments: <?php echo $row['ticketreplys']; ?></li>
+                        <li>Status:
+                            <?php
+                            if ($row['ticket_status'] == 'OPEN') {
+                                echo '<div style="color: green;">OPEN</div>';
+                            } elseif ($row['ticket_status'] == 'CLOSED') {
+                                echo '<div style="color: red;">CLOSED</div>';
+                            } elseif ($row['ticket_status'] == 'ONHOLD') {
+                                echo '<div style="color: orange;">ONHOLD</div>';
+                            } else {
+                                echo '<div style="color: blue;">UNKNOWN</div>';
+                            }
+                            ?></li>
                         <?php if ($row['lastreplyaccountid'] != $_SESSION['accountid']) { ?>
                             <li class="kd-ticket-new">New Reply</li>
                         <?php } ?>
                     </ul>
-                </span>
-                <span class="kd-ticket-status">
-                    <?php
-                    if ($row['ticket_status'] == 'OPEN') {
-                        echo '<div style="color: green;">OPEN</div>';
-                    } elseif ($row['ticket_status'] == 'CLOSED') {
-                        echo '<div style="color: red;">CLOSED</div>';
-                    } elseif ($row['ticket_status'] == 'ONHOLD') {
-                        echo '<div style="color: orange;">ONHOLD</div>';
-                    } else {
-                        echo '<div style="color: blue;">UNKNOWN</div>';
-                    }
-                    ?>
                 </span>
             </a>
         <?php } ?>
@@ -111,24 +109,24 @@ if (isset($_GET['status'])) {
                     <ul class="kd-ticket-info">
                         <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplyname']; ?></li>
                         <li>Product: <?php echo $row['ticket_product']; ?></li>
-                        <li>Comments: <?php echo $row['ticketreplys']; ?></li>
+                        <li>Status:
+                            <?php
+                            if ($row['ticket_status'] == 'OPEN') {
+                                echo '<div style="color: green;">OPEN</div>';
+                            } elseif ($row['ticket_status'] == 'CLOSED') {
+                                echo '<div style="color: red;">CLOSED</div>';
+                            } elseif ($row['ticket_status'] == 'ONHOLD') {
+                                echo '<div style="color: orange;">ONHOLD</div>';
+                            } else {
+                                echo '<div style="color: blue;">UNKNOWN</div>';
+                            }
+                            ?></li>
                         <?php if ($row['lastreplyaccountid'] != $_SESSION['accountid']) { ?>
                             <li class="kd-ticket-new">New Reply</li>
                         <?php } ?>
                     </ul>
                 </span>
                 <span class="kd-ticket-status">
-                    <?php
-                    if ($row['ticket_status'] == 'OPEN') {
-                        echo '<div style="color: green;">OPEN</div>';
-                    } elseif ($row['ticket_status'] == 'CLOSED') {
-                        echo '<div style="color: red;">CLOSED</div>';
-                    } elseif ($row['ticket_status'] == 'ONHOLD') {
-                        echo '<div style="color: orange;">ONHOLD</div>';
-                    } else {
-                        echo '<div style="color: blue;">UNKNOWN</div>';
-                    }
-                    ?>
                 </span>
             </a>
         <?php } ?>
