@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <!-- END: Breadcrumbs -->
                         </div>
                         <div class="kd-separator"></div>
-                        <form action="<?php $_CONFIG['ticketsurl']; ?>/inc/new-ticket.php.php" method="post" class="kd-form">
+                        <form action="<?php $_CONFIG['ticketsurl']; ?>/inc/new-ticket.php" method="post" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
                                     <label for="selectDepartment" class="mnt-7">Select a Department</label>
