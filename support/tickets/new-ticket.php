@@ -54,7 +54,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
                                     <label for="ticketTitle" class="mnt-7">Ticket Subject</label>
-                                    <input type="text" class="form-control form-control-style-2" id="ticketTitle" placeholder="Enter Ticket Subject">
+                                    <input type="text" class="form-control form-control-style-2" id="ticketTitle" name="ticketTitle" placeholder="Enter Ticket Subject">
                                 </div>
                                 <div class="kd-form-group">
                                     <label class="mnt-7">Ticket Message</label>
@@ -66,7 +66,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-box-content pt-0">
                                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                                     <div class="col-auto kd-dropzone-attachment-add">
-                                        <input type="file" name="ticketFile" class="form-control form-control-style-2">
+                                        <input type="file" name="ticketFile" id="ticketFile" class="form-control form-control-style-2">
                                     </div>
                                     <div class="col-auto kd-dropzone-attachment-btn">
                                         <button class="kd-btn kd-btn-lg" type="submit" value="submit" name="submit">Submit a ticket</button>
