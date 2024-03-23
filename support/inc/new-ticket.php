@@ -24,7 +24,7 @@ $ticketRole = $_SESSION['auth'];
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     if (isset($_POST['ticketFile'])) {
         $ticketReplyHasFile = true;
-        $ticketFile = $_FILES['ticketFile']['name'];
+        $ticketFile = $_POST['ticketFile']['name'];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $ticketFileName = $ticketAccountId . '-' . date('dmYHis') . '-' . uniqid().'.'.$imageFileType;
         $target_dir = $_SERVER['DOCUMENT_ROOT'].'/tickets/uploads/';
@@ -35,18 +35,18 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
             $upload = 0;
         }
 
-        if ($_FILES['ticketFile']['size'] > 524288) {
+        if ($_POST['ticketFile']['size'] > 524288) {
             $uploadOk = 0;
         }
 
-        if ($_FILES['ticketFile']['type'] != "jpg" && $_FILES['ticketFile']['type'] != "png" && $_FILES['ticketFile']['type'] != "jpeg" && $_FILES['ticketFile']['type'] != "gif") {
+        if ($_POST['ticketFile']['type'] != "jpg" && $_POST['ticketFile']['type'] != "png" && $_POST['ticketFile']['type'] != "jpeg" && $_POST['ticketFile']['type'] != "gif") {
             $uploadOk = 0;
         }
 
         if ($uploadOk == 0) {
             $ticketReplyHasFile = false;
 
-            $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreples) 
+            $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreplies) 
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
             $result = $dbcon->query($sql);
             if ($result) {
@@ -62,11 +62,11 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
                 header("location: " . $_CONFIG['ticketsurl'] . "/new-ticket.php?error=dbError");
             }
         } else {
-            if (move_uploaded_file($_FILES['ticketFile']['tmp_name'], $target_file)) {
-                $ticketFileSize = $_FILES['ticketFile']['size'];
+            if (move_uploaded_file($_POST['ticketFile']['tmp_name'], $target_file)) {
+                $ticketFileSize = $_POST['ticketFile']['size'];
                 $ticketFileDownloadLink = $_CONFIG['supporturl'] . '/tickets/uploads/' . $ticketFileName;
                 
-                $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreples) 
+                $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreplies) 
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
                 $result = $dbcon->query($sql);
                 if ($result) {
@@ -84,7 +84,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
             } else {
                 $ticketReplyHasFile = false;
 
-                $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreples) 
+                $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreplies) 
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
                 $result = $dbcon->query($sql);
                 if ($result) {
@@ -105,7 +105,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     } else {
         $ticketReplyHasFile = false;
 
-        $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreples) 
+        $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreplies) 
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
         $result = $dbcon->query($sql);
         if ($result) {
