@@ -17,7 +17,11 @@ $lastReplyImg = $_SESSION['profilepic'];
 $lastReplyName = $_SESSION['username'];
 $lastReplyDate = $ticketCreateDate;
 $lastReplyTime = $ticketCreateTime;
-$lastReplyMsg = substr($_POST['ticketMessage'], 0, 97).'...';
+if (strlen($_POST['ticketMessage']) > 100) {
+    $lastReplyMsg = substr($_POST['ticketMessage'], 0, 97) . '...';
+} else {
+    $lastReplyMsg = $_POST['ticketMessage'];
+}
 $lastReplyAccountId = $_SESSION['accountid'];
 $ticketRole = $_SESSION['auth'];
 $ticketFirstName = $_SESSION['firstname'];
@@ -48,7 +52,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
         if ($uploadOk == 0) {
             $ticketReplyHasFile = false;
 
-            $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreplies) 
+            $sql = "INSERT INTO tickets (ticket_no, ticket_title, ticket_priority, ticket_dept, ticket_status, ticket_accountid, ticket_createdate, ticket_createtime, ticket_product, lastreplyimg, lastreplyname, lastreplydate, lastreplytime, lastreplymsg, lastreplyaccountid, ticketreplies)
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
             $result = $dbcon->query($sql);
             if ($result) {
