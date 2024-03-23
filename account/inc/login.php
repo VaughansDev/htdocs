@@ -73,7 +73,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
         $stmt->execute();
         $stmt->store_result();
         if ($stmt->num_rows > 0) {
-            $stmt->bind_result($users_id, $users_username, $users_firstname, $users_lastname, $users_email, $users_emailverified, $users_accountid, $users_regdate, $users_profilepic, $users_password, $users_lastlogin, $users_dicordlinked, $users_address1, $users_address2, $users_country, $users_city, $users_state, $users_postal, $users_phone);
+            $stmt->bind_result($users_id, $users_username, $users_firstname, $users_lastname, $users_email, $users_emailverified, $users_accountid, $users_regdate, $users_profilepic, $users_password, $users_lastlogin, $users_dicordlinked, $users_address1, $users_address2, $users_country, $users_city, $users_state, $users_postal, $users_phone, $users_auth);
             $stmt->fetch();
             if (password_verify($_POST['password'], $users_password)) {
                 $thislogin = date("Y/m/d - h:i:sa");
@@ -104,6 +104,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $_SESSION['state'] = $users_state;
                 $_SESSION['postal'] = $users_postal;
                 $_SESSION['phone'] = $users_phone;
+                $_SESSION['auth'] = $users_auth;
                 $_SESSION['loggedin'] = TRUE;
                 header("location: " . $_CONFIG['accounturl']);
             }
