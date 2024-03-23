@@ -57,7 +57,7 @@ if ($result->num_rows > 0) {
                     </div>
                     <div class="kd-comment-date"><?php echo $row['post_create_date'] . ', ' . $row['post_create_time']; ?></div>
                     <div class="kd-separator"></div>
-                    <div class="kd-comment-text">
+                    <div class="kd-comment-text" style="max-width: 80%;">
                         <?php echo $row['post_content']; ?>
                     </div>
                 </div>
