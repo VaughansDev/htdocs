@@ -20,6 +20,8 @@ $lastReplyTime = $ticketCreateTime;
 $lastReplyMsg = substr($_POST['ticketMessage'], 0, 97).'...';
 $lastReplyAccountId = $_SESSION['accountid'];
 $ticketRole = $_SESSION['auth'];
+$ticketFirstName = $_SESSION['firstname'];
+$ticketLastName = $_SESSION['lastname']; 
 
 if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
     if (isset($_POST["ticketFile"])) {
@@ -50,8 +52,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
             $result = $dbcon->query($sql);
             if ($result) {
-                $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, role, replydate, replytime, message, replyhasfile)
-                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketRole', '$ticketReplyDate', '$ticketReplyTime', '$ticketMessage', '$ticketReplyHasFile')";
+                $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, firstname, lastname, role, replydate, replytime, message, replyhasfile)
+                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketFirstName', '$ticketLastName', '$ticketRole', '$ticketCreateDate', '$ticketCreateTime', '$ticketMessage', '$ticketReplyHasFile')";
                 $result = $dbcon->query($sql);
                 if ($result) {
                     header("location: " . $_CONFIG['ticketsurl'] . "/ticket.php?ticketno=" . $ticketNo);
@@ -70,8 +72,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
                 $result = $dbcon->query($sql);
                 if ($result) {
-                    $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, role, replydate, replytime, message, replyhasfile, filename, filesize, filedownloadlink)
-                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketRole', '$ticketReplyDate', '$ticketReplyTime', '$ticketMessage', '$ticketReplyHasFile', '$ticketFileName', '$ticketFileSize', '$ticketFileDownloadLink')";
+                    $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, firstname, lastname, role, replydate, replytime, message, replyhasfile, filename, filesize, filedownloadlink)
+                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketFirstName', '$ticketLastName', '$ticketRole', '$ticketCreateDate', '$ticketCreateTime', '$ticketMessage', '$ticketReplyHasFile', '$ticketFileName', '$ticketFileSize', '$ticketFileDownloadLink')";
                     $result = $dbcon->query($sql);
                     if ($result) {
                         header("location: " . $_CONFIG['ticketsurl'] . "/ticket.php?ticketno=" . $ticketNo);
@@ -88,8 +90,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
                 $result = $dbcon->query($sql);
                 if ($result) {
-                    $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, role, replydate, replytime, message, replyhasfile)
-                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketRole', '$ticketReplyDate', '$ticketReplyTime', '$ticketMessage', '$ticketReplyHasFile')";
+                    $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, firstname, lastname, role, replydate, replytime, message, replyhasfile)
+                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketFirstName', '$ticketLastName', '$ticketRole', '$ticketCreateDate', '$ticketCreateTime', '$ticketMessage', '$ticketReplyHasFile')";
                     $result = $dbcon->query($sql);
                     if ($result) {
                         header("location: " . $_CONFIG['ticketsurl'] . "/ticket.php?ticketno=" . $ticketNo);
@@ -109,8 +111,8 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
                                      VALUES ('$ticketNo', '$ticketTitle', '$ticketPriority', '$ticketDept', '$ticketStatus', '$ticketAccountId', '$ticketCreateDate', '$ticketCreateTime', '$ticketProduct', '$lastReplyImg', '$lastReplyName', '$lastReplyDate', '$lastReplyTime', '$lastReplyMsg', '$lastReplyAccountId', '$ticketReplies')";
         $result = $dbcon->query($sql);
         if ($result) {
-            $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, role, replydate, replytime, message, replyhasfile)
-                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketRole', '$ticketReplyDate', '$ticketReplyTime', '$ticketMessage', '$ticketReplyHasFile')";
+            $sql = "INSERT INTO ticket_responses (ticket_no, accountid, profilepic, firstname, lastname, role, replydate, replytime, message, replyhasfile)
+                                                  VALUES ('$ticketNo', '$ticketAccountId', '$lastReplyImg', '$ticketFirstName', '$ticketLastName', '$ticketRole', '$ticketCreateDate', '$ticketCreateTime', '$ticketMessage', '$ticketReplyHasFile')";
             $result = $dbcon->query($sql);
             if ($result) {
                 header("location: " . $_CONFIG['ticketsurl'] . "/ticket.php?ticketno=" . $ticketNo);
