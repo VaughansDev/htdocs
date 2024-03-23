@@ -17,6 +17,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
     $regdate = date('d/m/Y-h:i:sA');
     $password = 'discordauth';
     $dicordlinked = 1;
+    $auth = 'user';
     if ($stmt = $dbcon->prepare('SELECT * FROM users where users_username = ?')) {
         $stmt->bind_param('s', $username);
         $stmt->execute();
@@ -25,8 +26,8 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
             $msg = urlencode("That user name is already taken, Please try a differant one.");
             header("Location: " . $_CONFIG['accounturl'] . "/register.php?status=error&msg=" . $msg);
         } else {
-            $sql = "INSERT INTO users (users_username, users_firstname, users_lastname, users_email, users_emailverified, users_accountid, users_regdate, users_profilepic, users_password, users_lastlogin, users_dicordlinked)
-                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$password', '$regdate', '$dicordlinked')";
+            $sql = "INSERT INTO users (users_username, users_firstname, users_lastname, users_email, users_emailverified, users_accountid, users_regdate, users_profilepic, users_password, users_lastlogin, users_dicordlinked, users_auth)
+                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$password', '$regdate', '$dicordlinked', '$auth')";
             $result = mysqli_query($dbcon, $sql);
             if ($result) {
                 $sql2 = "INSERT INTO linked_discord_accounts (accountid, discord_id, discord_username, discord_displayname, discord_avatar, discord_email, discord_email_verified)
@@ -51,6 +52,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                     $_SESSION['password'] = $password;
                     $_SESSION['lastlogin'] = $regdate;
                     $_SESSION['users_dicordlinked'] = $dicordlinked;
+                    $_SESSION['auth'] = $auth;
                     $_SESSION['loggedin'] = TRUE;
 
                     header("location: " . $_CONFIG['accounturl']);
@@ -81,6 +83,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
             $emailverified = 0;
             $profilepic = 'https://khaosdevelopment.com/assets/images/user.png';
             $dicordlinked = 0;
+            $auth = 'user';
             $password = $_POST['password'];
             $confpassword = $_POST['confpassword'];
             if ($password === $confpassword) {
@@ -90,8 +93,8 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                 header("Location: " . $_CONFIG['url'] . "/register.php?status=error&msg=" . $msg);
                 die();
             }
-            $sql = "INSERT INTO users (users_username, users_firstname, users_lastname, users_email, users_emailverified, users_accountid, users_regdate, users_profilepic, users_password, users_lastlogin, users_dicordlinked)
-                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$hashedpass', '$regdate', '$dicordlinked')";
+            $sql = "INSERT INTO users (users_username, users_firstname, users_lastname, users_email, users_emailverified, users_accountid, users_regdate, users_profilepic, users_password, users_lastlogin, users_dicordlinked, users_auth)
+                    VALUES ('$username', '$firstname', '$lastname', '$email', '$emailverified', '$accountid', '$regdate', '$profilepic', '$hashedpass', '$regdate', '$dicordlinked', '$auth')";
             $result = mysqli_query($dbcon, $sql);
             if ($result) {
                 $verificationcode = random_int(100000, 999999);
@@ -148,6 +151,7 @@ if (isset($_POST['method']) && $_POST['method'] == 'discord') {
                     $_SESSION['password'] = $password;
                     $_SESSION['lastlogin'] = $regdate;
                     $_SESSION['users_dicordlinked'] = $dicordlinked;
+                    $_SESSION['auth'] = $auth;
                     $_SESSION['loggedin'] = TRUE;
                     header("location: " . $_CONFIG['accounturl']);
                 } else {

@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <!-- END: Breadcrumbs -->
                         </div>
                         <div class="kd-separator"></div>
-                        <form action="#" class="kd-form">
+                        <form action="<?php $_CONFIG['ticketsurl']; ?>/inc/new-ticket.php.php" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
                                     <label for="selectDepartment" class="mnt-7">Select a Department</label>
@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 <div class="kd-form-group">
                                     <label for="selectProduct" class="mnt-7">Select Product</label>
                                     <select class="form-control form-control-style-2" name="selectProduct" id="selectProduct" tabindex="null">
-                                        <option value="No Product">No Product</option>
+                                        <option value="None">None</option>
                                         <option value="Khaos Applications">Khaos Applications</option>
                                     </select>
                                 </div>
@@ -59,40 +59,21 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 <div class="kd-form-group">
                                     <label class="mnt-7">Ticket Message</label>
                                     <?php
-                                        require $_SERVER['DOCUMENT_ROOT'].'/inc/ticket-msg-box.php';
+                                    require $_SERVER['DOCUMENT_ROOT'] . '/inc/ticket-msg-box.php';
                                     ?>
                                 </div>
                             </div>
-                        </form>
-                        <div class="kd-box-content pt-0">
-                            <!-- STRART: Dropzone
-
-                            Additional Attributes:
-                            data-dropzone-action
-                            data-dropzone-maxMB
-                            data-dropzone-maxFiles
-                        -->
-                            <form class="kd-dropzone" action="#" data-dropzone-maxMB="5" data-dropzone-maxFiles="5">
-                                <div class="dz-message">
-                                    <div class="kd-dropzone-icon">
-                                        <span class="icon pe-7s-cloud-upload"></span>
+                            <div class="kd-box-content pt-0">
+                                <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
+                                    <div class="col-auto kd-dropzone-attachment-add">
+                                        <input type="file" class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></input>
                                     </div>
-                                    <div class="h6 kd-dropzone-title">Drop files here or click to upload</div>
-                                    <div class="kd-dropzone-text">
-                                        <p class="mnb-5 mnt-1">You can upload up to 5 files (maximum 5 MB each) of the following types: .jpg, .jpeg, .png, .zip.</p>
+                                    <div class="col-auto kd-dropzone-attachment-btn">
+                                        <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
                                     </div>
-                                </div>
-                            </form>
-                            <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
-                                <div class="col-auto kd-dropzone-attachment-add">
-                                    <label class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></label>
-                                </div>
-                                <div class="col-auto kd-dropzone-attachment-btn">
-                                    <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
                                 </div>
                             </div>
-                            <!-- END: Dropzone -->
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
