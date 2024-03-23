@@ -126,8 +126,6 @@ if (isset($_GET['status'])) {
                         <?php } ?>
                     </ul>
                 </span>
-                <span class="kd-ticket-status">
-                </span>
             </a>
         <?php } ?>
     <?php } else { ?>
