@@ -66,7 +66,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-box-content pt-0">
                                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                                     <div class="col-auto kd-dropzone-attachment-add">
-                                        <input type="file" class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></input>
+                                        <input type="file" class="form-control form-control-style-2">
                                     </div>
                                     <div class="col-auto kd-dropzone-attachment-btn">
                                         <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
