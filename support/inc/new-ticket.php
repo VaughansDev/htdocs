@@ -17,8 +17,8 @@ $lastReplyImg = $_SESSION['profilepic'];
 $lastReplyName = $_SESSION['username'];
 $lastReplyDate = $ticketCreateDate;
 $lastReplyTime = $ticketCreateTime;
-if (strlen($_POST['ticketMessage']) > 100) {
-    $lastReplyMsg = substr($_POST['ticketMessage'], 0, 97) . '...';
+if (strlen($_POST['ticketMessage']) > 75) {
+    $lastReplyMsg = substr($_POST['ticketMessage'], 0, 72) . '...';
 } else {
     $lastReplyMsg = $_POST['ticketMessage'];
 }
