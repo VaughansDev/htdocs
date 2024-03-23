@@ -27,7 +27,7 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <!-- END: Breadcrumbs -->
                         </div>
                         <div class="kd-separator"></div>
-                        <form action="<?php $_CONFIG['ticketsurl']; ?>/inc/new-ticket.php.php" class="kd-form">
+                        <form action="<?php $_CONFIG['ticketsurl']; ?>/inc/new-ticket.php.php" method="post" class="kd-form">
                             <div class="kd-box-content">
                                 <div class="kd-form-group">
                                     <label for="selectDepartment" class="mnt-7">Select a Department</label>
@@ -66,10 +66,10 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                             <div class="kd-box-content pt-0">
                                 <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                                     <div class="col-auto kd-dropzone-attachment-add">
-                                        <input type="file" class="form-control form-control-style-2">
+                                        <input type="file" name="ticketFile" class="form-control form-control-style-2">
                                     </div>
                                     <div class="col-auto kd-dropzone-attachment-btn">
-                                        <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
+                                        <button class="kd-btn kd-btn-lg" type="submit" value="submit" name="submit">Submit a ticket</button>
                                     </div>
                                 </div>
                             </div>
