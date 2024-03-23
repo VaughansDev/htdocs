@@ -103,7 +103,7 @@ if (isset($_GET['status'])) {
         while ($row = $result->fetch_assoc()) { ?>
             <a href="<?php echo $_CONFIG['ticketsurl']; ?>/ticket.php?ticketno=<?php echo $row['ticket_no']; ?>" class="kd-ticket-item kd-ticket-new kd-ticket-open kd-block-decorated">
                 <span class="kd-ticket-img">
-                    <img src="<?php echo $_CONFIG['accounturl'] . $row['lastreplyimg']; ?>" alt="">
+                    <img src="<?php echo $row['lastreplyimg']; ?>" alt="">
                 </span>
                 <span class="kd-ticket-cont">
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
