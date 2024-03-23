@@ -26,17 +26,10 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit') {
         $ticketReplyHasFile = true;
         $ticketFile = $_FILES['ticketFile']['name'];
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-        $ticketFileName = $ticketAccountId . '-' . date('dmYHis') . '-' . uniqid().$imageFileType;
+        $ticketFileName = $ticketAccountId . '-' . date('dmYHis') . '-' . uniqid().'.'.$imageFileType;
         $target_dir = $_SERVER['DOCUMENT_ROOT'].'/tickets/uploads/';
         $target_file = $target_dir . $ticketFileName;
         $uploadOk = 1;
-
-        $check = getimagesize($_FILES['ticketFile']['tmp_name']);
-        if ($check !== false) {
-            $uploadOk = 1;
-        } else {
-            $uploadOk = 0;
-        }
 
         if (file_exists($target_file)) {
             $upload = 0;
