@@ -121,5 +121,5 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
     $stmt->close();
     mysqli_close($dbcon);
 } else {
-    header("Location: " . $_CONFIG['accounturl'] . "/login.php?test=1");
+    header("Location: " . $_CONFIG['accounturl'] . "/login.php");
 }

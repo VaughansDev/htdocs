@@ -17,8 +17,8 @@ if (isset($_GET['status'])) {
                     <img src="<?php echo $row['lastreplyimg']; ?>" alt="">
                 </span>
                 <span class="kd-ticket-cont">
-                    <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
-                    <span class="kd-ticket-title h5"> <?php echo $row['lastreplymsg']; ?> </span>
+                    <span class="kd-ticket-name"> <?php echo $row['ticket_username']; ?> </span>
+                    <span class="kd-ticket-title h5"> <?php echo $row['ticket_title']; ?> </span>
                     <ul class="kd-ticket-info">
                         <li>Ticket Opened: <?php echo $row['ticket_createdate'] . ' at ' . $row['ticket_createtime']; ?></li>
                         <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplytime']; ?></li>
@@ -105,8 +105,8 @@ if (isset($_GET['status'])) {
                     <img src="<?php echo $row['lastreplyimg']; ?>" alt="">
                 </span>
                 <span class="kd-ticket-cont">
-                    <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
-                    <span class="kd-ticket-title h5"> <?php echo $row['lastreplymsg']; ?> </span>
+                    <span class="kd-ticket-name"> <?php echo $row['ticket_username']; ?> </span>
+                    <span class="kd-ticket-title h5"> <?php echo $row['ticket_title']; ?> </span>
                     <ul class="kd-ticket-info">
                         <li>Ticket Opened: <?php echo $row['ticket_createdate'] . ' at ' . $row['ticket_createtime']; ?></li>
                         <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplytime']; ?></li>
