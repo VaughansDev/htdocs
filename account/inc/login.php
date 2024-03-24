@@ -64,20 +64,16 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
     $stmt->close();
     mysqli_close($dbcon);
 } elseif (isset($_POST['login']) && $_POST['login'] == 'login') {
-    echo 'debug1';
     $username = $_POST['username'];
     $password = $_POST['password'];
     if ($stmt = $dbcon->prepare('SELECT * FROM users WHERE users_username = ?')) {
-        echo 'debug2';
         $stmt->bind_param('s', $username);
         $stmt->execute();
         $stmt->store_result();
         if ($stmt->num_rows > 0) {
-            echo 'debug3';
             $stmt->bind_result($users_id, $users_username, $users_firstname, $users_lastname, $users_email, $users_emailverified, $users_accountid, $users_regdate, $users_profilepic, $users_password, $users_lastlogin, $users_dicordlinked, $users_address1, $users_address2, $users_country, $users_city, $users_state, $users_postal, $users_phone, $users_auth);
             $stmt->fetch();
             if (password_verify($_POST['password'], $users_password)) {
-                echo 'debug4';
                 $thislogin = date("Y/m/d - h:i:sa");
                 $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_username = '$username'");
                 $stmt2->execute();
@@ -108,7 +104,6 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                 $_SESSION['phone'] = $users_phone;
                 $_SESSION['auth'] = $users_auth;
                 $_SESSION['loggedin'] = TRUE;
-                echo 'debug5';
                 header("location: " . $_CONFIG['accounturl']);
             } else {
                 $msg = urlencode("The password was incorrect.");
