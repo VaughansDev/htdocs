@@ -20,18 +20,18 @@ if (isset($_GET['status'])) {
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
                     <span class="kd-ticket-title h5"> <?php echo $row['lastreplymsg']; ?> </span>
                     <ul class="kd-ticket-info">
-                        <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplyname']; ?></li>
+                        <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplytime']; ?></li>
                         <li>Product: <?php echo $row['ticket_product']; ?></li>
                         <li>Status:
                             <?php
                             if ($row['ticket_status'] == 'OPEN') {
-                                echo '<div style="color: green;">OPEN</div>';
+                                echo '<span style="color: green;">OPEN</span>';
                             } elseif ($row['ticket_status'] == 'CLOSED') {
-                                echo '<div style="color: red;">CLOSED</div>';
+                                echo '<span style="color: red;">CLOSED</span>';
                             } elseif ($row['ticket_status'] == 'ONHOLD') {
-                                echo '<div style="color: orange;">ONHOLD</div>';
+                                echo '<span style="color: orange;">ONHOLD</span>';
                             } else {
-                                echo '<div style="color: blue;">UNKNOWN</div>';
+                                echo '<span style="color: blue;">UNKNOWN</span>';
                             }
                             ?></li>
                         <?php if ($row['lastreplyaccountid'] != $_SESSION['accountid']) { ?>
@@ -107,7 +107,7 @@ if (isset($_GET['status'])) {
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
                     <span class="kd-ticket-title h5"> <?php echo $row['lastreplymsg']; ?> </span>
                     <ul class="kd-ticket-info">
-                        <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplyname']; ?></li>
+                        <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplytime']; ?></li>
                         <li>Product: <?php echo $row['ticket_product']; ?></li>
                         <li>Status:
                             <?php
