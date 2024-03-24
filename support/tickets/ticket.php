@@ -30,14 +30,13 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                         require $_SERVER['DOCUMENT_ROOT'] . '/inc/ticket-msg-box.php';
                                         ?>
                                     </div>
-                                    <div class="kd-box-content pt-0">
-                                        <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
-                                            <div class="col-auto kd-dropzone-attachment-add">
-                                                <input type="file" name="ticketFile" id="ticketFile" class="form-control form-control-style-2">
-                                            </div>
-                                            <div class="col-auto kd-dropzone-attachment-btn">
-                                                <button class="kd-btn kd-btn-lg" type="submit" value="submit" name="submit">Submit a ticket</button>
-                                            </div>
+                                    <div class="kd-form-group">
+                                        <div class="col-auto kd-dropzone-attachment-add">
+                                            <input type="file" name="ticketFile" id="ticketFile" class="form-control form-control-style-2">
+                                        </div>
+                                        <div class="col-auto kd-dropzone-attachment-btn">
+                                            <button class="kd-btn kd-btn-lg" type="submit" value="submit" style="background-color:grey;" name="submit">Close ticket</button>
+                                            <button class="kd-btn kd-btn-lg" type="submit" value="submit" name="submit">Submit a ticket</button>
                                         </div>
                                     </div>
                                 </form>
@@ -48,6 +47,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
             </div>
         </div>
     </div>
-<?php
-require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
-?>
+    <?php
+    require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
+    ?>
