@@ -17,7 +17,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
                     $stmt->fetch();
 
                     $thislogin = date("Y/m/d - h:i:sa");
-                    $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_accountid = '$accountid'");
+                    $stmt2 = $dbcon->prepare("UPDATE users SET users_lastlogin = '$thislogin' WHERE users_accountid = '$users_accountid'");
                     $stmt2->execute();
 
                     session_set_cookie_params(
