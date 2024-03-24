@@ -25,28 +25,18 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 <h3 class="h6 mb-25">Write a Reply</h3>
                                 <form class="kd-form" action="#">
                                     <div class="kd-form-group">
-                                        <div class="kd-editor-quill">
-                                            <div class="kd-editor" data-editor-height="150" data-editor-maxHeight="250"></div>
-                                        </div>
+                                        <label class="mnt-7">Ticket Message</label>
+                                        <?php
+                                        require $_SERVER['DOCUMENT_ROOT'] . '/inc/ticket-msg-box.php';
+                                        ?>
                                     </div>
-                                    <div class="kd-form-group">
-                                        <div class="kd-dropzone" data-dropzone-action="#" data-dropzone-maxMB="5" data-dropzone-maxFiles="5">
-                                            <div class="dz-message">
-                                                <div class="kd-dropzone-icon">
-                                                    <span class="icon pe-7s-cloud-upload"></span>
-                                                </div>
-                                                <div class="h6 kd-dropzone-title">Drop files here or click to upload</div>
-                                                <div class="kd-dropzone-text">
-                                                    <p class="mnb-5 mnt-1">You can upload up to 5 files (maximum 5 MB each) of the following types: .jpg, .jpeg, .png, .zip.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="kd-box-content pt-0">
                                         <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
                                             <div class="col-auto kd-dropzone-attachment-add">
-                                                <label class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></label>
+                                                <input type="file" name="ticketFile" id="ticketFile" class="form-control form-control-style-2">
                                             </div>
                                             <div class="col-auto kd-dropzone-attachment-btn">
-                                                <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
+                                                <button class="kd-btn kd-btn-lg" type="submit" value="submit" name="submit">Submit a ticket</button>
                                             </div>
                                         </div>
                                     </div>
@@ -58,6 +48,6 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
             </div>
         </div>
     </div>
-    <?php
-    require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
-    ?>
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.php';
+?>
