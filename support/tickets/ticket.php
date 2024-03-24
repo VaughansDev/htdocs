@@ -35,8 +35,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                                 <input type="file" name="ticketFile" id="ticketFile" class="form-control form-control-style-2">
                                             </div>
                                             <div class="col-auto kd-dropzone-attachment-btn">
-                                                <button class="kd-btn kd-btn-lg" style="background-color: grey;" type="button" name="button">Close ticket</button>
-                                                <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
+                                                <button class="kd-btn kd-btn-lg kd-btn-secondary" type="button" name="button">Close ticket</button>
+                                                <button class="kd-btn kd-btn-lg" type="submit" name="button">Submit Reply</button>
                                             </div>
                                         </div>
                                     </div>
