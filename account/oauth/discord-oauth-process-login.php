@@ -17,8 +17,6 @@ $payload = [
     'scope' => 'identify%20email',
 ];
 
-print_r($payload);
-
 $payload_string = http_build_query($payload);
 $discord_token_url = "https://discordapp.com/api/oauth2/token";
 
@@ -52,4 +50,3 @@ $discord_email = $result['email'];
 $discord_email_verified = $result['verified'];
 
 header("location: " . $_CONFIG['accounturl'] . "/inc/login.php?method=discord&discord_id=" . $discord_id . "&discord_username=" . $discord_username . "&discord_displayname=" . $discord_displayname . "&discord_avatar=" . $discord_avatar . "&discord_email=" . $discord_email . "&discord_email_verified=" . $discord_email_verified);
-
