@@ -52,11 +52,11 @@ if (isset($_GET['ticketno'])) {
                     <div class="kd-comment kd-ticket-comment">
                         <div>
                             <div class="kd-comment-img">
-                                <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/avatar-1.png" alt="">
+                                <img src="<?php echo $row['profilepic']; ?>" alt="">
                             </div>
                             <div class="kd-comment-cont">
-                                <a href="#" class="kd-comment-name"><?php echo $row['firstname'].' '.$row['lastname']; ?></a>
-                                <div class="kd-comment-date"><?php echo $row['replydate'].' at '.$row['replytime']; ?></div>
+                                <a href="#" class="kd-comment-name"><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></a>
+                                <div class="kd-comment-date"><?php echo $row['replydate'] . ' at ' . $row['replytime']; ?></div>
                                 <div class="kd-comment-text">
                                     <p class="mb-0"><?php echo $row['message']; ?></p>
                                 </div>
@@ -68,7 +68,6 @@ if (isset($_GET['ticketno'])) {
                                         <span class="kd-comment-file-icon"><i class="fa-solid fa-download"></i></span>
                                     </a>
                                 <?php } else {
-
                                 } ?>
                             </div>
                         </div>
@@ -77,11 +76,11 @@ if (isset($_GET['ticketno'])) {
                     <div class="kd-comment kd-ticket-comment kd-comment-replied kd-comment-new">
                         <div>
                             <div class="kd-comment-img">
-                                <img src="<?php echo $_CONFIG['domain']; ?>/assets/images/avatar-default.svg" alt="">
+                                <img src="<?php echo $row['profilepic']; ?>" alt="">
                             </div>
                             <div class="kd-comment-cont">
-                                <a href="#" class="kd-comment-name"><?php echo $row['firstname'].' '.$row['lastname']; ?><span class="kd-comment-replied">Replied</span></a>
-                                <div class="kd-comment-date"><?php echo $row['replydate'].' at '.$row['replytime']; ?></div>
+                                <a href="#" class="kd-comment-name"><?php echo $row['firstname'] . ' ' . $row['lastname']; ?><span class="kd-comment-replied">Replied</span></a>
+                                <div class="kd-comment-date"><?php echo $row['replydate'] . ' at ' . $row['replytime']; ?></div>
                                 <div class="kd-comment-text">
                                     <p class=mb-0""><?php echo $row['message']; ?></p>
                                 </div>
@@ -93,7 +92,6 @@ if (isset($_GET['ticketno'])) {
                                         <span class="kd-comment-file-icon"><i class="fa-solid fa-download"></i></span>
                                     </a>
                                 <?php } else {
-
                                 } ?>
                             </div>
                         </div>
