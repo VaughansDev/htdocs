@@ -20,6 +20,7 @@ if (isset($_GET['status'])) {
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
                     <span class="kd-ticket-title h5"> <?php echo $row['lastreplymsg']; ?> </span>
                     <ul class="kd-ticket-info">
+                        <li>Ticket Opened: <?php echo $row['ticket_createdate'] . ' at ' . $row['ticket_createtime']; ?></li>
                         <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplytime']; ?></li>
                         <li>Product: <?php echo $row['ticket_product']; ?></li>
                         <li>Status:
@@ -107,6 +108,7 @@ if (isset($_GET['status'])) {
                     <span class="kd-ticket-name"> <?php echo $row['lastreplyname']; ?> </span>
                     <span class="kd-ticket-title h5"> <?php echo $row['lastreplymsg']; ?> </span>
                     <ul class="kd-ticket-info">
+                        <li>Ticket Opened: <?php echo $row['ticket_createdate'] . ' at ' . $row['ticket_createtime']; ?></li>
                         <li>Last Update: <?php echo $row['lastreplydate'] . ' at ' . $row['lastreplytime']; ?></li>
                         <li>Product: <?php echo $row['ticket_product']; ?></li>
                         <li>Status:

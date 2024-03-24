@@ -8,7 +8,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 'submit'){
         $topicTitle = $_POST['topicTitle'];
         $topicId = '20151693' . date('YmdHis');
         $topicViews = 0;
-        $topicCreateDate = date('j M Y');
+        $topicCreateDate = date('M j, Y');
         $topicCreateTime = date('g:i a');
 
         $sql = "INSERT INTO forum_topics (topic_id, topic_thread_id, topic_title, topic_creator_id, topic_create_date, topic_create_time, topic_creator_username, topic_views) 

@@ -8,7 +8,7 @@ $username = $_POST['username'];
 $accountId = $_POST['accountId'];
 $profilePic = $_POST['profilePic'];
 $replyContent = $_POST['replyContent'];
-$replyDate = date('j M Y');
+$replyDate = date('M j, Y');
 $replyTime = date('g:i a');
 
 if (isset($_POST['submit']) && $_POST['submit'] == "submit-reply") {    
