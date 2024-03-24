@@ -49,6 +49,7 @@ if (isset($_GET['method']) && $_GET['method'] == 'discord') {
 
                     echo 'debug';
                     header("location: " . $_CONFIG['accounturl']);
+                    echo 'debug';
                 } else {
                     $msg = urlencode("No account was found with that username.");
                     header("Location: " . $_CONFIG['accounturl'] . "/login.php?status=error&msg=" . $msg);
