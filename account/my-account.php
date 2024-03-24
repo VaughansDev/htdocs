@@ -36,6 +36,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
                                     echo 'You have ' . $num . ' active license(s)';
+                                } else {
+                                    echo 'You dont have any active licenses';
                                 }
                                 ?>
                             </div>
@@ -58,6 +60,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
                                     echo 'You have ' . $num . ' due invoice(s)';
+                                } else {
+                                    echo 'You dont have any due invoices';
                                 }
                                 ?>
                             </div>
@@ -80,6 +84,8 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 if ($result->num_rows > 0) {
                                     $num = $result->num_rows;
                                     echo 'You have ' . $num . ' open ticket(s)';
+                                } else {
+                                    echo 'You dont have any open tickets';
                                 }
                                 ?>
                             </div>
