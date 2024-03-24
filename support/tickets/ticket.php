@@ -25,19 +25,18 @@ if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] != TRUE) { ?>
                                 <h3 class="h6 mb-25">Write a Reply</h3>
                                 <form class="kd-form" action="#">
                                     <div class="kd-form-group">
-                                        <label class="mnt-7">Ticket Message</label>
                                         <?php
                                         require $_SERVER['DOCUMENT_ROOT'] . '/inc/ticket-msg-box.php';
                                         ?>
                                     </div>
                                     <div class="kd-form-group">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="file" name="ticketFile" id="ticketFile" class="form-control form-control-style-2">
+                                        <div class="row justify-content-between vertical-gap kd-dropzone-attachment">
+                                            <div class="col-auto kd-dropzone-attachment-add">
+                                                <label class="mb-0" class="mnt-7"><span class="icon fas fa-paperclip mr-10"></span><span>Add Attachment</span></label>
                                             </div>
-                                            <div class="col-md-6">
-                                                <button class="kd-btn kd-btn-lg" type="submit" value="submit" style="background-color:grey;" name="submit">Close ticket</button>
-                                                <button class="kd-btn kd-btn-lg" type="submit" value="submit" name="submit">Submit a ticket</button>
+                                            <div class="col-auto kd-dropzone-attachment-btn">
+                                                <button class="kd-btn kd-btn-lg" style="background-color: grey;" type="button" name="button">Close ticket</button>
+                                                <button class="kd-btn kd-btn-lg" type="button" name="button">Submit a ticket</button>
                                             </div>
                                         </div>
                                     </div>
