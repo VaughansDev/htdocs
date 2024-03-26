@@ -9,7 +9,7 @@ if (isset($_GET['status'])) {
     if ($stmt = $dbcon->prepare("SELECT * FROM tickets WHERE ticket_accountid = ? AND ticket_status = ? LIMIT ?,?")) {
         $calc_page = ($page - 1) * $num_results_on_page;
         $stmt->bind_param('ssii', $accountid, $status, $calc_page, $num_results_on_page);
-        $stmt->execute();
+        $stmt->execute(); 
         $result = $stmt->get_result();
         while ($row = $result->fetch_assoc()) { ?>
             <a href="<?php echo $_CONFIG['ticketsurl']; ?>/ticket.php?ticketno=<?php echo $row['ticket_no']; ?>" class="kd-ticket-item kd-ticket-new kd-ticket-open kd-block-decorated">
