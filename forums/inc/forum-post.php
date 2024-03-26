@@ -38,7 +38,7 @@ while ($row2 = $result2->fetch_assoc()) { ?>
     </div>
     <div class="kd-separator"></div>
 <?php }
-$total_pages = $dbcon->query("SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND topic_thread_id = '$threadId'")->num_rows;
+$total_pages = $dbcon->query("SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId'")->num_rows;
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 $num_results_on_page = 15;
 $calc_page = ($page - 1) * $num_results_on_page;
