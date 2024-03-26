@@ -37,7 +37,7 @@ while ($row2 = $result2->fetch_assoc()) { ?>
         <!-- END: Breadcrumbs -->
     </div>
     <div class="kd-separator"></div>
-<?php }
+    <?php }
 $total_pages = $dbcon->query("SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId'")->num_rows;
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
 $num_results_on_page = 15;
@@ -125,6 +125,8 @@ if ($result->num_rows > 0) {
                 <input type="text" name="username" value="<?php echo $_SESSION['username']; ?>" hidden>
                 <input type="text" name="accountId" value="<?php echo $_SESSION['accountid']; ?>" hidden>
                 <input type="text" name="profilePic" value="<?php echo $_SESSION['profilepic']; ?>" hidden>
+                <input type="text" name="returnUrl" value="<?php echo $_SERVER['REQUEST_URI']; ?>" hidden>
+                <?php echo $_SERVER['REQUEST_URI']; ?>
                 <textarea style="padding-right:20px;" name="replyContent" id="editor"></textarea>
             </div>
             <div class="kd-form-group">
