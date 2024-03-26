@@ -42,7 +42,7 @@ $sql = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_to
 $result = $dbcon->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) { ?>
-        <div class="kd-comment kd-topic-comment">
+        <div class="kd-comment kd-topic-comment" style="width: 100%;">
             <div>
                 <div class="kd-comment-img">
                     <img src="<?php echo $row['post_profile_pic']; ?>" alt="">
