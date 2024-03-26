@@ -32,7 +32,7 @@ while ($row2 = $result2->fetch_assoc()) { ?>
                     <?php
                     $total_pages = $dbcon->query("SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId'")->num_rows;
                     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
-                    $num_results_on_page = 10;
+                    $num_results_on_page = 15;
                     $calc_page = ($page - 1) * $num_results_on_page;
                     $sql = "SELECT * FROM forum_topics WHERE topic_thread_id = '$threadId' ORDER BY id DESC LIMIT $calc_page, $num_results_on_page";
                     $result = $dbcon->query($sql);

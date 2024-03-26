@@ -37,8 +37,12 @@ while ($row2 = $result2->fetch_assoc()) { ?>
         <!-- END: Breadcrumbs -->
     </div>
     <div class="kd-separator"></div>
-    <?php }
-$sql = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId'";
+<?php }
+$total_pages = $dbcon->query("SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND topic_thread_id = '$threadId'")->num_rows;
+$page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
+$num_results_on_page = 15;
+$calc_page = ($page - 1) * $num_results_on_page;
+$sql = "SELECT * FROM forum_posts WHERE post_thread_id = '$threadId' AND post_topic_id = '$topicId' LIMIT $calc_page, $num_results_on_page";
 $result = $dbcon->query($sql);
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) { ?>
@@ -70,17 +74,44 @@ if ($result->num_rows > 0) {
 
 
 <div class="kd-blog-post-box pt-30 pb-30">
-    <ul class="kd-pagination">
-        <li class="kd-pagination-icon"><a href="#"><i class="fa-solid fa-angle-left"></i></a></li>
-        <li><a href="#">1</a></li>
-        <li class="kd-pagination-space">...</li>
-        <li><a href="#">8</a></li>
-        <li class="active"><a href="#">9</a></li>
-        <li><a href="#">10</a></li>
-        <li class="kd-pagination-space">...</li>
-        <li><a href="#">18</a></li>
-        <li class="kd-pagination-icon"><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
-    </ul>
+
+    <?php if (ceil($total_pages / $num_results_on_page) > 0) { ?>
+        <ul class="kd-pagination">
+            <?php if ($page > 1) { ?>
+                <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page - 1; ?>"><i class="fa-solid fa-chevron-left"></i></a></li>
+            <?php }
+            if ($page > 3) { ?>
+                <li><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=1">1</a></li>
+                <li class="kd-pagination-space">...</li>
+            <?php }
+            if ($page - 2 > 0) { ?>
+                <li><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page - 2 ?>"><?php echo $page - 2 ?></a></li>
+            <?php }
+            if ($page - 1 > 0) { ?>
+                <li><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page - 1 ?>"><?php echo $page - 1 ?></a></li>
+            <?php } ?>
+            <li class="active"><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page; ?>"><?php echo $page; ?></a></li>
+            <?php if ($page + 1 < ceil($total_pages / $num_results_on_page) + 1) { ?>
+                <li>
+                    <a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page + 1 ?>">
+                        <?php echo $page + 1 ?>
+                    </a>
+                </li>
+            <?php }
+            if ($page + 2 < ceil($total_pages / $num_results_on_page) + 2) { ?>
+                <li><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page + 2 ?>"><?php echo $page + 2 ?></a></li>
+            <?php }
+            if ($page < ceil($total_pages / $num_results_on_page) - 2) { ?>
+                <li class="kd-pagination-space">...</li>
+                <li>
+                    <a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo ceil($total_pages / $num_results_on_page) ?>"><?php echo ceil($total_pages / $num_results_on_page) ?></a>
+                </li>
+            <?php }
+            if ($page < ceil($total_pages / $num_results_on_page)) { ?>
+                <li class="kd-pagination-icon"><a href="<?php echo $_CONFIG['forumsurl']; ?>/topic.php?threadid=<?php echo $threadid; ?>&topicId=<?php echo $topicId; ?>&page=<?php echo $page + 1 ?>"><i class="fa-solid fa-chevron-right"></i></a></li>
+            <?php } ?>
+        </ul>
+    <?php } ?>
 </div>
 
 <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == 'true') { ?>
