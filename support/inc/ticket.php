@@ -58,7 +58,7 @@ if (isset($_GET['ticketno'])) {
                                 <a href="#" class="kd-comment-name"><?php echo $row['firstname'] . ' ' . $row['lastname']; ?></a>
                                 <div class="kd-comment-date"><?php echo $row['replydate'] . ' at ' . $row['replytime']; ?></div>
                                 <div class="kd-comment-text">
-                                    <?php echo htmlspecialchars($row['message'], ENT_QUOTES, 'UTF-8'); ?>
+                                    <?php echo $row['message']; ?>
                                 </div>
                                 <?php if ($row['replyhasfile'] == 'TRUE') { ?>
                                     <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
@@ -82,7 +82,7 @@ if (isset($_GET['ticketno'])) {
                                 <a href="#" class="kd-comment-name"><?php echo $row['firstname'] . ' ' . $row['lastname']; ?><span class="kd-comment-replied">Replied</span></a>
                                 <div class="kd-comment-date"><?php echo $row['replydate'] . ' at ' . $row['replytime']; ?></div>
                                 <div class="kd-comment-text">
-                                    <?php echo htmlspecialchars($row['message'], ENT_QUOTES, 'UTF-8'); ?>
+                                    <?php echo $row['message']; ?>
                                 </div>
                                 <?php if ($row['replyhasfile'] == 'TRUE') { ?>
                                     <a href="<?php echo $row['filedownloadlink']; ?>" class="kd-comment-file kd-comment-file-jpg">
